@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="gb2312"?>
+<metadata  subsystem="ssms">
+	<menu name="货架管理中心" order="100">
+		<!--<menu name="货架分类管理" url="/web/resourcemgr/categoryTree.do"  order="100"/>-->
+		<menu name="货架分类管理" url="/web/ztree/category_main.jsp?approvalFlag=yes"  order="100"/>
+		<menu name="货架分类管理-审批发布" url="/web/resourcemgr/categoryApprovalList.do?operation=1"  order="150"/>
+		<!--<menu name="货架商品管理" url="/web/resourcemgr/cgyContentTree.do?subSystem=ssms" order="200"/>-->
+		<menu name="货架商品管理" url="/web/ztree/cgy_content_main.jsp?menuStatus=1" order="200"/>
+		<menu name="货架商品管理-审批发布" url="/web/resourcemgr/categoryApprovalList.do?operation=2"  order="250"/>
+		<menu name="业务内容数据导入" url="/web/resourcemgr/data_import.jsp?subSystem=ssms" order="300"/>
+		<menu name="内容数据导出" url="/web/resourcemgr/data_export.jsp" order="400"/>
+		<menu name="榜单分机型监控" url="/web/catemonitor/monitorContentTree.do" order="500"/>
+		<menu name="内容黑名单管理" url="/web/blacklist/black.do" order="600"/>
+		<menu name="内容黑名单管理-审批发布" url="/web/blacklist/approval.do?action=showList&amp;aprovalStatus=2" order="650"/>
+		<menu name="扩展属性管理" url="/web/datafield/keyBaseList.do" order="700"/>
+		<menu name="应用扩展属性管理" url="/web/datafield/contentList.do" order="800"/>
+		<menu name="紧急上线内容管理" url="/web/exigence/queryExigence.do?perType=query" order="900"/>
+		<menu name="重点机型管理" url="/web/pivot/device.do?perType=query" order="1000"/>
+		<menu name="重点内容管理" url="/web/pivot/content.do?perType=query" order="1100"/>
+		<menu name="应用活动属性管理" url="/web/datafield/contentExtList.do" order="1200"/>
+		<menu name="货架与用户关系管理" url="/web/singlecategory/singleCategoryUserGroupAction.do?opType=doQueryList"  order="1300"/>
+		<menu name="子货架分类管理" url="/web/singlecategory/singleCategoryTreeAction.do?userId=all_category_class"  order="1400"/>
+		<menu name="子货架商品管理" url="/web/singlecategory/singleCgyContentTreeAction.do?userId=all_category_content"  order="1500"/>
+		<menu name="每日新增应用查询" url="/web/queryapp/QueryAppAction.do?opType=doQueryAddList"  order="1600"/>
+		<menu name="商品全量应用查询" url="/web/queryapp/QueryAppAction.do?opType=doQueryContentList"  order="1700"/>
+		
+		<menu name="开放运营子货架分类管理" url="/web/singlecategory/singleCategoryTreeAction.do?userId=open_category_class"  order="1800"/>
+		<menu name="开放运营子货架商品管理" url="/web/singlecategory/singleCgyContentTreeAction.do?userId=open_category_content"  order="1900"/>
+		
+		<menu name="HTC子货架分类管理" url="/web/singlecategory/singleCategoryTreeAction.do?userId=htc_category_class"  order="2100"/>
+		<menu name="HTC子货架商品管理" url="/web/singlecategory/singleCgyContentTreeAction.do?userId=htc_category_content"  order="2200"/>
+
+		<menu name="浙江专区子货架分类管理" url="/web/singlecategory/singleCategoryTreeAction.do?userId=zhejiang_category_class"  order="2400"/>
+		<menu name="浙江专区子货架商品管理" url="/web/singlecategory/singleCgyContentTreeAction.do?userId=zhejiang_category_content"  order="2500"/>
+
+<menu name="上海专区货架分类管理" url="/web/singlecategory/singleCategoryTreeAction.do?userId=ssms_category_class_SH"  order="2800"/>
+		<menu name="上海专区货架商品管理" url="/web/singlecategory/singleCgyContentTreeAction.do?userId=ssms_category_content_SH"  order="2810"/>
+		<menu name="福建专区货架分类管理" url="/web/singlecategory/singleCategoryTreeAction.do?userId=ssms_category_class_FJ"  order="2820"/>
+		<menu name="福建专区货架商品管理" url="/web/singlecategory/singleCgyContentTreeAction.do?userId=ssms_category_content_FJ"  order="2830"/>
+		<menu name="安徽专区货架分类管理" url="/web/singlecategory/singleCategoryTreeAction.do?userId=ssms_category_class_AH"  order="2840"/>
+		<menu name="安徽专区货架商品管理" url="/web/singlecategory/singleCgyContentTreeAction.do?userId=ssms_category_content_AH"  order="2850"/>
+		<menu name="江西专区货架分类管理" url="/web/singlecategory/singleCategoryTreeAction.do?userId=ssms_category_class_JX"  order="2860"/>
+		<menu name="江西专区货架商品管理" url="/web/singlecategory/singleCgyContentTreeAction.do?userId=ssms_category_content_JX"  order="2870"/>
+		<menu name="广东专区货架分类管理" url="/web/singlecategory/singleCategoryTreeAction.do?userId=ssms_category_class_GD"  order="2880"/>
+		<menu name="广东专区货架商品管理" url="/web/singlecategory/singleCgyContentTreeAction.do?userId=ssms_category_content_GD"  order="2890"/>
+		<menu name="广西专区货架分类管理" url="/web/singlecategory/singleCategoryTreeAction.do?userId=ssms_category_class_GX"  order="2900"/>
+		<menu name="广西专区货架商品管理" url="/web/singlecategory/singleCgyContentTreeAction.do?userId=ssms_category_content_GX"  order="2910"/>
+		<menu name="海南专区货架分类管理" url="/web/singlecategory/singleCategoryTreeAction.do?userId=ssms_category_class_HI"  order="2920"/>
+		<menu name="海南专区货架商品管理" url="/web/singlecategory/singleCgyContentTreeAction.do?userId=ssms_category_content_HI"  order="2930"/>
+		<menu name="湖南专区货架分类管理" url="/web/singlecategory/singleCategoryTreeAction.do?userId=ssms_category_class_HN"  order="2940"/>
+		<menu name="湖南专区货架商品管理" url="/web/singlecategory/singleCgyContentTreeAction.do?userId=ssms_category_content_HN"  order="2950"/>
+		<menu name="湖北专区货架分类管理" url="/web/singlecategory/singleCategoryTreeAction.do?userId=ssms_category_class_HB"  order="2960"/>
+		<menu name="湖北专区货架商品管理" url="/web/singlecategory/singleCgyContentTreeAction.do?userId=ssms_category_content_HB"  order="2970"/>
+		<menu name="四川专区货架分类管理" url="/web/singlecategory/singleCategoryTreeAction.do?userId=ssms_category_class_SC"  order="2980"/>
+		<menu name="四川专区货架商品管理" url="/web/singlecategory/singleCgyContentTreeAction.do?userId=ssms_category_content_SC"  order="2990"/>
+		<menu name="云南专区货架分类管理" url="/web/singlecategory/singleCategoryTreeAction.do?userId=ssms_category_class_YN"  order="3000"/>
+		<menu name="云南专区货架商品管理" url="/web/singlecategory/singleCgyContentTreeAction.do?userId=ssms_category_content_YN"  order="3010"/>
+		<menu name="贵州专区货架分类管理" url="/web/singlecategory/singleCategoryTreeAction.do?userId=ssms_category_class_GZ"  order="3020"/>
+		<menu name="贵州专区货架商品管理" url="/web/singlecategory/singleCgyContentTreeAction.do?userId=ssms_category_content_GZ"  order="3030"/>
+		<menu name="重庆专区货架分类管理" url="/web/singlecategory/singleCategoryTreeAction.do?userId=ssms_category_class_CQ"  order="3040"/>
+		<menu name="重庆专区货架商品管理" url="/web/singlecategory/singleCgyContentTreeAction.do?userId=ssms_category_content_CQ"  order="3050"/>
+		<menu name="陕西专区货架分类管理" url="/web/singlecategory/singleCategoryTreeAction.do?userId=ssms_category_class_SN"  order="3060"/>
+		<menu name="陕西专区货架商品管理" url="/web/singlecategory/singleCgyContentTreeAction.do?userId=ssms_category_content_SN"  order="3070"/>
+		<menu name="西藏专区货架分类管理" url="/web/singlecategory/singleCategoryTreeAction.do?userId=ssms_category_class_XZ"  order="3080"/>
+		<menu name="西藏专区货架商品管理" url="/web/singlecategory/singleCgyContentTreeAction.do?userId=ssms_category_content_XZ"  order="3090"/>
+		<menu name="北京专区货架分类管理" url="/web/singlecategory/singleCategoryTreeAction.do?userId=ssms_category_class_BJ"  order="3100"/>
+		<menu name="北京专区货架商品管理" url="/web/singlecategory/singleCgyContentTreeAction.do?userId=ssms_category_content_BJ"  order="3110"/>
+		<menu name="天津专区货架分类管理" url="/web/singlecategory/singleCategoryTreeAction.do?userId=ssms_category_class_TJ"  order="3120"/>
+		<menu name="天津专区货架商品管理" url="/web/singlecategory/singleCgyContentTreeAction.do?userId=ssms_category_content_TJ"  order="3130"/>
+		<menu name="内蒙古专区货架分类管理" url="/web/singlecategory/singleCategoryTreeAction.do?userId=ssms_category_class_NMG"  order="3140"/>
+		<menu name="内蒙古专区货架商品管理" url="/web/singlecategory/singleCgyContentTreeAction.do?userId=ssms_category_content_NMG"  order="3150"/>
+		<menu name="山东专区货架分类管理" url="/web/singlecategory/singleCategoryTreeAction.do?userId=ssms_category_class_SD"  order="3160"/>
+		<menu name="山东专区货架商品管理" url="/web/singlecategory/singleCgyContentTreeAction.do?userId=ssms_category_content_SD"  order="3170"/>
+		<menu name="辽宁专区货架分类管理" url="/web/singlecategory/singleCategoryTreeAction.do?userId=ssms_category_class_LN"  order="3180"/>
+		<menu name="辽宁专区货架商品管理" url="/web/singlecategory/singleCgyContentTreeAction.do?userId=ssms_category_content_LN"  order="3190"/>
+		<menu name="吉林专区货架分类管理" url="/web/singlecategory/singleCategoryTreeAction.do?userId=ssms_category_class_JN"  order="3200"/>
+		<menu name="吉林专区货架商品管理" url="/web/singlecategory/singleCgyContentTreeAction.do?userId=ssms_category_content_JN"  order="3210"/>
+		<menu name="黑龙江专区货架分类管理" url="/web/singlecategory/singleCategoryTreeAction.do?userId=ssms_category_class_HLJ"  order="3220"/>
+		<menu name="黑龙江专区货架商品管理" url="/web/singlecategory/singleCgyContentTreeAction.do?userId=ssms_category_content_HLJ"  order="3230"/>
+		<menu name="河南专区货架分类管理" url="/web/singlecategory/singleCategoryTreeAction.do?userId=ssms_category_class_HA"  order="3240"/>
+		<menu name="河南专区货架商品管理" url="/web/singlecategory/singleCgyContentTreeAction.do?userId=ssms_category_content_HA"  order="3250"/>
+		<menu name="河北专区货架分类管理" url="/web/singlecategory/singleCategoryTreeAction.do?userId=ssms_category_class_HE"  order="3260"/>
+		<menu name="河北专区货架商品管理" url="/web/singlecategory/singleCgyContentTreeAction.do?userId=ssms_category_content_HE"  order="3270"/>
+		<menu name="山西专区货架分类管理" url="/web/singlecategory/singleCategoryTreeAction.do?userId=ssms_category_class_SX"  order="3280"/>
+		<menu name="山西专区货架商品管理" url="/web/singlecategory/singleCgyContentTreeAction.do?userId=ssms_category_content_SX"  order="3290"/>
+		<menu name="宁夏专区货架分类管理" url="/web/singlecategory/singleCategoryTreeAction.do?userId=ssms_category_class_NX"  order="3300"/>
+		<menu name="宁夏专区货架商品管理" url="/web/singlecategory/singleCgyContentTreeAction.do?userId=ssms_category_content_NX"  order="3310"/>
+		<menu name="甘肃专区货架分类管理" url="/web/singlecategory/singleCategoryTreeAction.do?userId=ssms_category_class_GS"  order="3320"/>
+		<menu name="甘肃专区货架商品管理" url="/web/singlecategory/singleCgyContentTreeAction.do?userId=ssms_category_content_GS"  order="3330"/>
+		<menu name="青海专区货架分类管理" url="/web/singlecategory/singleCategoryTreeAction.do?userId=ssms_category_class_QH"  order="3340"/>
+		<menu name="青海专区货架商品管理" url="/web/singlecategory/singleCgyContentTreeAction.do?userId=ssms_category_content_QH"  order="3350"/>
+		<menu name="新疆专区货架分类管理" url="/web/singlecategory/singleCategoryTreeAction.do?userId=ssms_category_class_XJ"  order="3360"/>
+		<menu name="新疆专区货架商品管理" url="/web/singlecategory/singleCgyContentTreeAction.do?userId=ssms_category_content_XJ"  order="3370"/>
+		<menu name="江苏专区货架分类管理" url="/web/singlecategory/singleCategoryTreeAction.do?userId=ssms_category_class_JS"  order="3380"/>
+		<menu name="江苏专区货架商品管理" url="/web/singlecategory/singleCgyContentTreeAction.do?userId=ssms_category_content_JS"  order="3390"/>
+
+		<menu name="玩家争霸子货架分类管理" url="/web/singlecategory/singleCategoryTreeAction.do?userId=ssms_category_class_wjzb"  order="3400"/>
+		<menu name="玩家争霸子货架商品管理" url="/web/singlecategory/singleCgyContentTreeAction.do?userId=ssms_category_content_wjzb"  order="3500"/>
+
+		<menu name="导出管理系统导出" url="/web/exportData/queryExport.do?perType=query&amp;exportByUser=1"  order="2600"/>
+		<menu name="导出管理运维导出" url="/web/exportData/queryExport.do?perType=query&amp;exportByUser=2"  order="2700"/>
+		<menu name="商品位置锁定管理" url="/web/lockLocation/category_main.jsp"  order="2800"/>
+	</menu>
+	<menu name="货架自动更新" order="200">
+		<menu name="货架与规则管理" url="/web/autoupdate/categoryRuleList.do" order="100"/>
+		<menu name="规则与条件管理" url="/web/autoupdate/ruleList.do" order="200"/>
+	</menu>	
+	<menu name="人工干预管理" order="400">
+		<menu name="容器管理" url="/web/intervenor/intervenorList.do" order="100"/>
+		<menu name="榜单干预管理" url="/web/intervenor/categoryList.do?actionType=listCategory" order="200"/>	
+		<menu name="榜单黑名单导入" url="/web/androidBlackList/androidBlackList.do?perType=query" order="300"/>	
+		<menu name="风险标签干预管理" url="/web/risktag/riskTagList.do?perType=query" order="400"/>	
+	</menu>
+	<menu name="基地游戏管理" order="400">
+		<menu name="游戏推荐" url="/web/baserecomm/baseGameQuery.do" order="100"/>
+		<menu name="推荐导出文件" url="/web/baserecomm/baseGameTemp.do" order="200"/>
+		<menu name="图文游戏管理" url="/web/baseGame/queryGameTW.do?perType=query" order="300"/>
+		<menu name="游戏黑名单管理" url="/web/basegame/black.do?method=query" order="400"/>
+	</menu>
+	<menu name="基地音乐管理" order="500">
+		<menu name="音乐推荐" url="/web/baserecomm/baseMusicQuery.do" order="100"/>
+		<menu name="推荐导出文件" url="/web/baserecomm/baseMusicTemp.do" order="200"/>	
+		<menu name="货架管理" url="/web/newmusicsys/category_main.jsp" order="300"/>
+		<menu name="货架管理-审批发布" url="/web/newmusicsys/categoryApprovalList.do?approvalStatus=2&amp;operation=1" order="350"/>
+		<menu name="商品管理" url="/web/newmusicsys/reference_main.jsp" order="400"/>	
+		<menu name="商品管理-审批发布" url="/web/newmusicsys/categoryApprovalList.do?approvalStatus=2&amp;operation=2" order="450"/>
+		<menu name="歌手管理" url="/web/baseMusic/querySinger.do?perType=query&amp;isFirst=1" order="500"/>
+		<menu name="音乐图片管理" url="/web/baseMusic/queryMusicPic.do?perType=query&amp;isFirst=1" order="600"/>	
+	</menu>
+	<menu name="基地图书管理" order="600">
+		<menu name="图书推荐" url="/web/baserecomm/baseBookQuery.do" order="100"/>
+		<menu name="推荐导出文件" url="/web/baserecomm/baseBookTemp.do" order="200"/>	
+		<menu name="图书货架管理" url="/web/book/category_main.jsp" order="300"/>
+		<menu name="图书商品管理" url="/web/book/reference_main.jsp" order="400"/>	
+		<menu name="新图书货架管理" url="/web/book/new_category_main.jsp" order="500"/>
+		<menu name="新图书货架管理-审批发布" url="/web/baseRead/categoryApprovalList.do?approvalStatus=2&amp;operation=1" order="650"/>
+		<menu name="新图书商品管理" url="/web/book/new_reference_main.jsp" order="600"/>
+		<menu name="新图书商品管理-审批发布" url="/web/baseRead/categoryApprovalList.do?approvalStatus=2&amp;operation=2" order="650"/>
+		<menu name="新图书作者管理" url="/web/baseRead/queryAuthor.do?perType=query&amp;isFirst=1" order="700"/>
+		<menu name="新图书货架详情管理" url="/web/baseRead/categoryTree.do?perType=categoryQuery&amp;isFirst=1" order="800"/>
+	</menu>
+	<menu name="基地视频管理" order="700">
+		<menu name="视频推荐" url="/web/baserecomm/baseVideoQuery.do" order="100"/>
+		<menu name="推荐导出文件" url="/web/baserecomm/baseVideoTemp.do" order="200"/>
+		<menu name="视频货架管理" url="/web/video/category_main.jsp" order="300"/>
+		<menu name="视频货架管理-审批发布" url="/web/baseVideo/categoryApprovalList.do?approvalStatus=2&amp;operation=1" order="350"/>
+		<menu name="视频商品管理" url="/web/video/reference_main.jsp" order="400"/>
+		<menu name="视频商品管理-审批发布" url="/web/baseVideo/categoryApprovalList.do?approvalStatus=2&amp;operation=2" order="450"/>
+		<menu name="视频产品管理" url="/web/baseVideo/product.do?perType=listProduct" order="500"/>
+		<menu name="视频栏目说明管理" url="/web/baseVideo/videoNode.do?perType=query" order="600"/>
+		<menu name="视频节目管理" url="/web/baseVideo/queryProgram.do?perType=query&amp;isFirst=1" order="700"/>
+	  	<menu name="视频黑名单管理" url="/web/baseVideo/black.do?method=query" order="800"/>
+		<menu name="视频三级节点管理" url="/web/baseVideo/collection.do?method=query" order="800"/>
+		<menu name="POMS货架管理" url="/web/newvideo/category_main.jsp" order="900"/>
+		<menu name="POMS货架管理-审批发布" url="/web/newvideo/categoryApprovalList.do?approvalStatus=2&amp;operation=1" order="950"/>
+		<menu name="POMS商品管理" url="/web/newvideo/reference_main.jsp" order="1000"/>
+		<menu name="POMS商品管理-审批发布" url="/web/newvideo/categoryApprovalList.do?approvalStatus=2&amp;operation=2" order="1500"/>
+	</menu>
+	
+	<menu name="基地动漫管理" order="900">
+		<menu name="动漫货架管理" url="/web/comic/category_main.jsp" order="100"/>
+		<menu name="动漫货架管理-审批发布" url="/web/comic/categoryApprovalList.do?approvalStatus=2&amp;operation=1" order="150"/>
+		<menu name="动漫商品管理" url="/web/comic/reference_main.jsp" order="200"/>
+		<menu name="动漫商品管理-审批发布" url="/web/comic/categoryApprovalList.do?approvalStatus=2&amp;operation=2" order="250"/>
+		<menu name="动漫黑名单管理" url="/web/comic/black.do?method=query" order="300"/>
+	</menu>
+	
+	<menu name="专题信息管理" order="1000">
+		<menu name="专题信息管理" url="/web/dissertation/queryDiss.do?param=all" order="100"/>
+	</menu>
+	<menu name="系统工具" order="1100">
+		<menu name="日志查看" url="/web/actionlog/queryLog.do?subSystem=ssms" order="100"/>
+		<menu name="稽核查看" url="/web/audit/checklog.do?method=query" order="200"/>
+	</menu>
+	
+	<menu name="WP汇聚管理" order="1200">
+		<menu name="WP汇聚货架管理" url="/web/wpinfo/category_main.jsp"  order="100"/>
+        <menu name="WP商品管理" url="/web/wpinfo/reference_main.jsp"  order="200"/>
+	</menu>
+	
+	<menu name="帐号管理" order="1300">
+		<menu name="渠道商列表" url="/web/channeladmin/queryOpenChannelsList.do?method=queryOpenChannelsList"  order="100"/>
+	</menu>
+	
+	<menu name="渠道版合作管理" order="1400">
+		<menu name="渠道商配置" url="/web/channeladmin/openChannelMoList.do?method=queryList"  order="100"/>
+		<menu name="货架分类管理" url="/web/singlecategory/singleCategoryTreeAction.do?userId=cdfh_category_class"  order="200"/>
+		<menu name="货架商品管理" url="/web/singlecategory/singleCgyContentTreeAction.do?userId=cdfh_category_content"  order="300"/>
+		<menu name="待审核" url="/web/toaudit/toAuditListAction.do?method=queryList"  order="400"/>
+	</menu>
+	
+	<menu name="合作管理" order="1500">
+		<menu name="合作商列表" url="/web/cooperation/cooperationList.do?method=query"  order="100"/>
+	</menu>
+	
+	<menu name="渠道管理" order="1600">
+		<menu name="渠道列表" url="/web/cooperation/channelList.do?method=query"  order="100"/>
+	</menu>
+	
+	<menu name="渠道号管理" order="1700">
+		<menu name="渠道号" url="/web/cooperation/channelsNoInfoList.do?method=query"  order="100"/>
+	</menu>
+
+</metadata>

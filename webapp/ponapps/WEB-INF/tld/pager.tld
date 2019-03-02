@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE taglib
+  PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.2//EN"
+  "http://java.sun.com/dtd/web-jsptaglibrary_1_2.dtd">
+
+<taglib>
+  <tlib-version>1.0</tlib-version>
+  <jsp-version>1.2</jsp-version>
+  <short-name>pager</short-name>
+  <description>
+    Paging taglib.
+  </description>
+ <tag>
+    <name>pager</name>
+    <tag-class>com.aspire.ponaadmin.common.page.tag.PagerTag</tag-class>
+    <body-content>JSP</body-content>
+    <description>
+      Iterates over a specified array of objects, showing pages of information at a time.
+    </description>
+    <attribute>
+      <name>name</name>
+      <required>true</required>
+      <rtexprvalue>false</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>action</name>
+      <required>false</required>
+      <rtexprvalue>false</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>params</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.Object</type>
+    </attribute>
+    <attribute>
+      <name>form</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+  <tag>
+    <name>pageNumber</name>
+    <tag-class>com.aspire.ponaadmin.common.page.tag.PageNumberTag</tag-class>
+    <body-content>empty</body-content>
+    <description>
+      Displays the current page number.
+    </description>
+  </tag>
+
+  <tag>
+    <name>pageCount</name>
+    <tag-class>com.aspire.ponaadmin.common.page.tag.PageCountTag</tag-class>
+    <body-content>empty</body-content>
+    <description>
+      Displays the number of pages.
+    </description>
+  </tag>
+
+  <tag>
+    <name>recordCount</name>
+    <tag-class>com.aspire.ponaadmin.common.page.tag.RecordCountTag</tag-class>
+    <body-content>empty</body-content>
+    <description>
+      Displays the number of records.
+    </description>
+  </tag>
+
+  <tag>
+    <name>previousPage</name>
+    <tag-class>com.aspire.ponaadmin.common.page.tag.PreviousPageTag</tag-class>
+    <body-content>JSP</body-content>
+    <description>
+      Inserts a hyperlink into the page allowing the user to see the previous page.
+    </description>
+
+    <attribute>
+      <name>label</name>
+      <required>false</required>
+      <rtexprvalue>false</rtexprvalue>
+    </attribute>
+
+    <attribute>
+      <name>src</name>
+      <required>false</required>
+      <rtexprvalue>false</rtexprvalue>
+    </attribute>
+
+  </tag>
+
+  <tag>
+    <name>nextPage</name>
+    <tag-class>com.aspire.ponaadmin.common.page.tag.NextPageTag</tag-class>
+    <body-content>JSP</body-content>
+    <description>
+      Inserts a hyperlink into the page allowing the user to see the next page.
+    </description>
+
+    <attribute>
+      <name>label</name>
+      <required>false</required>
+      <rtexprvalue>false</rtexprvalue>
+    </attribute>
+
+    <attribute>
+      <name>src</name>
+      <required>false</required>
+      <rtexprvalue>false</rtexprvalue>
+    </attribute>
+
+  </tag>
+
+  <tag>
+    <name>firstPage</name>
+    <tag-class>com.aspire.ponaadmin.common.page.tag.FirstPageTag</tag-class>
+    <body-content>JSP</body-content>
+    <description>
+      Inserts a hyperlink into the page allowing the user to see the first page.
+    </description>
+
+    <attribute>
+      <name>label</name>
+      <required>false</required>
+      <rtexprvalue>false</rtexprvalue>
+    </attribute>
+
+    <attribute>
+      <name>src</name>
+      <required>false</required>
+      <rtexprvalue>false</rtexprvalue>
+    </attribute>
+
+  </tag>
+
+  <tag>
+    <name>lastPage</name>
+    <tag-class>com.aspire.ponaadmin.common.page.tag.LastPageTag</tag-class>
+    <body-content>JSP</body-content>
+    <description>
+      Inserts a hyperlink into the page allowing the user to see the last page.
+    </description>
+
+    <attribute>
+      <name>label</name>
+      <required>false</required>
+      <rtexprvalue>false</rtexprvalue>
+    </attribute>
+
+    <attribute>
+      <name>src</name>
+      <required>false</required>
+      <rtexprvalue>false</rtexprvalue>
+    </attribute>
+
+  </tag>
+
+  <tag>
+    <name>location</name>
+    <tag-class>com.aspire.ponaadmin.common.page.tag.LocationTag</tag-class>
+    <body-content>JSP</body-content>
+    <description>
+      Inserts a hyperlink into the page allowing the user to see the last page.
+    </description>
+    <attribute>
+      <name>id</name>
+      <required>false</required>
+      <rtexprvalue>false</rtexprvalue>
+    </attribute>
+  </tag>
+
+
+</taglib>

@@ -1,0 +1,7 @@
+
+
+
+
+
+delete DBVERSION where PATCHVERSION = 'MM1.1.1.159_SSMS' and LASTDBVERSION = 'MM1.1.1.155_SSMS';
+commit;

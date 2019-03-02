@@ -1,0 +1,169 @@
+.indexbg1 {
+	background-image: url(../image/index_bg03.gif);
+	background-repeat: repeat-x;
+	background-position: top;
+}
+input {
+	font-family: "宋体";
+	font-size: 12px;
+	color: #1F2C41;
+}
+.input1 {
+	font-family: "宋体";
+	font-size: 12px;
+	color: #1F2C41;
+	background-color: #C7D3D6;
+}
+select {
+	font-family: "宋体";
+	font-size: 12px;
+	border: 1px solid #327889;
+	background-color: #F8FBFC;
+	color: #1F2C41;
+	margin: 1px;
+	padding: 1px;
+}
+textarea {
+	font-family: "宋体";
+	font-size: 12px;
+	color: #1F2C41;
+}
+.textareareadonley {
+	font-family: "宋体";
+	font-size: 12px;
+	background-color: #ECF4F9;
+	border: 0px solid #000;
+	color: #005151;
+	line-height: 1.5em;
+}
+td {
+	font-family: "宋体";
+	font-size: 12px;
+	line-height: 1.6em;
+	color: #005151;
+}
+.menubg {
+	background-image: url(../image/page_bg02.gif);
+	background-repeat: repeat-y;
+	background-position: left;
+}
+.link1 {
+	font-family: "宋体";
+	font-size: 12px;
+	line-height: 1.6em;
+	color: #1F2C41;
+	text-decoration: none;
+}
+.link2 {
+	font-family: "宋体";
+	font-size: 12px;
+	line-height: 1.6em;
+	
+	color: #FFFFFF;
+}
+.link3{
+	font-family: "宋体";
+	font-size: 12px;
+	line-height: 1.6em;
+	
+	color: #333333;
+}
+a:link {
+	font-family: "宋体";
+	font-size: 12px;
+	color: #003333;
+	text-decoration: none;
+}
+a:visited {
+	font-family: "宋体";
+	font-size: 12px;
+	color: #003333;
+	text-decoration: none;
+}
+div {
+	font-family: "宋体";
+	font-size: 12px;
+	color: #1F2C41;
+}
+a:hover {
+	text-decoration: underline;
+	color: #005151;
+}
+.title1 {
+	font-family: "宋体";
+	font-size: 12px;
+	line-height: 1.6em;
+	background-color: #94D6E9;
+	color: #003333;
+}
+.text1 {
+	font-family: "宋体";
+	font-size: 12px;
+	line-height: 1.6em;
+	background-color: #E9F0F8;
+}
+.text2 {
+	font-family: "宋体";
+	font-size: 12px;
+	line-height: 1.6em;
+	background-color: #B7DDEE;
+}
+.title2 {
+	font-family: "宋体";
+	font-size: 12px;
+	line-height: 1.6em;
+	background-color: #97D9EC;
+	color: #003333;
+}
+.text3 {
+	font-family: "宋体";
+	font-size: 12px;
+	line-height: 1.5em;
+	background-color: #C4EBF4;
+}
+.text4 {
+	font-family: "宋体";
+	font-size: 12px;
+	line-height: 1.5em;
+	background-color: #ECF4F9;
+}
+.text5 {
+	font-family: "宋体";
+	font-size: 12px;
+	line-height: 1.5em;
+	background-color: #C5ECF3;
+}
+.redtxt {
+	font-family: "宋体";
+	font-size: 12px;
+	line-height: 1.5em;
+	color: #ff0000;
+}
+.purpletxt {
+	font-family: "宋体";
+	font-size: 12px;
+	line-height: 1.5em;
+	color: #993399;
+}
+.body1 {
+	font-family: "宋体";
+	font-size: 12px;
+	line-height: 1.5em;
+	background-color: #F0FBFD;
+}
+.bluetxt {
+	font-family: "宋体";
+	font-size: 12px;
+	line-height: 1.5em;
+	color: #9CE7E7;
+	font-weight: bold;
+}
+.arrow {
+	font-family: Webdings;
+	font-size: 12px;
+}
+.redfont{
+	color: Red;
+	font-family: 宋体;
+	font-size: 12px;
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<bbssso>
+	<authorizeUrl>http://10.101.14.170:9090/sso/sso/validateToken.action</authorizeUrl>
+	<queryChannelsAPUrl>http://dev.10086.cn/oms/ChannelAPInfo</queryChannelsAPUrl>
+	<loginUrl>http://dev.10086.cn</loginUrl>
+	<loginENUrl>http://dev.10086.cn/en/supesite/</loginENUrl>
+	<authErrorUrl>http://221.179.8.167:17011/mportal/common/authError.html</authErrorUrl>
+	<BPID>345354354</BPID>
+</bbssso>

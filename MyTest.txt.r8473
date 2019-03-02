@@ -1,0 +1,19 @@
+##############################################
+# sql for game base
+##############################################
+add...aiyan
+com.aspire.dotcard.basegame.getAllGameTypeKeyId=select id from t_gametype
+com.aspire.dotcard.basegame.updateGameType=update t_gametype set name=? where id=?
+kkk,wangminglong..add...
+com.aspire.dotcard.basegame.insertGameType=insert into t_gametype(id,name) values(?,?)
+
+com.aspire.dotcard.basegame.delOldType=delete from t_gametype_aiyan_2
+
+hehe...
+
+
+waiyan...lo....
+
+\aiyan.._wangmongl
+2012_12_17
+2012_12_18zzzzzzzzzzzz

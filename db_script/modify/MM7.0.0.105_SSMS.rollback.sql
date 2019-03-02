@@ -1,0 +1,1 @@
+drop PROCEDURE p_update_appid

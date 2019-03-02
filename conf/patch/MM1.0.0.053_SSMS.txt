@@ -1,0 +1,6 @@
+PatchID=MM1.0.0.053_SSMS
+PatchName=MM1.0.0.053_SSMS
+UpdateTime=2009/09/23
+Description=[none]
+Amended=[none]
+Added=[none]

@@ -1,0 +1,6 @@
+PatchID=MM2.0.0.0.045_SSMS
+PatchName=MM2.0.0.0.045_SSMS
+UpdateTime=2013/04/03
+Description=[none]
+Amended=[none]
+Added=[none]

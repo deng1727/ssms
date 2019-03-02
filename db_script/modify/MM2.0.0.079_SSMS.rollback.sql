@@ -1,0 +1,5 @@
+
+drop table T_AWMS_CATEGORY_MAPPING;
+
+delete DBVERSION where PATCHVERSION = 'MM2.0.0.0.079_SSMS' and LASTDBVERSION = 'MM2.0.0.0.075_SSMS';
+commit;

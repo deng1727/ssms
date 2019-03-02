@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/" threshold="info">
+    <appender name="debug" class="com.aspire.common.log.proxy.TimeSizeRollingFileAppender">
+        <param name="File" value="/log/debug/debug.log" />
+        <param name="MaxBackupIndex" value="100" />
+        <param name="Encoding" value="GB2312" />
+        <param name="MaxFileSize" value="1MB" />
+        <param name="DatePattern" value="'.'yyyy-MM-dd-HH" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value=" %d{ISO8601} [%c]- %m%n" />
+        </layout>
+    </appender>
+    <appender name="debug_android" class="com.aspire.common.log.proxy.TimeSizeRollingFileAppender">
+        <param name="File" value="/log/android/debug/debug.log" />
+        <param name="MaxBackupIndex" value="100" />
+        <param name="Encoding" value="GB2312" />
+        <param name="MaxFileSize" value="1MB" />
+        <param name="DatePattern" value="'.'yyyy-MM-dd-HH" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value=" %d{ISO8601} [%c]- %m%n" />
+        </layout>
+    </appender>
+    <appender name="debug_video" class="com.aspire.common.log.proxy.TimeSizeRollingFileAppender">
+        <param name="File" value="/log/video/debug/debug.log" />
+        <param name="MaxBackupIndex" value="100" />
+        <param name="Encoding" value="GB2312" />
+        <param name="MaxFileSize" value="1MB" />
+        <param name="DatePattern" value="'.'yyyy-MM-dd-HH" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value=" %d{ISO8601} [%c]- %m%n" />
+        </layout>
+    </appender>
+    <appender name="jdbclogApp" class="com.aspire.common.log.proxy.TimeSizeRollingFileAppender">
+        <param name="File" value="/log/debug/jdbc.log" />
+        <param name="MaxBackupIndex" value="100" />
+        <param name="Encoding" value="GB2312" />
+        <param name="MaxFileSize" value="1MB" />
+        <param name="DatePattern" value="'.'yyyy-MM-dd-HH" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value=" %d{ISO8601} [%c]- %m%n" />
+        </layout>
+    </appender>
+    <appender name="run" class="com.aspire.common.log.proxy.TimeSizeRollingFileAppender">
+        <param name="File" value="/log/run/run.log" />
+        <param name="DatePattern" value="'.'yyyy-MM-dd-HH" />
+        <param name="Encoding" value="GB2312" />
+        <param name="MaxBackupIndex" value="100" />
+        <param name="MaxFileSize" value="1MB" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value=" %d{ISO8601} [%c]- %m%n" />
+        </layout>
+        <filter class="org.apache.log4j.varia.LevelRangeFilter">
+            <param name="LevelMin" value="info" />
+            <param name="LevelMax" value="warn" />
+            <param name="acceptOnMatch" value="true" />
+          </filter>
+    </appender>
+    <appender name="run_android" class="com.aspire.common.log.proxy.TimeSizeRollingFileAppender">
+        <param name="File" value="/log/android/run/run.log" />
+        <param name="DatePattern" value="'.'yyyy-MM-dd-HH" />
+        <param name="Encoding" value="GB2312" />
+        <param name="MaxBackupIndex" value="100" />
+        <param name="MaxFileSize" value="1MB" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value=" %d{ISO8601} [%c]- %m%n" />
+        </layout>
+        <filter class="org.apache.log4j.varia.LevelRangeFilter">
+            <param name="LevelMin" value="info" />
+            <param name="LevelMax" value="warn" />
+            <param name="acceptOnMatch" value="true" />
+          </filter>
+    </appender>
+    <appender name="run_video" class="com.aspire.common.log.proxy.TimeSizeRollingFileAppender">
+        <param name="File" value="/log/video/run/run.log" />
+        <param name="DatePattern" value="'.'yyyy-MM-dd-HH" />
+        <param name="Encoding" value="GB2312" />
+        <param name="MaxBackupIndex" value="100" />
+        <param name="MaxFileSize" value="1MB" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value=" %d{ISO8601} [%c]- %m%n" />
+        </layout>
+        <filter class="org.apache.log4j.varia.LevelRangeFilter">
+            <param name="LevelMin" value="info" />
+            <param name="LevelMax" value="warn" />
+            <param name="acceptOnMatch" value="true" />
+          </filter>
+    </appender>
+    <appender name="error" class="com.aspire.common.log.proxy.TimeSizeRollingFileAppender">
+        <param name="threshold" value="error" />
+        <param name="File" value="/log/error/error.log" />
+        <param name="DatePattern" value="'.'yyyy-MM-dd-HH" />
+        <param name="Encoding" value="GB2312" />
+        <param name="MaxBackupIndex" value="100" />
+        <param name="MaxFileSize" value="1MB" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value=" %d{ISO8601} [%c]- %m%n" />
+        </layout>      
+    </appender>
+    <appender name="error_android" class="com.aspire.common.log.proxy.TimeSizeRollingFileAppender">
+        <param name="threshold" value="error" />
+        <param name="File" value="/log/android/error/error.log" />
+        <param name="DatePattern" value="'.'yyyy-MM-dd-HH" />
+        <param name="Encoding" value="GB2312" />
+        <param name="MaxBackupIndex" value="100" />
+        <param name="MaxFileSize" value="1MB" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value=" %d{ISO8601} [%c]- %m%n" />
+        </layout>      
+    </appender>
+    <appender name="error_video" class="com.aspire.common.log.proxy.TimeSizeRollingFileAppender">
+        <param name="threshold" value="error" />
+        <param name="File" value="/log/video/error/error.log" />
+        <param name="DatePattern" value="'.'yyyy-MM-dd-HH" />
+        <param name="Encoding" value="GB2312" />
+        <param name="MaxBackupIndex" value="100" />
+        <param name="MaxFileSize" value="1MB" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value=" %d{ISO8601} [%c]- %m%n" />
+        </layout>      
+    </appender>
+    <appender name="systemerror" class="com.aspire.common.log.proxy.TimeSizeRollingFileAppender">
+        <param name="threshold" value="error" />
+        <param name="File" value="/log/error/systemerror.log" />
+        <param name="DatePattern" value="'.'yyyy-MM-dd-HH" />
+        <param name="Encoding" value="GB2312" />
+        <param name="MaxBackupIndex" value="100" />
+        <param name="MaxFileSize" value="1MB" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value=" %d{ISO8601} [%c]- %m%n" />
+        </layout>
+    </appender>
+    <appender name="biz" class="com.aspire.common.log.proxy.TimeSizeRollingFileAppender">
+        <param name="File" value="/log/biz/biz.log" />
+        <param name="DatePattern" value="'.'yyyy-MM-dd-HH" />
+        <param name="Encoding" value="GB2312" />
+        <param name="MaxBackupIndex" value="100" />
+        <param name="MaxFileSize" value="1MB" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value=" %d{ISO8601}- %m%n" />
+        </layout>
+    </appender>   
+	  <appender name="DCMPLog" class="com.aspire.common.log.proxy.TimeSizeRollingFileAppender">
+        <param name="File" value="/log/dcmp/dcmp.log"/>
+        <param name="DatePattern" value="'.'yyyy-MM-dd-HH"/>
+        <param name="MaxBackupIndex" value="50"/>
+        <param name="Encoding" value="GBK"/>
+        <param name="MaxFileSize" value="5MB"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value=" %d{ISO8601}- %m%n"/>
+        </layout>
+    </appender>
+
+	<appender name="categoryAutoRef" class="com.aspire.common.log.proxy.TimeSizeRollingFileAppender">
+        <param name="File" value="/log/categoryAutoRef/refesh.log"/>
+        <param name="DatePattern" value="'.'yyyy-MM-dd-HH"/>
+        <param name="MaxBackupIndex" value="50"/>
+        <param name="Encoding" value="GBK"/>
+        <param name="MaxFileSize" value="5MB"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value=" %d{ISO8601} [%c]- %m%n"/>
+        </layout>
+    </appender>
+  	<appender name="colorringsyn" class="com.aspire.common.log.proxy.TimeSizeRollingFileAppender">
+		  <param name="File" value="/log/colorring/clrsyn.log"/>
+		  <param name="DatePattern" value="'.'yyyy-MM-dd-HH"/>
+		  <param name="MaxBackupIndex" value="50"/>
+		  <param name="Encoding" value="GBK"/>
+		  <param name="MaxFileSize" value="5MB"/>
+		  <layout class="org.apache.log4j.PatternLayout">
+			  <param name="ConversionPattern" value=" %d{ISO8601}- %m%n"/>
+		  </layout>
+	  </appender>
+    <appender name="clrconvert" class="com.aspire.common.log.proxy.TimeSizeRollingFileAppender">
+		  <param name="File" value="/log/colorring/clrconvert.log"/>
+		  <param name="DatePattern" value="'.'yyyy-MM-dd-HH"/>
+		  <param name="MaxBackupIndex" value="50"/>
+		  <param name="Encoding" value="GBK"/>
+		  <param name="MaxFileSize" value="5MB"/>
+		  <layout class="org.apache.log4j.PatternLayout">
+			  <param name="ConversionPattern" value=" %d{ISO8601}- %m%n"/>
+		  </layout>
+	  </appender>
+    <appender name="reportimpclient" class="com.aspire.common.log.proxy.TimeSizeRollingFileAppender">
+        <param name="File" value="/log/report/reportimpclient.log"/>
+        <param name="DatePattern" value="'.'yyyy-MM-dd-HH"/>
+        <param name="MaxBackupIndex" value="50"/>
+        <param name="Encoding" value="GBK"/>
+        <param name="MaxFileSize" value="5MB"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value=" %d{ISO8601}- %m%n"/>
+        </layout>
+    </appender>
+    
+    <appender name="DataSyncLog" class="com.aspire.common.log.proxy.TimeRollingFileAppender">
+        <param name="File" value="/log/datesync/dateSyncLog.log"/>
+        <param name="DatePattern" value="'.'yyyy-MM-dd"/>
+        <param name="Encoding" value="GBK"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss}---- %m%n"/>
+        </layout>
+    </appender>
+    
+    <logger name="jdbclog" additivity="false">
+        <level value="debug" />
+        <appender-ref ref="jdbclogApp" />
+    </logger>
+    <logger name="com.aspire" additivity="false">
+        <level value="debug" />
+        <appender-ref ref="debug" />
+        <appender-ref ref="run" />
+        <appender-ref ref="error" />
+    </logger>
+    
+    <!-- add by aiyan 2013-05-23 -->
+   <logger name="com.aspire.dotcard.syncAndroid" additivity="false">
+        <level value="debug" />
+        <appender-ref ref="debug_android" />
+        <appender-ref ref="run_android" />
+        <appender-ref ref="error_android" />
+    </logger>
+    
+    <!-- add by wml 2013-06-26 -->
+    <logger name="com.aspire.dotcard.baseVideo" additivity="false">
+        <level value="info" />
+        <appender-ref ref="debug_video" />
+        <appender-ref ref="run_video" />
+        <appender-ref ref="error_video" />
+    </logger>
+    
+    <logger name="com.aspire.dotcard.baseVideoNew" additivity="false">
+        <level value="info" />
+        <appender-ref ref="debug_video" />
+        <appender-ref ref="run_video" />
+        <appender-ref ref="error_video" />
+    </logger>
+    
+	  <logger name="FTP-DCMP-Log" additivity="false">
+        <level value="debug" />
+        <appender-ref ref="DCMPLog" />
+    </logger>
+    <logger name="colorring.syn" additivity="false">
+		    <level value="debug" />
+		    <appender-ref ref="colorringsyn" />
+	  </logger>
+	  <logger name="colorring.convert" additivity="false">
+		    <level value="debug" />
+		    <appender-ref ref="clrconvert" />
+	  </logger>
+	  <logger name="reportimp.client" additivity="false">
+        <level value="debug" />
+        <appender-ref ref="reportimpclient" />
+    </logger>
+
+	<logger name="com.aspire.ponaadmin.web.category" additivity="false">
+        <level value="debug" />
+        <appender-ref ref="categoryAutoRef" />
+    </logger>
+    <logger name="DataSyncLog" additivity="false">
+        <level value="info" />
+        <appender-ref ref="DataSyncLog" />
+    </logger>
+    <root>
+        <level value="debug" />
+        <appender-ref ref="systemerror" />
+    </root>
+</log4j:configuration>

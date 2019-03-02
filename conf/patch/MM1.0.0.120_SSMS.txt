@@ -1,0 +1,6 @@
+PatchID=MM1.0.0.120_SSMS
+PatchName=MM1.0.0.120_SSMS
+UpdateTime=2010/05/25
+Description=[none]
+Amended=[none]
+Added=[none]

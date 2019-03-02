@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="GB2312"?>
+<!-- ====================================================================== -->
+<!--                                                                        -->
+<!--                       SSMS Build                                 -->
+<!--  This file used to deploy the SSMS system                          -->
+<!--                                                                        -->
+<!-- ====================================================================== -->
+<!--
+Your should change the base dir of your local path
+-->
+<project name="PonaAdmin" default="clean" basedir=".">
+	<description>
+     SSMS build file
+  </description>
+	<!-- set global properties for this build -->
+	<!-- ====================================================================== -->
+	<!--                                                                        -->
+	<!--              Set the local  props                                   -->
+	<!--                                                                        -->
+	<!-- ====================================================================== -->
+  <property environment="env"/>
+  <property name="JAVAC_HOME" value="${env.JAVAC_HOME}"/>
+  <property name="WEBLOGIC_HOME" location="${env.WEBLOGIC_HOME}"/>
+  <property name="COMPONENT_SRC_PATH" location="${env.COMPONENT_SRC_PATH}"/>
+  <property name="DB_SRC_PATH" location="${env.DB_SRC_PATH}"/>
+	<property name="BUILD_TARGET" value="${env.BUILD_TARGET}"/>
+	<property name="PATCH_NUMBER" value="${env.PATCH_NUMBER}"/>
+	<!-- ===================================================================== -->
+	<!--                                                                        -->
+	<!-- Set props of this project                                              -->
+	<!--                                                                        -->
+	<!-- ====================================================================== -->
+	<property name="RELEASE_HOME" location="${env.RELEASE_HOME}"/>
+  <property name="configPath" location="${RELEASE_HOME}/conf"/>
+  <property name="dbscriptePath" location="${RELEASE_HOME}/db_script"/>
+	<property name="appPath" location="${RELEASE_HOME}/app"/>
+	<property name="tempPath" location="${RELEASE_HOME}/src"/>
+	<property name="warFile"  location="${RELEASE_HOME}/ssms.war"/>
+
+	<path id="libClassPath">
+		<fileset dir="${appPath}/ponaadmin/WEB-INF/lib">
+			<include name="*.jar"/>
+			<include name="*.zip"/>
+		</fileset>
+		<!--<pathelement location="${WEBLOGIC_HOME}/server/lib/weblogic.jar"/>-->
+		<pathelement location="${WEBLOGIC_HOME}/modules/javax.mail_1.4.jar"/>
+		<pathelement location="${WEBLOGIC_HOME}/modules/javax.servlet_2.0.0.0_3-0.jar"/>
+		<pathelement location="${WEBLOGIC_HOME}/modules/javax.jsp_2.0.0.0_2-2.jar"/>
+	</path>
+	<target name="init" depends="">
+		<mkdir dir="${RELEASE_HOME}"/>
+		<mkdir dir="${appPath}"/>
+		<mkdir dir="${appPath}/patch"/>
+		<mkdir dir="${appPath}/ponaadmin/WEB-INF/lib"/>
+		<mkdir dir="${appPath}/ponaadmin/WEB-INF/classes"/>
+		<mkdir dir="${tempPath}"/>
+    <mkdir dir="${configPath}"/>
+    <mkdir dir="${dbscriptePath}"/>
+    <mkdir dir="${appPath}/ponaadmin/patch"/>
+	</target>
+
+	<target name="getjava" depends="init" description="Get source file from CC">
+		<!-- Get SSMS java files from vss -->
+		<echo>Get SSMS java files</echo>
+		<!--<copy todir="${tempPath}/com/aspire">-->
+			<copy todir="${tempPath}">
+			<!--<fileset dir="${COMPONENT_SRC_PATH}/code/com/aspire">-->
+			<fileset dir="${COMPONENT_SRC_PATH}/code">
+				<include name="**/*.java"/>
+				<include name="**/*.properties"/>
+				<include name="**/*.xml"/>
+			</fileset>
+		</copy>
+	</target>
+
+	<!-- Get all lib -->
+	<target name="getlib" depends="init" description="Get lib file">
+		<echo>Copy SSMS lib files</echo>
+		<copy todir="${appPath}/ponaadmin/WEB-INF/lib">
+			<fileset dir="${COMPONENT_SRC_PATH}/lib_jdk1.6"/>
+		</copy>
+	</target>
+
+	<target name="getapp" depends="init" description="Get all other SSMS file">
+		<!-- Get patch files   -->
+		<echo>Get patch files</echo>
+		<native2ascii encoding="gb2312" src="${COMPONENT_SRC_PATH}/conf/patch" dest="${appPath}/patch" includes="${patchFile}.*"/>
+		<!-- Get portal page files   -->
+		<echo>Get SSMS page files</echo>
+        <copy todir="${appPath}">
+	      <fileset dir="${COMPONENT_SRC_PATH}/webapp">
+	      	    <exclude name="${COMPONENT_SRC_PATH}/webapp/ponaadmin/WEB-INF/lib/**"/>
+              <exclude name="${COMPONENT_SRC_PATH}/webapp/ponaadmin/WEB-INF/lib_jdk1.6/**"/>
+              <exclude name="${COMPONENT_SRC_PATH}/webapp/ponaadmin/WEB-INF/classes/**"/>
+		  </fileset>
+		</copy>
+    	<!-- Get system config files   -->
+	    <echo>Get config files</echo>
+        <copy todir="${configPath}">
+	        <fileset dir="${COMPONENT_SRC_PATH}/conf" includes="**"/>
+	    </copy>
+    	<!-- Get db script files   -->
+        <echo>Get db script files</echo>
+        <copy todir="${dbscriptePath}">
+           <fileset dir="${COMPONENT_SRC_PATH}/db_script" includes="*.*"/>
+        </copy>
+        <copy todir="${dbscriptePath}/modify">
+	    <fileset dir="${COMPONENT_SRC_PATH}/db_script/modify">
+	    <include name="${PATCH_NUMBER}*.sql"/>
+				<include name="${PATCH_NUMBER}**/*.sql"/>
+			</fileset>
+	    </copy>
+        <!-- copy patch to war file   -->
+        <echo>copy patch to war file</echo>
+        <copy todir="${appPath}/ponaadmin/patch">
+         <fileset dir="${COMPONENT_SRC_PATH}/conf/patch" includes="*.*"/>
+        </copy> 
+	</target>
+
+	<target name="compile" depends="getjava,getapp,getlib" description="compile all java code">
+		<javac srcdir="${tempPath}" destdir="${appPath}/ponaadmin/WEB-INF/classes"
+		          debug="true" encoding="gb2312" fork="false" verbose="no" executable="${JAVAC_HOME}">
+          <classpath refid="libClassPath"/>
+		</javac>
+		<!--
+		<copy todir="${appPath}/ponaadmin/WEB-INF/classes/com/aspire/ponaadmin">
+			<fileset dir="${COMPONENT_SRC_PATH}/code/com/aspire/ponaadmin">
+				<include name="**/*.properties"/>
+				<include name="**/*.xml"/>
+			</fileset>
+		</copy>
+		-->
+		<copy todir="${appPath}/ponaadmin/WEB-INF/classes">
+			<fileset dir="${COMPONENT_SRC_PATH}/code">
+				<include name="**/*.properties"/>
+				<include name="**/*.xml"/>
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="updateTime">
+		<tstamp>
+			<format property="buildtime" pattern="yyyy-MM-dd HH:mm:ss"/>
+		</tstamp>
+		<replace file="${appPath}/ponaadmin/version.txt" token="@UpdateTime@" value="${buildtime}"/>
+	</target>
+
+	<target name="war" depends="compile,updateTime" description="Build the app war file,">
+		<jar destfile="${warFile}" basedir="${appPath}/ponaadmin" index="true"/>
+	</target>
+
+	<target name="clean" depends="war" description="clean up all">
+	
+      <delete dir="${tempPath}"/>
+      <delete dir="${appPath}"/>
+     
+	</target>         
+         
+</project>
+         
+         

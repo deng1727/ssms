@@ -1,0 +1,1 @@
+ant -buildfile build/build.xml -propertyfile ant.properties

@@ -1,0 +1,90 @@
+.indexbg1 {
+	background-image: url(../image/index_bg03.gif);
+	background-repeat: repeat-x;
+	background-position: top;
+}
+input {
+	font-family: "宋体";
+	font-size: 12px;
+	border: 1px solid #327889;
+	background-color: #F8FBFC;
+	color: #1F2C41;
+}
+.imgField {
+	font-family: "宋体";
+	font-size: 12px;
+	border: 0px solid #327889;
+	background-color: #F8FBFC;
+	color: #1F2C41;
+}
+select {
+	font-family: "宋体";
+	font-size: 12px;
+	border: 1px solid #327889;
+	background-color: #F8FBFC;
+	color: #1F2C41;
+	margin: 1px;
+	padding: 1px;
+}
+textarea {
+	font-family: "宋体";
+	font-size: 12px;
+	border: 1px solid #327889;
+	background-color: #F8FBFC;
+	color: #1F2C41;
+}
+td {
+	font-family: "宋体";
+	font-size: 12px;
+	line-height: 1.6em;
+	color: #1F2C41;
+}
+.text1 {
+	font-family: "宋体";
+	font-size: 12px;
+	line-height: 1.6em;
+	color: #7B7B7B;
+}
+.menubg {
+	background-image: url(../image/page_bg02.gif);
+	background-repeat: repeat-y;
+	background-position: left;
+}
+.link1 {
+	font-family: "宋体";
+	font-size: 12px;
+	line-height: 1.6em;
+	color: #E15A00;
+}
+.link2 {
+	font-family: "宋体";
+	font-size: 12px;
+	line-height: 1.6em;
+	
+	color: #FFFFFF;
+}
+.link3{
+	font-family: "宋体";
+	font-size: 12px;
+	line-height: 1.6em;
+	
+	color: #333333;
+}a:link {
+	font-size: 12px;
+	color: #1F2C41;
+	font-family: "宋体";
+	text-decoration: underline;
+}
+a:visited {
+	font-family: "宋体";
+	font-size: 12px;
+	color: #1F2C41;
+	text-decoration: underline;
+}div {
+	font-family: "宋体";
+	font-size: 12px;
+	color: #1F2C41;
+}
+a:hover {
+	text-decoration: none;
+}

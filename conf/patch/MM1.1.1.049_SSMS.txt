@@ -1,0 +1,6 @@
+PatchID=MM1.1.1.049_SSMS
+PatchName=MM1.1.1.049_SSMS
+UpdateTime=2012/4/19
+Description=[none]
+Amended=[none]
+Added=[none]

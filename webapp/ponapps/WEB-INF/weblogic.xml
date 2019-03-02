@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE weblogic-web-app PUBLIC "-//BEA Systems, Inc.//DTD Web Application 8.1//EN" "http://www.bea.com/servers/wls810/dtd/weblogic810-web-jar.dtd">
+<weblogic-web-app>
+  <session-descriptor>
+    <session-param>
+      <param-name>URLRewritingEnabled</param-name>
+      <param-value>true</param-value>
+    </session-param>
+    <session-param>
+      <param-name>CookieMaxAgeSecs</param-name>
+      <param-value>-1</param-value>
+    </session-param>
+    <session-param>
+      <param-name>CookiesEnabled</param-name>
+      <param-value>true</param-value>
+    </session-param>
+    <session-param>
+      <param-name>CookieName</param-name>
+      <param-value>SSMS_JSESSIONID</param-value>
+    </session-param>
+    <session-param>
+      <param-name>PersistentStoreCookieName</param-name>
+      <param-value>WLCOOKIE</param-value>
+    </session-param>
+    <session-param>
+      <param-name>TimeoutSecs</param-name>
+      <param-value>3600</param-value>
+    </session-param>
+    <session-param>
+      <param-name>InvalidationIntervalSecs</param-name>
+      <param-value>60</param-value>
+    </session-param>
+    <session-param>
+      <param-name>TrackingEnabled</param-name>
+      <param-value>true</param-value>
+    </session-param>
+  </session-descriptor>
+<jsp-descriptor>
+    <jsp-param>
+      <param-name>workingDir</param-name>
+      <param-value>jspc/ssmspps</param-value>
+    </jsp-param>
+    <jsp-param>
+      <param-name>keepgenerated</param-name>
+      <param-value>true</param-value>
+    </jsp-param>
+     <jsp-param>
+      <param-name>verbose</param-name>
+      <param-value>false</param-value>
+    </jsp-param>
+    <jsp-param>
+       <param-name>pageCheckSeconds</param-name>
+       <param-value>3</param-value>
+    </jsp-param>
+  </jsp-descriptor>
+</weblogic-web-app>

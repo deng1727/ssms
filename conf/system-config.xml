@@ -1,0 +1,5468 @@
+<?xml version="1.0" encoding="GB2312"?>
+<!-- edited with XMLSPY v2004 rel. 4 U (http://www.xmlspy.com) by aspire 
+	(ORiON) -->
+<XMLSystemConfig>
+	<!-- 门户管理系统 专有配置项 开始 -->
+	<ModuleConfig Name="ssms" Description="SSMS 配置项">
+	
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>essentialDataTime</Name>
+			<Description>[3:必须修改项]
+				每天同步触点应用和MM应用并写入表中,一定要写成4位数字格式hhmm（小时、分钟）,例如:0400 </Description>
+			<Value>1045</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>domainNameUrl</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]可配置URL</Description>
+			<Value>http://u5.fr18.mmarket.com:80/rs</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>exigenceStartTime</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]紧急上下线自动任务执行启动时间，多启动时间以|分隔</Description>
+			<Value>17:00|17:20|18:00</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>exigenceExeContent</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]紧急上下线如何处理内容表数据 1：增量处理内容表信息 0：全量处理内容表信息
+			</Description>
+			<Value>0</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>contentExpPicPath</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]MM应用内容扩展图片资源服务器路径</Description>
+			<Value>temp/ssms</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>adminContactInfo</Name>
+			<Description>[3:必须修改项] 管理员的联系方式，显示在首页上取回密码链接的弹出窗口中。如果需要折行请用\n。
+			</Description>
+			<Value>电话:13855555555 \nE-Mail:admin@aspire-tech.com</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>phone</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]内容同步、自动更新,人工干预的结果短信通知手机号码，支持多个，并用英文逗号隔开
+			</Description>
+			<Value>13800000000</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>maxLinkCheckTakNum</Name>
+			<Description>[2:可选修改] 链接检查的最大并发任务数量</Description>
+			<Value>3</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>syncDataTime</Name>
+			<Description>[3:必须修改项]
+				每天从产品供应管理系统同步数据的时间,一定要写成4位数字格式hhmm（小时、分钟）,例如:0400 此时间执行同步方法与zcom
+				自动更新 分类精品库 人工干预串行其他时间配置失效</Description>
+			<Value>0400</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>CYsyncDataMaxNum</Name>
+			<Description>[3:必须修改项] 同步创业大赛数据的多线程数</Description>
+			<Value>10</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>syncDataMaxNum</Name>
+			<Description>[3:必须修改项] MM应用数据同步的多线程数</Description>
+			<Value>10</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>CYsyncDataTime</Name>
+			<Description>[3:必须修改项]
+				每天从产品供应管理系统同步创业大赛数据的时间,一定要写成4位数字格式hhmm（小时、分钟）,例如:0400</Description>
+			<Value>0400</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>openChannelCategoryId</Name>
+			<Description>[3:必须修改项] 开放运营渠道商货架根货架ID</Description>
+			<Value>68336161</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>channelRootCategoryId</Name>
+			<Description>[3:必须修改项] 渠道商货架根货架ID</Description>
+			<Value>100000162</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>Page_MIN</Name>
+			<Description>用户自定义分页大小所允许的最小值(只能是正整数)</Description>
+			<Value>1</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>page_MAX</Name>
+			<Description>用户自定义分页大小所允许的最大值(只能是正整数)</Description>
+			<Value>100</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>page_DEFAULT</Name>
+			<Description>用户自定义分页大小的默认值(只能是正整数)</Description>
+			<Value>12</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>string_SIZE_DEFAULT</Name>
+			<Description>字符串长度超过X个字符部分的内容用省略号代替</Description>
+			<Value>10</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>platformExt</Name>
+			<Description>[2:可选修改]kjava平台类型的默认扩展类型</Description>
+			<Value>S602nd</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>categoryPicURlFtpDir</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]资源服务器上图片预览图保存目录（相对ftp登录后的目录），要有读写权限，当前路径配置空
+			</Description>
+			<Value>rs/ssms/</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>ServiceQueryInterval</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]资费变更轮训的间隔时间，必须为整数，单位为秒</Description>
+			<Value>2</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>ServiceQueryIntervalStartTime</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]资费变更轮训的启始时间</Description>
+			<Value>23:00</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>ServiceQueryIntervalEndTime</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]资费变更轮训的结束时间</Description>
+			<Value>01:00</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>ServiceQueryIntervalTimeIsNext</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]资费变更轮训的结束时间是否是跨天后的时间,值为true按二天时间计算，值为false按一天时间计算
+			</Description>
+			<Value>true</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>DB_NAME</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]数据库用户名</Description>
+			<Value>ssms</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>OP_TAG_NUM</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改项]从运营标签中获取标签数</Description>
+			<Value>2</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>AP_TAG_NUM</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改项]从应用标签中获取标签数</Description>
+			<Value>6</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>OP_TAG_FIRST</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改项]获取标签排列顺序，true表示运营标签在前 false表示运用标签在后
+			</Description>
+			<Value>true</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>TAG_SIZE</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改项]自定义标签个数</Description>
+			<Value>3</Value>
+			<Reserved />
+		</ConfigItem>
+
+		<ConfigItem>
+			<Name>DEVICE_SYN_S</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改项]v_cm_device_resource同步类型：1，采用存储过程f_ppms_cm_device_pid;2,采用系统老的JAVA代码同步
+			</Description>
+			<Value>1</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>DEVICE_SYN_TYPE</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改项]存储过程同步类型，DEVICE_SYN_S取值为1有效：1，存储过程增量同步；0，存储过程全量同步
+			</Description>
+			<Value>1</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>gameTatictype</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改项]基地游戏单机精品二级分类内容同步策略开关，true：开启</Description>
+			<Value>true</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>MO_URL_Sync</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改项]用于临时同步MO门户的url</Description>
+			<Value>http://localhost:7001/ssms/web/main.jsp</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>WWW_URL_Sync</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改项]用于临时同步WWW门户的url</Description>
+			<Value>http://localhost:7001/ssms/web/main.jsp</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>WAP_URL_Sync</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改项]用于临时同步WAP门户的url</Description>
+			<Value>http://localhost:7001/ssms/web/main.jsp</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>SEARCH_URL_Sync</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改项]用于临时通知搜索门户的url</Description>
+			<Value>http://localhost:7001/ssms/web/main.jsp</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>authorizeUrl</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]www统一管理门户鉴权URL</Description>
+			<Value>http://127.0.0.1:17011/mportal/message</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>MAXOffLineNuber</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]最大下线数阀值</Description>
+			<Value>500</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>dataExportSyncTime</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]统一导出时间配置</Description>
+			<Value>0400</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>dataExportSyncMailto</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]统一导出接收邮箱配置</Description>
+			<Value>test2@aspire-tech.com</Value>
+			<Reserved />
+		</ConfigItem>
+		<ArrayConfigItem>
+			<Name>BaseGameProvinceCtrol</Name>
+			<Id>10</Id>
+			<Description>[2:可选修改项]基地游戏分省暂停信息与货架城市对应关系,以|分隔</Description>
+			<Priority>0</Priority>
+			<EffectTime>0</EffectTime>
+			<ArrayValue>
+				<Id>1</Id>
+				<Value>10|0001</Value>
+				<Reserved />
+			</ArrayValue>
+			<ArrayValue>
+				<Id>2</Id>
+				<Value>20|0011</Value>
+				<Reserved />
+			</ArrayValue>
+			<ArrayValue>
+				<Id>3</Id>
+				<Value>21|0002</Value>
+				<Reserved />
+			</ArrayValue>
+			<ArrayValue>
+				<Id>4</Id>
+				<Value>22|0003</Value>
+				<Reserved />
+			</ArrayValue>
+			<ArrayValue>
+				<Id>5</Id>
+				<Value>23|0004</Value>
+				<Reserved />
+			</ArrayValue>
+			<ArrayValue>
+				<Id>6</Id>
+				<Value>24|0007</Value>
+				<Reserved />
+			</ArrayValue>
+			<ArrayValue>
+				<Id>7</Id>
+				<Value>25|0016</Value>
+				<Reserved />
+			</ArrayValue>
+			<ArrayValue>
+				<Id>8</Id>
+				<Value>27|0012</Value>
+				<Reserved />
+			</ArrayValue>
+			<ArrayValue>
+				<Id>9</Id>
+				<Value>28|0026</Value>
+				<Reserved />
+			</ArrayValue>
+			<ArrayValue>
+				<Id>10</Id>
+				<Value>29|0022</Value>
+				<Reserved />
+			</ArrayValue>
+			<ArrayValue>
+				<Id>11</Id>
+				<Value>311|0009</Value>
+				<Reserved />
+			</ArrayValue>
+			<ArrayValue>
+				<Id>12</Id>
+				<Value>351|0021</Value>
+				<Reserved />
+			</ArrayValue>
+			<ArrayValue>
+				<Id>13</Id>
+				<Value>371|0010</Value>
+				<Reserved />
+			</ArrayValue>
+			<ArrayValue>
+				<Id>14</Id>
+				<Value>431|0006</Value>
+				<Reserved />
+			</ArrayValue>
+			<ArrayValue>
+				<Id>15</Id>
+				<Value>451|0005</Value>
+				<Reserved />
+			</ArrayValue>
+			<ArrayValue>
+				<Id>16</Id>
+				<Value>471|0008</Value>
+				<Reserved />
+			</ArrayValue>
+			<ArrayValue>
+				<Id>17</Id>
+				<Value>531|0013</Value>
+				<Reserved />
+			</ArrayValue>
+			<ArrayValue>
+				<Id>18</Id>
+				<Value>551|0015</Value>
+				<Reserved />
+			</ArrayValue>
+			<ArrayValue>
+				<Id>19</Id>
+				<Value>571|0014</Value>
+				<Reserved />
+			</ArrayValue>
+			<ArrayValue>
+				<Id>20</Id>
+				<Value>591|0024</Value>
+				<Reserved />
+			</ArrayValue>
+			<ArrayValue>
+				<Id>21</Id>
+				<Value>731|0023</Value>
+				<Reserved />
+			</ArrayValue>
+			<ArrayValue>
+				<Id>22</Id>
+				<Value>771|0027</Value>
+				<Reserved />
+			</ArrayValue>
+			<ArrayValue>
+				<Id>23</Id>
+				<Value>791|0017</Value>
+				<Reserved />
+			</ArrayValue>
+			<ArrayValue>
+				<Id>24</Id>
+				<Value>851|0028</Value>
+				<Reserved />
+			</ArrayValue>
+			<ArrayValue>
+				<Id>25</Id>
+				<Value>871|0018</Value>
+				<Reserved />
+			</ArrayValue>
+			<ArrayValue>
+				<Id>26</Id>
+				<Value>891|0030</Value>
+				<Reserved />
+			</ArrayValue>
+			<ArrayValue>
+				<Id>27</Id>
+				<Value>898|0029</Value>
+				<Reserved />
+			</ArrayValue>
+			<ArrayValue>
+				<Id>28</Id>
+				<Value>931|0025</Value>
+				<Reserved />
+			</ArrayValue>
+			<ArrayValue>
+				<Id>29</Id>
+				<Value>951|0019</Value>
+				<Reserved />
+			</ArrayValue>
+			<ArrayValue>
+				<Id>30</Id>
+				<Value>971|0020</Value>
+				<Reserved />
+			</ArrayValue>
+			<ArrayValue>
+				<Id>31</Id>
+				<Value>991|0031</Value>
+				<Reserved />
+			</ArrayValue>
+		</ArrayConfigItem>
+		<ConfigItem>
+			<Name>categorypic</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]货架特殊图片(一变四扩展字段名)</Description>
+			<Value>category_pic</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>sync_size</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]建议500到1000之间的数值，数据同步时候DataSyncDAO.getInstance().prepareDate防止内存溢出，加了每次最多同步多少个CONTENT
+			</Description>
+			<Value>1000</Value>
+			<Reserved />
+		</ConfigItem>
+
+		<ConfigItem>
+			<Name>localDir</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]商品用EXCEL批量导入的时候在服务器里备份这个文件，方便和运营人员一起排查问题的原因。
+			</Description>
+			<Value>/opt/aspire/product/ssms/ssmsdomain/ssmsserver/ssms/execl_reference_bak
+			</Value>
+			<Reserved />
+		</ConfigItem>
+		
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>syncMailTime</Name>
+			<Description>[3:必须修改项]
+				每天从产品供应管理系统同步数据的时间,一定要写成4位数字格式hhmm（小时、分钟）,例如:0400 此时间执行同步方法与zcom
+				自动更新 分类精品库 人工干预串行其他时间配置失效</Description>
+			<Value>0400</Value>
+			<Reserved />
+		</ConfigItem>
+
+	</ModuleConfig>
+	<!-- 门户管理系统 专有配置项 结束 -->
+
+	<!-- 邮件发送 开始 -->
+	<ModuleConfig Name="Mail" Description="邮件发送配置">
+		<ConfigItem>
+			<Name>smtpHost</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]smtp邮件服务器地址</Description>
+			<Value>smtp.aspire-tech.com</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>fromMail</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]邮件的发送方地址</Description>
+			<Value>test@aspire-tech.com</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>adminMail</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]邮件的接受方地址，请填管理员的邮件地址，不支持多个</Description>
+			<Value>test2@aspire-tech.com</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>user</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]邮件用户名称</Description>
+			<Value>user</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>password</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]邮件用户密码</Description>
+			<Value>password</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>synColorringSubject</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改]彩铃同步结果邮件的标题</Description>
+			<Value>彩铃同步提示邮件！！！</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>syncServiceSubject</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改]业务同步提示邮件的标题</Description>
+			<Value>业务同步提示邮件！！！</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>syncContentSubject</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改]内容同步提示邮件的标题</Description>
+			<Value>内容同步提示邮件！！！</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>CYsyncContentSubject</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改]内容同步提示邮件的标题</Description>
+			<Value>创业大赛内容同步提示邮件！！！</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>mailTo</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]公用发送邮件用例中邮件的接受方的邮件地址，支持多个，并用英文逗号隔开
+			</Description>
+			<Value>test3@aspire-tech.com</Value>
+			<Reserved />
+		</ConfigItem>
+		
+		<ConfigItem>
+			<Name>mailForData</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]同步业务发送邮件用例中邮件的接受方的邮件地址，支持多个，并用英文逗号隔开
+			</Description>
+			<Value>dengshaobo@aspirecn.com,zhanghuan@aspirecn.com,ouyangguangming@aspirecn.com</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>autoUpdateSubject</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改]自动上架提示邮件</Description>
+			<Value>自动上架提示邮件！！！</Value>
+			<Reserved />
+		</ConfigItem>
+	</ModuleConfig>
+	<!-- 邮件发送 结束 -->
+
+	<!--日志跟踪配置 开始 -->
+	<ModuleConfig Name="LOG" Description="日志配置">
+		<ConfigItem>
+			<Name>OldLogChkTime</Name>
+			<Id>0</Id>
+			<Description>[1:内部保留]检查日志历史文件是否过期的时间间隔,以小时为单位,必须为整数</Description>
+			<Value>1</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>OldLogExpireTime</Name>
+			<Id>0</Id>
+			<Description>[2:高级选项]日志历史文件有效期的时间,在此之前的会被删除,以天为单位,必须为整数</Description>
+			<Value>3</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>AlertAllowed</Name>
+			<Id>0</Id>
+			<Description>错误是否告警[2:高级选项]</Description>
+			<Value>false</Value>
+			<Reserved />
+		</ConfigItem>
+	</ModuleConfig>
+	<!--日志跟踪配置 结束 -->
+	<!-- 彩铃相关配置 开始 -->
+	<ModuleConfig Name="colorring" Description="彩铃相关配置">
+		<ConfigItem>
+			<Name>FTPServerIP</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]彩铃中心RBT GW的FTP服务地址</Description>
+			<Value>10.1.3.201</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPServerPort</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]彩铃中心RBT GW的FTP服务端口</Description>
+			<Value>21</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPServerUser</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]彩铃中心RBT GW的FTP服务的登录用户名</Description>
+			<Value>max</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPServerPassword</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]彩铃中心RBT GW的FTP服务的登录密码</Description>
+			<Value>1qazZAQ!</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>LYXXDir</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]彩铃中心RBT GW的FTP服务器上铃音信息接口文件文件存放的目录</Description>
+			<Value>thirdData</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>ColorringSynStartTime</Name>
+			<Description>[2:可选修改]彩铃数据导入自动任务执行的时间(24小时制)，格式： HH:MM</Description>
+			<Value>5:00</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>ColorringSynMailto</Name>
+			<Description>[3:必须修改项]彩铃数据同步结果邮件接收人，使用英文逗号分割</Description>
+			<Value>bihui@aspire-tech.com</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>UCAPUrl</Name>
+			<Description>[3:必须修改项]统一内容适配平台URL</Description>
+			<Value>http://ip:Port/tas/AdaptEngine</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>ColorringConvertTaskNum</Name>
+			<Description>[3:必须修改项]彩铃试听文件转换一次启动的任务数</Description>
+			<Value>50</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>ColorringUpdateTaskNum</Name>
+			<Description>[3:必须修改项]彩铃查询更新启动的任务数</Description>
+			<Value>50</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>ColorringMaxReceivedNum</Name>
+			<Description>[3:必须修改项]彩铃运行器队列的最大容量</Description>
+			<Value>10000</Value>
+			<Reserved />
+		</ConfigItem>
+		<ArrayConfigItem>
+			<Name>code_abps</Name>
+			<Id>10</Id>
+			<Description>[3:必须修改]彩铃试听转换的格式以及转换率，以英文逗号分隔</Description>
+			<Priority>0</Priority>
+			<EffectTime>0</EffectTime>
+			<ArrayValue>
+				<Id>1</Id>
+				<Value>aac,30</Value>
+				<Reserved />
+			</ArrayValue>
+			<ArrayValue>
+				<Id>2</Id>
+				<Value>mp3,40</Value>
+				<Reserved />
+			</ArrayValue>
+		</ArrayConfigItem>
+		<ConfigItem>
+			<Name>sourceServerIP</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]资源服务器的ip地址</Description>
+			<Value>10.1.3.201</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>sourceServerPort</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]资源服务器的端口</Description>
+			<Value>21</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>sourceServerUser</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]资源服务器的登录用户名</Description>
+			<Value>max</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>sourceServerPassword</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]资源服务器的登录密码</Description>
+			<Value>1qazZAQ!</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>clrConvertPath</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]资源服务器上面转换后的彩铃存放目录（相对ftp登录后的目录），要有读写权限，当前路径只配置"/"，并且要配置apache的别名指向该目录
+			</Description>
+			<Value>colorring</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>sourceServerVisit</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]资源服务器的访问方式，必须以"/"结尾</Description>
+			<Value>http://10.201.11.26:38080/</Value>
+			<Reserved />
+		</ConfigItem>
+	</ModuleConfig>
+	<!-- 彩铃相关配置 结束 -->
+
+	<!-- 导入报表产品运行属性配置 开始 -->
+	<ModuleConfig Name="topdataimport" Description="导入报表产品运行属性配置">
+		<ConfigItem>
+			<Name>TopDataFTPServerIP</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]报表系统FTP服务地址</Description>
+			<Value>10.1.3.201</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>TopDataFTPServerPort</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]报表系统的FTP服务端口</Description>
+			<Value>21</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>TopDataFTPServerUser</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]报表系统的登录用户名</Description>
+			<Value>max</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>TopDataFTPServerPassword</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]报表系统的登录密码</Description>
+			<Value>1qazZAQ!</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>ContentDayReportDir</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]内容每日数据在FTP服务器上的接口文件存放目录</Description>
+			<Value>extractdata/product_add_value_d</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>ContentWeekReportDir</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]内容每周数据在FTP服务器上的接口文件存放目录</Description>
+			<Value>extractdata/product_add_value_w</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>ContentMonthReportDir</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]内容每月数据在FTP服务器上的接口文件存放目录</Description>
+			<Value>extractdata/product_add_value_m</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>TopDataSiteDir</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改]报表数据在应用环境下存储目录的名称。</Description>
+			<Value>report</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>ContentImportTime_Day</Name>
+			<Description>[2:可选修改]内容日数据导入自动任务每日执行的时间点,格式：HH:MM</Description>
+			<Value>6:00</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>ContentImportTime_Week</Name>
+			<Description>[2:可选修改]内容周数据导入自动任务每日执行的时间点,格式：HH:MM</Description>
+			<Value>6:00</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>ContentImportTime_Month</Name>
+			<Description>[2:可选修改]内容月数据导入自动任务每日执行的时间点,格式：HH:MM</Description>
+			<Value>6:00</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>A8_FtpDir</Name>
+			<Description>[3:必须修改项]A8货架歌曲试听次数报表数据在FTP服务器上的接口文件存放目录</Description>
+			<Value>temp/ssms</Value>
+			<Reserved />
+		</ConfigItem>
+
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>A8_ImportTime</Name>
+			<Description>[3:必须修改项]A8货架歌曲试听次数数据导入自动任务每日执行的时间点,格式：HH:MM,支持一天执行多次任务，时间使用英文“;”分号分隔
+			</Description>
+			<Value>21:00</Value>
+			<Reserved />
+		</ConfigItem>
+
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>APPLast_FtpDir</Name>
+			<Description>[3:必须修改项]最新应用榜日统计数据报表数据在FTP服务器上的接口文件存放目录</Description>
+			<Value>temp/ssms</Value>
+			<Reserved />
+		</ConfigItem>
+
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>APPRecommond_FtpDir</Name>
+			<Description>[3:必须修改项]推荐应用榜日统计数据报表数据在FTP服务器上的接口文件存放目录</Description>
+			<Value>temp/ssms</Value>
+			<Reserved />
+		</ConfigItem>
+
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>APPCompetitive_FtpDir</Name>
+			<Description>[3:必须修改项]精品应用榜日统计数据报表数据在FTP服务器上的接口文件存放目录</Description>
+			<Value>temp/ssms</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>contentBlackList_FtpDir</Name>
+			<Description>[3:必须修改项]AP应用黑名单数据报表数据在FTP服务器上的接口文件存放目录</Description>
+			<Value>temp/ssms</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>APP_ImportTime</Name>
+			<Description>[3:必须修改项]推荐，最新，精品,小编推荐,黑名单应用榜日统计数据导入自动任务每日执行的时间点,格式：HH:MM
+				支持一天执行多次任务，时间使用英文“;”分号分隔</Description>
+			<Value>11:00;23:00</Value>
+			<Reserved />
+		</ConfigItem>
+
+
+	</ModuleConfig>
+	<!-- 导入报表排行榜数据配置 结束 -->
+
+	<!--a8音乐导入配置 开始 -->
+	<ModuleConfig Name="a8" Description="日志配置">
+
+		<ConfigItem>
+			<Name>FTPServerIP</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]报表系统FTP服务地址</Description>
+			<Value>10.1.3.201</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPServerPort</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]报表系统的FTP服务端口</Description>
+			<Value>21</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPServerUser</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]报表系统的登录用户名</Description>
+			<Value>max</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPServerPassword</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]报表系统的登录密码</Description>
+			<Value>1qazZAQ!</Value>
+			<Reserved />
+		</ConfigItem>
+
+		<ConfigItem>
+			<Name>A8MusicDir</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]A8音乐索引信息在FTP服务器上的接口文件存放目录,如果是当前目录填写为空
+			</Description>
+			<Value>temp/singer</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>MusicSynStartTime</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]音乐数据导入自动任务每日执行的时间点,格式：HH:MM</Description>
+			<Value>16:55</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>MusicSynFrequency</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]音乐数据导入自动任务执行的频率，其值只能为day和week</Description>
+			<Value>day</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>A8SingerDir</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]A8歌手索引信息在FTP服务器上的接口文件存放目录,如果是当前目录填写为空
+			</Description>
+			<Value>temp/singer</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>SingerSynStartTime</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]歌手数据导入自动任务每日执行的时间点,格式：HH:MM</Description>
+			<Value>15:23</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>SingerSynFrequency</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]歌手数据导入自动任务执行的频率，其值只能为day和week</Description>
+			<Value>day</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>TopListDir</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]A8榜单信息在FTP服务器上的接口文件存放目录,如果是当前目录填写为空
+			</Description>
+			<Value>temp/singer</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>TopListSynStartTime</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]榜单数据导入自动任务每日执行的时间点,格式：HH:MM</Description>
+			<Value>15:23</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>TopListSynFrequency</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]榜单数据导入自动任务执行的频率，其值只能为day和week</Description>
+			<Value>day</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>MaxSaveDay</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]备份文件最大保存天数，值为-1，不进行目录维护</Description>
+			<Value>30</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>BackupDir</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]A8音乐信息文件备份目录，绝对路径</Description>
+			<Value>c:/bea/user_projects/domains/ssmsdomain/myserver/ssms/</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>a8MailTo</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]A8音乐导入结果邮件接收人数组,多个邮件使用英文逗号“,”分隔</Description>
+			<Value>aaaaa@aspire-tech.com</Value>
+			<Reserved />
+		</ConfigItem>
+	</ModuleConfig>
+	<!--a8音乐导入配置 结束 -->
+
+	<!-- 货架自动更新属性配置 开始 -->
+	<ModuleConfig Name="categoryAutoUpdate" Description="货架自动更新属性配置">
+		<ConfigItem>
+			<Name>startTime</Name>
+			<Id>0</Id>
+			<Description>货架自动更新时间，格式：(24小时制)，格式： HH:MM</Description>
+			<Value>10:00</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>ConditionMaxValue</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]当前货架允许上架商品的默认最大值。</Description>
+			<Value>2000</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>spnameSortCount</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]根据sp信息进行商品调整的最大商品数。</Description>
+			<Value>60</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>spnameMaxCount</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]允许同一sp的最大商品数。</Description>
+			<Value>2</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>RuleRunningTaskNum</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]执行规则的最大线程数。</Description>
+			<Value>10</Value>
+			<Reserved />
+		</ConfigItem>
+	</ModuleConfig>
+	<!-- 货架自动更新属性配置 结束 -->
+
+	<!-- 货架商品自动导出 属性配置 开始 -->
+	<ModuleConfig Name="categoryExport" Description="货架商品自动导出 属性配置">
+		<ConfigItem>
+			<Name>startTime</Name>
+			<Id>0</Id>
+			<Description>货架自动更新时间，格式：(24小时制)，格式： HH:MM</Description>
+			<Value>13:49</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>CategorySynFrequency</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]货架数据导出自动任务执行的频率，其值只能为day和week</Description>
+			<Value>day</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPServerIP</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]导出结果FTP服务地址</Description>
+			<Value>10.1.3.201</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPServerPort</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]导出结果的FTP服务端口</Description>
+			<Value>21</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPServerUser</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]导出结果的登录用户名</Description>
+			<Value>max</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPServerPassword</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]导出结果的登录密码</Description>
+			<Value>1qazZAQ!</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPDir</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]FTP存放目录</Description>
+			<Value>temp/ssms</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>LocalDir</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改]本地excel存放目录</Description>
+			<Value>/opt/aspire/product/ssms/ssmsdomain/ssmsserver/ssms/conf
+			</Value>
+			<Reserved />
+		</ConfigItem>
+	</ModuleConfig>
+	<!-- 货架商品自动导出 属性配置 结束 -->
+	<!-- 搜索索引文件属性配置 开始 -->
+	<ModuleConfig Name="searchFileGenerate" Description="搜索索引文件属性配置">
+		<ConfigItem>
+			<Name>startTime</Name>
+			<Id>0</Id>
+			<Description>任务执行时间，格式：(24小时制)，格式： HH:MM</Description>
+			<Value>18:30</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>CYStartTime</Name>
+			<Id>0</Id>
+			<Description>任务执行时间，格式：(24小时制)，格式： HH:MM</Description>
+			<Value>18:33</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>frequency</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]任务执行间隔。</Description>
+			<Value>day</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>LocalDir</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]索引文件生成的本地目录/ftpdata/searchfile</Description>
+			<Value>day</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>mailTo</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]任务完成后的邮件地址，支持多个，并用英文逗号隔开</Description>
+			<Value>test@aspire-tech.com</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>AppTopstartTime</Name>
+			<Id>0</Id>
+			<Description>心机同步任务执行时间，格式：(24小时制)，格式： HH:MM</Description>
+			<Value>18:30</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPIP</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]为要同步到心机的FTP地址</Description>
+			<Value>10.1.3.201</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPPort</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]为要同步到心机的FTP端口</Description>
+			<Value>21</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPName</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]为要同步到心机的FTP登录用户名</Description>
+			<Value>max</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPPassWord</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]为要同步到心机的FTP登录密码</Description>
+			<Value>1qazZAQ!</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPPath</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]为心机同步文件存放路径</Description>
+			<Value>temp</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>cyDataCategoryId</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]用于导出2010创业大赛数据所在的货架id</Description>
+			<Value>100003160</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>pageSize</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]用于分页导出全量数据时每页大小</Description>
+			<Value>10000</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>VIRTUAL_CATEGORY_ID</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]用于创建虚拟货架goodsId的货架编码</Description>
+			<Value>999000001</Value>
+			<Reserved />
+		</ConfigItem>
+	</ModuleConfig>
+	<!-- 搜索索引文件属性配置 结束 -->
+	<!-- 基地音乐相关配置 开始 -->
+	<ModuleConfig Name="basemusic" Description="基地音乐相关配置">
+		<ConfigItem>
+			<Name>isCloseNotBaseMusicData</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]基地音乐保留音乐元数据，其他任务暂停。</Description>
+			<Value>true</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPServerIP</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]基地音乐的FTP服务地址</Description>
+			<Value>10.1.3.201</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPServerPort</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]基地音乐的FTP服务端口</Description>
+			<Value>21</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPServerUser</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]基地音乐的FTP服务的登录用户名</Description>
+			<Value>max</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPServerPassword</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]基地音乐的FTP服务的登录密码</Description>
+			<Value>1qazZAQ!</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPDir</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]基地音乐的FTP服务器上音乐信息接口文件文件存放的目录</Description>
+			<Value>temp/ssms</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>resServerPath</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]扩展字段资源服务器文件存放的目录</Description>
+			<Value>temp/ssms</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>localDir</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]基地音乐的本地临时上音乐信息接口文件文件存放的目录</Description>
+			<Value>D:/bea/user_projects/domains/mydomain/myserver/ssms/report/temp
+			</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BaseMusicSynStartTime</Name>
+			<Description>[2:可选修改]基地音乐数据导入自动任务执行的时间(24小时制)，格式： HH:MM</Description>
+			<Value>19:02</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BaseMusicSynMailto</Name>
+			<Description>[3:必须修改项]基地音乐歌曲数据全量导入同步结果邮件接收人，使用英文逗号分割</Description>
+			<Value>dongke@aspire-tech.com</Value>
+			<Reserved />
+		</ConfigItem>
+
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BaseFullMusicSynMailto</Name>
+			<Description>[3:必须修改项]基地音乐数据全量同步结果邮件接收人，使用英文逗号分割</Description>
+			<Value>dongke@aspire-tech.com</Value>
+			<Reserved />
+		</ConfigItem>
+
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BaseMusicUpdateTaskNum</Name>
+			<Description>[3:必须修改项]基地音乐查询更新启动的任务数</Description>
+			<Value>50</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BaseMusicMaxReceivedNum</Name>
+			<Description>[3:必须修改项]基地音乐运行器队列的最大容量</Description>
+			<Value>10000</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>fileEncoding</Name>
+			<Description>[3:必须修改项]基地音乐文件编码</Description>
+			<Value>UTF-8</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>typeMapingCategoryId</Name>
+			<Description>[3:可选修改项]基地音乐会员榜单映射货架规则</Description>
+			<Value>100000197|01,100000198|02,100000199|03,100000200|04</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BMusicListSep</Name>
+			<Description>[2:可选修改项]基地音乐文件字段间隔符</Description>
+			<Value>|</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>synBaseMusicSubject</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改]基地音乐同步结果邮件的标题</Description>
+			<Value>基地音乐同步提示邮件！！！</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>synBaseFullMusicSubject</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改]基地音乐歌曲数据全量导入结果邮件的标题</Description>
+			<Value>基地音乐歌曲数据全量导入同步提示邮件！！！</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>MusicNameRegex</Name>
+			<Description>[2:可选修改项]基地音乐清单文件名</Description>
+			<Value>MUSIC_~DyyyyMMdd~.txt</Value>
+			<Reserved />
+		</ConfigItem>
+		<ArrayConfigItem>
+			<Name>NewNameRegex</Name>
+			<Id>10</Id>
+			<Description>[2:可选修改项]基地音乐最新榜单文件名</Description>
+			<Priority>0</Priority>
+			<EffectTime>0</EffectTime>
+			<ArrayValue>
+				<Id>100002166</Id>
+				<Value>MUSIC_NEW_~DyyyyMMdd~.txt</Value>
+				<Reserved />
+			</ArrayValue>
+
+		</ArrayConfigItem>
+		<ArrayConfigItem>
+			<Name>ChartNameRegex</Name>
+			<Id>10</Id>
+			<Description>[3:必须修改]基地音乐排行榜单文件名</Description>
+			<Priority>0</Priority>
+			<EffectTime>0</EffectTime>
+			<ArrayValue>
+				<Id>100000445</Id>
+				<Value>MUSIC_LIST_~DyyyyMMdd~.txt</Value>
+				<Reserved />
+			</ArrayValue>
+
+		</ArrayConfigItem>
+
+		<ConfigItem>
+			<Name>NewFTPServerIP</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]基地新音乐的FTP服务地址</Description>
+			<Value>10.1.3.185</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>NewFTPServerPort</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]基地新音乐的FTP服务端口</Description>
+			<Value>21</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>NewFTPServerUser</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]基地新音乐的FTP服务的登录用户名</Description>
+			<Value>imallftp</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>NewFTPServerPassword</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]基地新音乐的FTP服务的登录密码</Description>
+			<Value>imallftp</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>NewFTPDir</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]基地新音乐的FTP服务器上音乐信息接口文件文件存放的目录</Description>
+			<Value>ssms/temp</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>NewlocalDir</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]基地新音乐的本地临时上音乐信息接口文件文件存放的目录</Description>
+			<Value>D:/bea/user_projects/domains/mydomain/myserver/ssms/report/temp
+			</Value>
+			<Reserved />
+		</ConfigItem>
+
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>NewMusicNameRegex</Name>
+			<Description>[2:可选修改项]基地新音乐清单文件名</Description>
+			<Value>a_m-music_~DyyyyMMdd~.txt</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>NewFullMusicNameRegex</Name>
+			<Description>[2:可选修改项]基地新音乐全量清单文件名</Description>
+			<Value>i_m-music_~DyyyyMMdd[-1]~_[0-9]{6}.txt</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>NewMusicSingerNameRegex</Name>
+			<Description>[2:可选修改项]基地新音乐歌手文件名</Description>
+			<Value>i_m-songer_~DyyyyMMdd~.txt</Value>
+			<Reserved />
+		</ConfigItem>
+
+
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BNewMusicListSep</Name>
+			<Description>[2:可选修改项]基地音乐文件字段间隔符</Description>
+			<Value>0x1F</Value>
+			<Reserved />
+		</ConfigItem>
+
+
+		<ArrayConfigItem>
+			<Name>albumNameRegex</Name>
+			<Id>10</Id>
+			<Description>[2:可选修改项]基地新音乐专辑文件名</Description>
+			<Priority>0</Priority>
+			<EffectTime>0</EffectTime>
+			<ArrayValue>
+				<Id>100000176</Id>
+				<Value>i_m-album_~DyyyyMMdd~.txt</Value>
+				<Reserved />
+			</ArrayValue>
+
+		</ArrayConfigItem>
+
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>albumRefNameRegex</Name>
+			<Description>[2:可选修改项]基地音乐专辑商品文件名</Description>
+			<Value>i_m-albumSong_~DyyyyMMdd~.txt</Value>
+			<Reserved />
+		</ConfigItem>
+
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>toneboxNameRegex</Name>
+			<Description>[2:可选修改项]铃音盒文件名</Description>
+			<Value>i_m-tonebox_~DyyyyMMdd~_[0-9]{6}.txt,i_m-tonebox_~DyyyyMMdd~.verf
+			</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>toneboxSongNameRegex</Name>
+			<Description>[2:可选修改项]铃音盒歌曲文件名</Description>
+			<Value>i_m-toneboxSong_~DyyyyMMdd~_[0-9]{6}.txt,i_m-toneboxSong_~DyyyyMMdd~.verf
+			</Value>
+			<Reserved />
+		</ConfigItem>
+
+	</ModuleConfig>
+	<!-- 基地音乐相关配置 结束 -->
+
+	<!-- 基地业务通用配置 开始 -->
+	<ModuleConfig Name="basecommon" Description="基地业务通用配置">
+		<ConfigItem>
+			<Name>startTime</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]基地自动上下架时间</Description>
+			<Value>4:50</Value>
+			<Reserved />
+		</ConfigItem>
+	</ModuleConfig>
+
+
+	<!-- 动漫基地相关配置 开始 -->
+	<ModuleConfig Name="dmbase" Description="动漫基地相关配置">
+		<ConfigItem>
+			<Name>delDayNum</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]动漫基地的FTP服务的文件要清理的天数(-3表示是删除3天前数据)</Description>
+			<Value>-3</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPServerIP</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]动漫基地的FTP服务地址</Description>
+			<Value>221.179.8.171</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPServerPort</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]动漫基地的FTP服务端口</Description>
+			<Value>21</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPServerUser</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]动漫基地的FTP服务的登录用户名</Description>
+			<Value>shelf</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPServerPassword</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]动漫基地的FTP服务的登录密码</Description>
+			<Value>jgM,j7vB</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPDir</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]动漫基地的FTP服务器上音乐信息接口文件文件存放的目录</Description>
+			<Value>dmbase/dm</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>localDir</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]动漫基地的本地临时上接口文件文件存放的目录</Description>
+			<Value>D:/bea/user_projects/domains/mydomain/myserver/ssms/report/temp
+			</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>fileEncoding</Name>
+			<Description>[3:必须修改项]动漫基地文件编码</Description>
+			<Value>UTF-8</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>dmBaseSynSubject</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改]动漫基地同步结果邮件的标题</Description>
+			<Value>动漫基地同步提示邮件！！！</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>dmBaseSynMailto</Name>
+			<Description>[3:必须修改项]动漫基地数据同步结果邮件接收人，使用英文逗号分割</Description>
+			<Value>aiyan@aspirecn.com,dongke@aspirecn.com</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BaseComicSynStartTime</Name>
+			<Description>[2:可选修改]动漫基地数据导入自动任务执行的时间(24小时制)，格式： HH:MM</Description>
+			<Value>02:20</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>c-brand-day</Name>
+			<Id>0</Id>
+			<Description>品牌馆按月导入，这里定义是当月具体日导入。</Description>
+			<Value>1</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>comicSeriesNameRegex</Name>
+			<Description>漫画书同步接口文件名</Description>
+			<Value>i_c-comicseries_~DyyyyMMdd~_[0-9]{6}.txt,i_c-comicseries_~DyyyyMMdd~.verf
+			</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>cpNameRegex</Name>
+			<Description>CP信息同步接口文件名</Description>
+			<Value>i_c-cp_~DyyyyMMdd~_[0-9]{6}.txt,i_c-cp_~DyyyyMMdd~.verf
+			</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>infoNameRegex</Name>
+			<Description>资讯同步接口文件名</Description>
+			<Value>i_c-info_~DyyyyMMdd~_[0-9]{6}.txt,i_c-info_~DyyyyMMdd~.verf
+			</Value>
+			<Reserved />
+		</ConfigItem>
+
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>themeNameRegex</Name>
+			<Description>主题同步接口文件名</Description>
+			<Value>i_c-theme_~DyyyyMMdd~_[0-9]{6}.txt,i_c-theme_~DyyyyMMdd~.verf
+			</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>tvSeriesNameRegex</Name>
+			<Description>动画片同步接口文件名</Description>
+			<Value>i_c-tvseries_~DyyyyMMdd~_[0-9]{6}.txt,i_c-tvseries_~DyyyyMMdd~.verf
+			</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>statisticsNameRegex</Name>
+			<Description>动漫统计同步接口文件名</Description>
+			<Value>i_c-statistics_~DyyyyMMdd~_[0-9]{6}.txt,i_c-statistics_~DyyyyMMdd~.verf
+			</Value>
+			<Reserved />
+		</ConfigItem>
+
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>firstNameRegex</Name>
+			<Description>首发同步接口文件名</Description>
+			<Value>i_c-firstlist_~DyyyyMMdd~_[0-9]{6}.txt,i_c-firstlist_~DyyyyMMdd~.verf
+			</Value>
+			<Reserved />
+		</ConfigItem>
+
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>rankNameRegex</Name>
+			<Description>排行榜信息同步接口文件名</Description>
+			<Value>i_c-rank_~DyyyyMMdd~_[0-9]{6}.txt,i_c-rank_~DyyyyMMdd~.verf
+			</Value>
+			<Reserved />
+		</ConfigItem>
+
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>adapterNameRegex</Name>
+			<Description>呈现同步接口文件名</Description>
+			<Value>i_c-adapter_~DyyyyMMdd~_[0-9]{6}.txt,i_c-adapter_~DyyyyMMdd~.verf
+			</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>brandContentNameRegex</Name>
+			<Description>品牌馆内容同步接口文件名</Description>
+			<Value>i_c-brand-item_~DyyyyMMdd~_[0-9]{6}.txt,i_c-brand-item_~DyyyyMMdd~.verf
+			</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>brandNameRegex</Name>
+			<Description>品牌馆栏目同步接口文件名</Description>
+			<Value>i_c-brand_~DyyyyMMdd~_[0-9]{6}.txt,i_c-brand_~DyyyyMMdd~.verf
+			</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>chapterNameRegex</Name>
+			<Description>章节同步接口文件名</Description>
+			<Value>i_c-chapter_~DyyyyMMdd~_[0-9]{6}.txt,i_c-chapter_~DyyyyMMdd~.verf
+			</Value>
+			<Reserved />
+		</ConfigItem>
+
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>topicNameRegex</Name>
+			<Description>专题同步接口文件名</Description>
+			<Value>i_c-topic_~DyyyyMMdd~_[0-9]{6}.txt,i_c-topic_~DyyyyMMdd~.verf
+			</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>topicContentNameRegex</Name>
+			<Description>专题内容同步接口文件名</Description>
+			<Value>i_c-topic-item_~DyyyyMMdd~_[0-9]{6}.txt,i_c-topic-item_~DyyyyMMdd~.verf
+			</Value>
+			<Reserved />
+		</ConfigItem>
+
+	</ModuleConfig>
+	<!-- 动漫基地相关配置 结束 -->
+
+
+	<!-- xbus变更通知属性配置 开始 -->
+	<ModuleConfig Name="xbus" Description="xbus变更通知属性配置">
+		<ConfigItem>
+			<Name>isSend</Name>
+			<Id>0</Id>
+			<Description>是否对变更内容进行xbus通知取值为true,false开为对变更内容进行通知，关为变更后不通知xbus
+			</Description>
+			<Value>true</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>urls</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]通知的xbus服务的url,多个以'#'隔开。</Description>
+			<Value>http://10.1.28.13:18080/mopas/xbusServlet#http://10.1.3.97:8000/xbus/servlet/Test0007HTTP
+			</Value>
+			<Reserved />
+		</ConfigItem>
+	</ModuleConfig>
+	<!-- xbus变更通知属性配置 结束 -->
+
+	<!-- 基地图书 -->
+	<ModuleConfig Name="basebook" Description="基地图书配置项">
+		<ConfigItem>
+			<Name>FTPServerIP</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]基地图书的FTP服务地址</Description>
+			<Value>10.1.3.201</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPServerPort</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]基地图书的FTP服务端口</Description>
+			<Value>21</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPServerUser</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]基地图书的FTP服务的登录用户名</Description>
+			<Value>max</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPServerPassword</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]基地图书的FTP服务的登录密码</Description>
+			<Value>1qazZAQ!</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPDir</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]基地图书的FTP服务器上音乐信息接口文件文件存放的目录</Description>
+			<Value>temp/ssms</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>localDir</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]基地图书的本地临时上图书信息接口文件文件存放的目录</Description>
+			<Value>D:/bea/user_projects/domains/mydomain/myserver/ssms/report/temp
+			</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>errorFileDir</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]基地图书的导入失败的文件存放的目录</Description>
+			<Value>D:/bea/user_projects/domains/mydomain/myserver/ssms/report/temp/error
+			</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BaseBookSynStartTime</Name>
+			<Description>[2:可选修改]基地图书数据导入自动任务执行的时间(24小时制)，格式： HH:MM</Description>
+			<Value>19:02</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BaseBookSynMailto</Name>
+			<Description>[3:必须修改项]基地图书数据同步结果邮件接收人，使用英文逗号分割</Description>
+			<Value>x_zhailiqing@aspire-tech.com</Value>
+			<Reserved />
+		</ConfigItem>
+
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BaseBookSynTaskNum</Name>
+			<Description>[3:必须修改项]基地图书查询启动的任务数</Description>
+			<Value>50</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BaseBookMaxReceivedNum</Name>
+			<Description>[3:必须修改项]基地图书运行器队列的最大容量</Description>
+			<Value>10000</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>fileEncoding</Name>
+			<Description>[3:必须修改项]基地图书文件编码</Description>
+			<Value>UTF-8</Value>
+			<Reserved />
+		</ConfigItem>
+
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BBookListSep</Name>
+			<Description>[2:可选修改项]基地图书文件字段间隔符</Description>
+			<Value>|</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>synBaseBookSubject</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改]基地图书同步结果邮件的标题</Description>
+			<Value>基地图书同步提示邮件！！！</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BookTypeRegex</Name>
+			<Description>[2:可选修改项]基地图书分类清单文件名</Description>
+			<Value>category_~DyyyyMMdd~.txt</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BookAuthorRegex</Name>
+			<Description>[2:可选修改项]基地图书作者信息文件名</Description>
+			<Value>author_~DyyyyMMdd~.txt</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BookRegex</Name>
+			<Description>[2:可选修改项]基地图书信息文件名</Description>
+			<Value>book_~DyyyyMMdd~.txt</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BookMonthRegex</Name>
+			<Description>[2:可选修改项]基地图书包月信息文件名</Description>
+			<Value>book2_~DyyyyMMdd~.txt</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BookRecommendRegex</Name>
+			<Description>[2:可选修改项]基地图书推荐信息文件名</Description>
+			<Value>bookrecommend_~DyyyyMMdd~.txt</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BookAreaRegex</Name>
+			<Description>[2:可选修改项]基地专区信息文件名</Description>
+			<Value>catalog_~DyyyyMMdd~.txt</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BookAreaReferenceRegex</Name>
+			<Description>[2:可选修改项]基地专区内容信息文件名</Description>
+			<Value>catalogcontent_~DyyyyMMdd~.txt</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BookTotalRankRegex</Name>
+			<Description>[2:可选修改项]基地图书总排行信息文件名</Description>
+			<Value>ranktotal_~DyyyyMMdd~.txt</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BookMonthRankRegex</Name>
+			<Description>[2:可选修改项]基地图书月排行信息文件名</Description>
+			<Value>rankmonth_~DyyyyMMdd~.txt</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BookWeekRankRegex</Name>
+			<Description>[2:可选修改项]基地图书周排行信息文件名</Description>
+			<Value>rankweek_~DyyyyMMdd~.txt</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>bookPicURl</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]资源服务器上图片预览图保存目录（相对ftp登录后的目录），要有读写权限，当前路径配置空
+			</Description>
+			<Value>book/ssms/</Value>
+			<Reserved />
+		</ConfigItem>
+		<ArrayConfigItem>
+			<Name>BaseBookType</Name>
+			<Id>10</Id>
+			<Description>[2:可选修改项]基地图书分类信息,大类和小类之间以|分隔，小类之间以;分隔</Description>
+			<Priority>0</Priority>
+			<EffectTime>0</EffectTime>
+			<ArrayValue>
+				<Id>1</Id>
+				<Value>都市言情|都市;言情</Value>
+				<Reserved />
+			</ArrayValue>
+			<ArrayValue>
+				<Id>2</Id>
+				<Value>穿越幻想|穿越</Value>
+				<Reserved />
+			</ArrayValue>
+			<ArrayValue>
+				<Id>3</Id>
+				<Value>玄幻奇幻|玄幻;奇幻</Value>
+				<Reserved />
+			</ArrayValue>
+			<ArrayValue>
+				<Id>4</Id>
+				<Value>武侠仙侠|武侠;仙侠</Value>
+				<Reserved />
+			</ArrayValue>
+			<ArrayValue>
+				<Id>5</Id>
+				<Value>游戏竞技|游戏;竞技</Value>
+				<Reserved />
+			</ArrayValue>
+			<ArrayValue>
+				<Id>6</Id>
+				<Value>浪漫青春|青春</Value>
+				<Reserved />
+			</ArrayValue>
+			<ArrayValue>
+				<Id>7</Id>
+				<Value>历史军事|历史;军事</Value>
+				<Reserved />
+			</ArrayValue>
+			<ArrayValue>
+				<Id>8</Id>
+				<Value>灵异悬疑|悬疑</Value>
+				<Reserved />
+			</ArrayValue>
+			<ArrayValue>
+				<Id>9</Id>
+				<Value>名著传记|古典;传记;译林;纪实</Value>
+				<Reserved />
+			</ArrayValue>
+			<ArrayValue>
+				<Id>10</Id>
+				<Value>科幻小说|科幻</Value>
+				<Reserved />
+			</ArrayValue>
+			<ArrayValue>
+				<Id>11</Id>
+				<Value>影视剧本|影视</Value>
+				<Reserved />
+			</ArrayValue>
+			<ArrayValue>
+				<Id>12</Id>
+				<Value>时尚生活|时尚;生活;家庭;旅游</Value>
+				<Reserved />
+			</ArrayValue>
+			<ArrayValue>
+				<Id>13</Id>
+				<Value>官场职场|官场;职场;商战</Value>
+				<Reserved />
+			</ArrayValue>
+			<ArrayValue>
+				<Id>14</Id>
+				<Value>经管励志|经管;励志;理财</Value>
+				<Reserved />
+			</ArrayValue>
+			<ArrayValue>
+				<Id>15</Id>
+				<Value>教育社科|教育;社科;科普</Value>
+				<Reserved />
+			</ArrayValue>
+			<ArrayValue>
+				<Id>16</Id>
+				<Value>短篇小品|短篇;幽默;美文;童话</Value>
+				<Reserved />
+			</ArrayValue>
+		</ArrayConfigItem>
+	</ModuleConfig>
+	<!-- 基地图书配置结束 -->
+	<!-- 人工干预属性配置 开始 -->
+	<ModuleConfig Name="intervenor" Description="人工干预属性配置">
+		<ConfigItem>
+			<Name>startTime</Name>
+			<Id>0</Id>
+			<Description>任务执行时间，格式：(24小时制)，格式： HH:MM</Description>
+			<Value>02:30</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>intervenorMaxNum</Name>
+			<Id>0</Id>
+			<Description>人工干预最大同步多线程数量</Description>
+			<Value>5</Value>
+			<Reserved />
+		</ConfigItem>
+	</ModuleConfig>
+	<!-- 人工干预属性配置 结束 -->
+
+	<!-- 提供体验营销系统数据导出 开始 -->
+	<ModuleConfig Name="experiential" Description="体验营销系统数据导出配置">
+		<ConfigItem>
+			<Name>FTPIP</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]体验营销系统的FTP服务地址</Description>
+			<Value>10.1.3.201</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPPort</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]体验营销系统的FTP服务端口</Description>
+			<Value>21</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPName</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]体验营销系统的FTP服务的登录用户名</Description>
+			<Value>max</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPPassWord</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]体验营销系统的FTP服务的登录密码</Description>
+			<Value>1qazZAQ!</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPPath</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]体验营销系统的FTP服务器上接口文件文件存放的目录</Description>
+			<Value>temp/ssms</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>localDir</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]体验营销系统的本地临时接口文件文件存放的目录</Description>
+			<Value>D:/bea/user_projects/domains/mydomain/myserver/ssms/report/temp
+			</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>ExperStartTime</Name>
+			<Description>[2:可选修改]体验营销系统数据导出自动任务执行的时间(24小时制)，格式： HH:MM
+			</Description>
+			<Value>14:25</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>mailTo</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]公用发送邮件用例中邮件的接受方的邮件地址，支持多个，并用英文逗号隔开
+			</Description>
+			<Value>dongke@aspire-tech.com</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>ExperEncoding</Name>
+			<Id>0</Id>
+			<Description>体验营销系统同步文件编码格式</Description>
+			<Value>UTF-8</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>categoryName</Name>
+			<Id>0</Id>
+			<Description>应用分类信息同步文件名</Description>
+			<Value>MMFenLei_~DyyyyMMdd~.txt</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>categoryLineSep</Name>
+			<Id>0</Id>
+			<Description>应用分类信息同步文件行分隔符</Description>
+			<Value>\r\n</Value>
+			<Reserved />
+		</ConfigItem>
+
+		<ConfigItem>
+			<Name>categoryColumnSep</Name>
+			<Id>0</Id>
+			<Description>应用分类信息同步文件列分隔符</Description>
+			<Value>|</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FullDeviceName</Name>
+			<Id>0</Id>
+			<Description>全量机型信息同步文件名</Description>
+			<Value>MMJiXingFull_~DyyyyMMdd~.txt</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>deviceName</Name>
+			<Id>0</Id>
+			<Description>增量机型信息同步文件名</Description>
+			<Value>MMJiXing_~DyyyyMMdd~.txt</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>deviceLineSep</Name>
+			<Id>0</Id>
+			<Description>机型信息同步文件行分隔符</Description>
+			<Value>\r\n</Value>
+			<Reserved />
+		</ConfigItem>
+
+		<ConfigItem>
+			<Name>deviceColumnSep</Name>
+			<Id>0</Id>
+			<Description>机型信息同步文件列分隔符</Description>
+			<Value>|</Value>
+			<Reserved />
+		</ConfigItem>
+
+		<ConfigItem>
+			<Name>APPFullName</Name>
+			<Id>0</Id>
+			<Description>全量应用信息同步文件名</Description>
+			<Value>APPFull_~DyyyyMMdd~.csv</Value>
+			<Reserved />
+		</ConfigItem>
+
+		<ConfigItem>
+			<Name>APPNewName</Name>
+			<Id>0</Id>
+			<Description>增量应用信息同步文件名</Description>
+			<Value>APPNew_~DyyyyMMdd~.csv</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>APPNewColumnSep</Name>
+			<Id>0</Id>
+			<Description>增量应用信息同步文件列分隔符</Description>
+			<Value>|</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>APPUpdateName</Name>
+			<Id>0</Id>
+			<Description>增量应用信息更新同步文件名</Description>
+			<Value>APPUpdate_~DyyyyMMdd~.csv</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>APPUpdateColumnSep</Name>
+			<Id>0</Id>
+			<Description>增量应用信息更新同步文件列分隔符</Description>
+			<Value>|</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>APPName</Name>
+			<Id>0</Id>
+			<Description>榜单应用信息同步文件名</Description>
+			<Value>APP_~DyyyyMMdd~.txt</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>APPLineSep</Name>
+			<Id>0</Id>
+			<Description>榜单应用信息同步文件行分隔符</Description>
+			<Value>\r\n</Value>
+			<Reserved />
+		</ConfigItem>
+
+		<ConfigItem>
+			<Name>APPColumnSep</Name>
+			<Id>0</Id>
+			<Description>榜单应用信息同步文件列分隔符</Description>
+			<Value>|</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>APPSYSMONTHDAY</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]按月生成全量同步文件的日期，每月几号</Description>
+			<Value>1</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>APPSYSMONTHSTARTTIME</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]按月生成全量同步文件开始时间</Description>
+			<Value>19:00</Value>
+			<Reserved />
+		</ConfigItem>
+	</ModuleConfig>
+	<!-- 提供体验营销系统数据导出 结束 -->
+
+	<!-- 提供MM第3方渠道营销数据导出 开始 -->
+	<ModuleConfig Name="thirdChannel" Description="MM第3方渠道营销系统数据导出配置">
+		<ConfigItem>
+			<Name>localDir</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]MM第3方渠道营销系统的本地临时接口文件文件存放的目录</Description>
+			<Value>D:/bea/user_projects/domains/mm_ssms/ssms/ssms/report/temp
+			</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>ChannelStartTime</Name>
+			<Description>[2:可选修改]MM第3方渠道营销数据导出自动任务执行的时间(24小时制)，格式： HH:MM
+			</Description>
+			<Value>14:25</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>mailTo</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]公用发送邮件用例中邮件的接受方的邮件地址，支持多个，并用英文逗号隔开
+			</Description>
+			<Value>x_zhailiqing@aspire-tech.com</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>ChannelEncoding</Name>
+			<Id>0</Id>
+			<Description>MM第3方渠道营销同步文件编码格式</Description>
+			<Value>GBK</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>exportFreeFile</Name>
+			<Id>0</Id>
+			<Description>免费同步文件名
+			</Description>
+			<Value>MM_APP_AAA_BBB_~DyyyyMMdd~_FREE.csv</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>exportPayFile</Name>
+			<Id>0</Id>
+			<Description>付费同步文件名
+			</Description>
+			<Value>MM_APP_AAA_BBB_~DyyyyMMdd~_PAY.csv</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>exportAllFile</Name>
+			<Id>0</Id>
+			<Description>全部同步文件名
+			</Description>
+			<Value>MM_APP_AAA_BBB_~DyyyyMMdd~_ALL.csv</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>exportTBFile</Name>
+			<Id>0</Id>
+			<Description>先体验后付费同步文件名
+			</Description>
+			<Value>MM_APP_AAA_BBB_~DyyyyMMdd~_TB.csv</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>wwwZXCategoryId</Name>
+			<Id>0</Id>
+			<Description>www最新货架目录ID</Description>
+			<Value>100001128</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>wwwZRCategoryId</Name>
+			<Id>0</Id>
+			<Description>www最热货架目录ID</Description>
+			<Value>100001129</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>wwwXBTJCategoryId</Name>
+			<Id>0</Id>
+			<Description>www小编推荐货架目录ID</Description>
+			<Value>100001130</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>wapZXCategoryId</Name>
+			<Id>0</Id>
+			<Description>wap最新货架目录ID</Description>
+			<Value>100001131</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>wapZRCategoryId</Name>
+			<Id>0</Id>
+			<Description>wap最热货架目录ID</Description>
+			<Value>100001132</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>wapXBTJCategoryId</Name>
+			<Id>0</Id>
+			<Description>wap小编推荐货架目录ID</Description>
+			<Value>100001134</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>selfIcpCode</Name>
+			<Id>0</Id>
+			<Description>自有业务判断条件 icpcode</Description>
+			<Value>100246</Value>
+			<Reserved />
+		</ConfigItem>
+	</ModuleConfig>
+	<!-- 提供MM第3方渠道营销数据导出 结束 -->
+	<!-- 提供实体卡AP数据导出 开始 -->
+	<ModuleConfig Name="entitycard" Description="实体卡AP数据导出配置">
+		<ConfigItem>
+			<Name>FTPIP</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]实体卡AP的FTP服务地址</Description>
+			<Value>10.1.3.201</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPPort</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]实体卡AP的FTP服务端口</Description>
+			<Value>21</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPName</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]实体卡AP的FTP服务的登录用户名</Description>
+			<Value>max</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPPassWord</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]实体卡AP的FTP服务的登录密码</Description>
+			<Value>1qazZAQ!</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPPath</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]实体卡AP的FTP服务器上接口文件文件存放的目录</Description>
+			<Value>temp/ssms/entitycard</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>localDir</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]实体卡AP的本地临时接口文件文件存放的目录</Description>
+			<Value>D:/bea/user_projects/domains/mm_ssms/ssms/ssms/report/temp/entitycard
+			</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>EntitycardStartTime</Name>
+			<Description>[2:可选修改]实体卡AP数据导出自动任务执行的时间(24小时制)，格式： HH:MM
+			</Description>
+			<Value>13:53</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>mailTo</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]公用发送邮件用例中邮件的接受方的邮件地址，支持多个，并用英文逗号隔开
+			</Description>
+			<Value>x_zhailiqing@aspire-tech.com</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>EntitycardEncoding</Name>
+			<Id>0</Id>
+			<Description>实体卡AP同步文件编码格式</Description>
+			<Value>UTF-8</Value>
+			<Reserved />
+		</ConfigItem>
+
+		<ConfigItem>
+			<Name>EntitycardLineSep</Name>
+			<Id>0</Id>
+			<Description>实体卡AP同步文件行分隔符</Description>
+			<Value>\r\n</Value>
+			<Reserved />
+		</ConfigItem>
+
+		<ConfigItem>
+			<Name>EntitycardColumnSep</Name>
+			<Id>0</Id>
+			<Description>实体卡AP同步文件列分隔符</Description>
+			<Value>;</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>APExportFile</Name>
+			<Id>0</Id>
+			<Description>AP信息同步文件名</Description>
+			<Value>EC_AP_INFO_~DyyyyMMdd~.txt</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>APOperExportFile</Name>
+			<Id>0</Id>
+			<Description>AP业务代码同步文件名</Description>
+			<Value>EC_AP_OPER_~DyyyyMMdd~.txt</Value>
+			<Reserved />
+		</ConfigItem>
+	</ModuleConfig>
+	<!-- 提供实体卡AP数据导出 结束 -->
+
+	<!-- 创业大赛货架自动更新属性配置 开始 -->
+	<ModuleConfig Name="categoryAutoUpdateByCarveOut"
+		Description="创业大赛货架自动更新属性配置">
+		<ConfigItem>
+			<Name>startTime</Name>
+			<Id>0</Id>
+			<Description>创业大赛货架自动更新时间，格式：(24小时制)，格式： HH:MM</Description>
+			<Value>10:00</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>ConditionMaxValue</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]当前货架允许上架商品的默认最大值。</Description>
+			<Value>2000</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>RuleRunningTaskNum</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]执行规则的最大线程数。</Description>
+			<Value>10</Value>
+			<Reserved />
+		</ConfigItem>
+	</ModuleConfig>
+	<!-- 创业大赛货架自动更新属性配置 结束 -->
+
+	<!-- 分类同步添加精品库 开始 -->
+	<ModuleConfig Name="synCategory" Description="分类同步添加精品库">
+		<ConfigItem>
+			<Name>startTime</Name>
+			<Id>0</Id>
+			<Description>分类同步添加精品库执行时间，格式：(24小时制)，格式： HH:MM</Description>
+			<Value>03:00</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>aCategoryId</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]指定WAP精品库的货架id。</Description>
+			<Value>400000992</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>wCategoryId</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]指定WWW精品库的货架id。</Description>
+			<Value>400000991</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>oCategoryId</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]指定MO精品库的货架id。</Description>
+			<Value>400000993</Value>
+			<Reserved />
+		</ConfigItem>
+	</ModuleConfig>
+	<!-- 分类同步添加精品库 结束 -->
+
+	<!-- MM基地业务数字内容推荐需求 开始 -->
+	<ModuleConfig Name="baseDataSys" Description="MM基地业务数字内容推荐需求">
+		<ConfigItem>
+			<Name>localFilePath</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]本地生成目录，绝对路径</Description>
+			<Value>d:/test/</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPServerIP</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]导出文件上传FTP服务地址</Description>
+			<Value>10.1.3.201</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPServerPort</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]导出文件上传的FTP服务端口</Description>
+			<Value>21</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPServerUser</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]导出文件上传的FTP的登录用户名</Description>
+			<Value>max</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPServerPassword</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]导出文件上传的FTP的登录密码</Description>
+			<Value>1qazZAQ!</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPDir</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]FTP存放目录</Description>
+			<Value>temp/baseData</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>fileDataNum</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]一个文件中的数据最大值</Description>
+			<Value>30000</Value>
+			<Reserved />
+		</ConfigItem>
+	</ModuleConfig>
+	<!-- MM基地业务数字内容推荐需求 结束 -->
+	<!-- wap货架导出 开始 -->
+	<ModuleConfig Name="wapCategoryExport" Description="wap货架数据自动导出 属性配置">
+		<ConfigItem>
+			<Name>startTime</Name>
+			<Id>0</Id>
+			<Description>货架自动更新时间，格式：(24小时制)，格式： HH:MM</Description>
+			<Value>11:10</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>frequency</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]货架数据导出自动任务执行的频率，其值只能为day和week</Description>
+			<Value>day</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPServerIP</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]导出结果FTP服务地址</Description>
+			<Value>10.1.3.201</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPServerPort</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]导出结果的FTP服务端口</Description>
+			<Value>21</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPServerUser</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]导出结果的登录用户名</Description>
+			<Value>max</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPServerPassword</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]导出结果的登录密码</Description>
+			<Value>1qazZAQ!</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPDir</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]FTP存放目录</Description>
+			<Value>temp/ssms</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>LocalDir</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改]本地存放目录</Description>
+			<Value>D:/bea/user_projects/domains/mm_ssms/ssms/ssms/report/temp
+			</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>parentCategoryId</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改]父货架ID，缺少该配置项或值为-1或为空时从根节点全部导出,为正数（多个使用","分隔）时从指定根节点导出
+			</Description>
+			<Value>100001215,100001223</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>localFileName</Name>
+			<Id>0</Id>
+			<Description>wap货架数据导出到本地的文件名</Description>
+			<Value>wapcategory_yyyyMMdd.txt</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>ftpFileName</Name>
+			<Id>0</Id>
+			<Description>wap货架数据导出到FTP的文件名</Description>
+			<Value>wapcategory_yyyyMMdd.txt</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>appsLocalFileName</Name>
+			<Id>0</Id>
+			<Description>应用信息导出到本地的文件名(增量导出:%operation%=Day;全量导出%operation%=All)
+			</Description>
+			<Value>apps%operation%_yyyyMMdd.txt</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>appsFtpFileName</Name>
+			<Id>0</Id>
+			<Description>应用信息导出到FTP的文件名(增量导出:%operation%=Day;全量导出%operation%=All)
+			</Description>
+			<Value>apps%operation%_yyyyMMdd.txt</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>mailTo</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]公用发送邮件用例中邮件的接受方的邮件地址，支持多个，并用英文逗号隔开
+			</Description>
+			<Value>zhangweixing@aspire-tech.com</Value>
+			<Reserved />
+		</ConfigItem>
+	</ModuleConfig>
+	<!-- wap货架导出 结束 -->
+	<!-- 139音乐信息同步 开始 -->
+	<ModuleConfig Name="music139" Description="139音乐信息同步属性配置">
+		<ConfigItem>
+			<Name>startTime</Name>
+			<Id>0</Id>
+			<Description>信息同步开始时间</Description>
+			<Value>11:06</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>frequency</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]自动任务执行的频率，其值只能为day和week</Description>
+			<Value>day</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPServerIP</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]导入139音乐数据FTP服务地址</Description>
+			<Value>10.1.3.201</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPServerPort</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]导入139音乐数据的FTP服务端口</Description>
+			<Value>21</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPServerUser</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]导入139音乐数据的FTP登录用户名</Description>
+			<Value>max</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPServerPassword</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]导入139音乐数据的FTP登录密码</Description>
+			<Value>1qazZAQ!</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPDir</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]139音乐数据FTP存放目录</Description>
+			<Value>temp/ssms</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>SourceAlbumFTPDir</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]导入139专辑图片数据的FTP存放目录</Description>
+			<Value>img/album</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>SourceMusicFTPDir</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]导入139榜单中的歌曲图片数据的FTP存放目录</Description>
+			<Value>img/song</Value>
+			<Reserved />
+		</ConfigItem>
+
+		<ConfigItem>
+			<Name>DestFTPServerIP</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]上传139图片资源服务器的FTP服务地址</Description>
+			<Value>10.1.3.201</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>DestFTPServerPort</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]上传139图片资源服务器的FTP服务端口</Description>
+			<Value>21</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>DestFTPServerUser</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]上传139图片资源服务器的FTP登录用户名</Description>
+			<Value>max</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>DestFTPServerPassword</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]上传139图片资源服务器的FTP登录密码</Description>
+			<Value>1qazZAQ!</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>DestAlbumFTPDir</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]上传139专辑图片资源服务器的FTP存放目录</Description>
+			<Value>temp/ssms</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>DestMusicFTPDir</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]上传139榜单中歌曲图片资源服务器的FTP存放目录</Description>
+			<Value>temp/ssms</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>MusicPicUrl</Name>
+			<Id>0</Id>
+			<Description>歌曲图片名称前缀(最后必须有分隔符!)</Description>
+			<Value>http://10.201.11.26:38080/</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>LocalDir</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改]本地存放目录</Description>
+			<Value>e:/bea/user_projects/domains/mm_ssms/ssms/ssms/report/temp
+			</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>albumFileName</Name>
+			<Id>0</Id>
+			<Description>专辑基础信息同步接口</Description>
+			<Value>album_yyyyMMdd.txt</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>billboardFileName</Name>
+			<Id>0</Id>
+			<Description>榜单基础信息同步接口</Description>
+			<Value>billboard_yyyyMMdd.txt</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>keywordFileName</Name>
+			<Id>0</Id>
+			<Description>搜索关键字信息同步接口</Description>
+			<Value>keyword_yyyyMMdd.txt</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>tagFileName</Name>
+			<Id>0</Id>
+			<Description>歌曲标签信息同步接口</Description>
+			<Value>tag_yyyyMMdd.xls</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>picUrl</Name>
+			<Id>0</Id>
+			<Description>专辑图片名称前缀(最后必须有分隔符!)</Description>
+			<Value>http://10.201.11.26:38080/</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>mailTo</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]公用发送邮件用例中邮件的接受方的邮件地址，支持多个，并用英文逗号隔开
+			</Description>
+			<Value>zhangweixing@aspire-tech.com</Value>
+			<Reserved />
+		</ConfigItem>
+	</ModuleConfig>
+	<!-- 139音乐信息同步 结束 -->
+
+	<!-- AP刷榜预警系统 开始 -->
+	<ModuleConfig Name="AP_WARN" Description="AP刷榜预警系统配置">
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>StartTime</Name>
+			<Description>[2:可选修改]AP刷榜预警系统自动任务执行的时间(24小时制)，格式： HH:MM
+			</Description>
+			<Value>14:25</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>mailTo</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]公用发送邮件用例中邮件的接受方的邮件地址，支持多个，并用英文逗号隔开
+			</Description>
+			<Value>x_zhailiqing@aspire-tech.com</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>localAttachFile</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]发送邮件中刷榜应用文件附件存放的地址
+			</Description>
+			<Value>D:/bea/user_projects/domains/mm_ssms/ssms/ssms/report/temp/warn
+			</Value>
+			<Reserved />
+		</ConfigItem>
+		<!-- 免费商品 开始 -->
+		<ConfigItem>
+			<Name>freeWarnMaxDayOrder</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改项]免费商品当日下载次数 大于多少 预警 ， 整数
+			</Description>
+			<Value>500</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>freeWarnDayOrderLessYDayOrder</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改项]免费商品（当天下载次数 - 昨日下载次数）的绝对值 大于 多少 预警 ，整数
+			</Description>
+			<Value>500</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>freeWarnDayOrderLess7DayOrder</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改项]免费商品（当天下载次数 - 7天下载次数均值）的绝对值 大于多少 预警， 整数
+			</Description>
+			<Value>500</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>freeWarnDayOrderYDayOrderPercent</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改项]免费商品（当天下载次数/昨日下载次数 - 1）x100% 的绝对值 大于多少 预警， 整数
+			</Description>
+			<Value>50</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>freeWarnDayOrder7DayOrderPercent</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改项]免费商品（当天下载次数/7天下载次数均值 - 1）x100%的绝对值 大于多少 预警， 整数
+			</Description>
+			<Value>50</Value>
+			<Reserved />
+		</ConfigItem>
+		<!-- 免费商品 结束 -->
+
+		<!-- 付费商品 开始 -->
+		<ConfigItem>
+			<Name>payWarnMaxDayOrder</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改项]付费商品当日下载次数 大于多少 预警， 整数
+			</Description>
+			<Value>100</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>payWarnDayOrderLessYDayOrder</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改项]付费商品（当天下载次数 - 昨日下载次数）的绝对值 大于 多少 预警， 整数
+			</Description>
+			<Value>200</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>payWarnDayOrderLess7DayOrder</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改项]付费商品（当天下载次数 - 7天下载次数均值）的绝对值 大于多少 预警， 整数
+			</Description>
+			<Value>200</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>payWarnDayOrderYDayOrderPercent</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改项]付费商品（当天下载次数/昨日下载次数 - 1）x100% 的绝对值 大于多少 预警， 整数
+			</Description>
+			<Value>50</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>payWarnDayOrder7DayOrderPercent</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改项]付费商品（当天下载次数/7天下载次数均值 - 1）x100%的绝对值 大于多少 预警， 整数
+			</Description>
+			<Value>50</Value>
+			<Reserved />
+		</ConfigItem>
+		<!-- 付费商品 结束 -->
+	</ModuleConfig>
+	<!-- AP刷榜预警系统 结束 -->
+
+	<!--AP刷榜预警二期 开始 -->
+	<ModuleConfig Name="AP_WARN_DET" Description="AP刷榜预警二期">
+		<!-- 单用户下载应用异常指标 -->
+		<ConfigItem>
+			<Name>MAX_DOWNLOAD_DAY</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改项]商品当日下载次数最大值 大于多少 预警， 整数
+			</Description>
+			<Value>200</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>MAX_DOWNLOAD_USER</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改项]当日相同手机号码下载此商品次数最大值 大于 多少 预警， 整数
+			</Description>
+			<Value>10</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>MAX_USER_DOWNLOAD_QUOTIETY</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改项]当日下载此商品次数总和>此商品当日下载次数的最大百分比 大于多少% 预警， 整数
+			</Description>
+			<Value>30</Value>
+			<Reserved />
+		</ConfigItem>
+		<!-- 单用户下载应用异常指标 -->
+
+		<!-- 连号消费现象指标 -->
+		<ConfigItem>
+			<Name>MAX_SERIES_USER</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改项]手机允许最大连号数 大于多少 预警， 整数
+			</Description>
+			<Value>500</Value>
+			<Reserved />
+		</ConfigItem>
+		<!-- 连号消费现象指标 -->
+
+		<!-- 下载用户重叠率指标 -->
+		<ConfigItem>
+			<Name>MAX_USER_ITERANCE_QUOTIETY</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改项]下载用户重叠率最大值 大于多少% 预警， 整数
+			</Description>
+			<Value>30</Value>
+			<Reserved />
+		</ConfigItem>
+		<!-- 下载用户重叠率指标 -->
+
+		<!-- 地市消费增幅巨大指标 -->
+		<ConfigItem>
+			<Name>MAX_DOWNLOAD_CITY_NUM</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改项]可计算的下载量最大城市有几个 整数
+			</Description>
+			<Value>2</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>MAX_DOWNLOAD_CITY</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改项]允许下载量最大城市 不在范围内 预警， 以:隔开
+			</Description>
+			<Value>深圳市:上海市</Value>
+			<Reserved />
+		</ConfigItem>
+		<!-- 地市消费增幅巨大指标 -->
+
+		<!-- 消费时间固定指标 -->
+		<ConfigItem>
+			<Name>MAX_DOWNLOAD_TIME</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改项]允许的下载峰值时段 不在范围内 预警， 以,隔开
+			</Description>
+			<Value>17:00-18:00,11:00-12:00</Value>
+			<Reserved />
+		</ConfigItem>
+		<!-- 消费时间固定指标 -->
+	</ModuleConfig>
+	<!--AP刷榜预警二期 结束 -->
+
+	<!--二级分类同步开始 -->
+	<ModuleConfig Name="AppcateSyn" Description="二级分类同步">
+		<ConfigItem>
+			<Name>startTime</Name>
+			<Id>0</Id>
+			<Description>同步开始时间</Description>
+			<Value>11:06</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>frequency</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]自动任务执行的频率，其值只能为day和week</Description>
+			<Value>day</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>mailTo</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]公用发送邮件用例中邮件的接受方的邮件地址，支持多个，并用英文逗号隔开
+			</Description>
+			<Value>zhangweixing@aspire-tech.com</Value>
+			<Reserved />
+		</ConfigItem>
+	</ModuleConfig>
+	<!--二级分类同步结束 -->
+	<!-- 专题管理配置 -->
+	<ModuleConfig Name="DISSERTATION" Description="专题管理配置">
+		<ConfigItem>
+			<Name>FTPServerIP</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]上传专题关联门户logo图片的资源服务器FTP服务地址</Description>
+			<Value>10.1.3.201</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPServerPort</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]上传专题关联门户logo图片的FTP资源服务器端口</Description>
+			<Value>21</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPServerUser</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]上传专题关联门户logo图片的FTP资源服务器登录用户名</Description>
+			<Value>max</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPServerPassword</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]上传专题关联门户logo图片的FTP资源服务器登录密码</Description>
+			<Value>1qazZAQ!</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPDir</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]上传专题关联门户logo图片的FTP资源服务器目录</Description>
+			<Value>temp/ssms/yuDiss</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>PicUrl</Name>
+			<Id>0</Id>
+			<Description>资源服务器logo图片名称前缀(最后必须有分隔符!)</Description>
+			<Value>http://10.201.11.26:38080/</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>LocalDir</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改]logo图片本地存放目录</Description>
+			<Value>e:/bea/user_projects/domains/mm_ssms/ssms/ssms/report/temp
+			</Value>
+			<Reserved />
+		</ConfigItem>
+	</ModuleConfig>
+	<!-- 专题管理配置 -->
+	<!-- 飞信，139邮箱,139说客数据导出配置 -->
+	<ModuleConfig Name="circle" Description="飞信，139邮箱,139说客数据导出配置">
+		<ConfigItem>
+			<Name>FTPServerIP</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]上传飞信139邮箱139说客导出文件FTP服务地址</Description>
+			<Value>10.1.3.201</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPServerPort</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]上传飞信139邮箱139说客导出文件FTP服务器端口</Description>
+			<Value>21</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPServerUser</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]上传飞信139邮箱139说客导出文件的FTP服务器登录用户名</Description>
+			<Value>max</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPServerPassword</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]上传飞信139邮箱139说客导出文件的FTP服务器登录密码</Description>
+			<Value>1qazZAQ!</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPDir</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]上传飞信139邮箱139说客导出文件的FTP服务器目录</Description>
+			<Value>temp/ssms/yuDiss</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>LOCALPATH</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改]本地存放目录</Description>
+			<Value>D:/bea/user_projects/domains/mydomain/myserver/ssms/temp
+			</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>startTime</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改]启动时间</Description>
+			<Value>22:45</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FetionFilename</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改]飞信文件命名</Description>
+			<Value>app_fetioncontent_~DyyyyMMdd~.csv</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>f139mailFileName</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改]139邮箱文件命名</Description>
+			<Value>app_139mailcontent_~DyyyyMMdd~.csv</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>f139skFileName</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改]139说客文件命名</Description>
+			<Value>app_139skcontent_~DyyyyMMdd~.csv</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>mailTo</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]公用发送邮件用例中邮件的接受方的邮件地址，支持多个，并用英文逗号隔开
+			</Description>
+			<Value>dongke@aspire-tech.com</Value>
+			<Reserved />
+		</ConfigItem>
+	</ModuleConfig>
+	<!-- 飞信，139邮箱,139说客数据导出管理配置 -->
+	<!-- 报表榜单数据文件处理任务相关配置 开始 -->
+	<ModuleConfig Name="topListConfig" Description="创业大赛相关配置">
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>TopListSynStartTime</Name>
+			<Description>[2:可选修改]报表榜单数据文件处理任务自动任务执行的时间(24小时制)，格式： HH:MM
+			</Description>
+			<Value>01:30</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPServerIP</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]获取报表文件FTP服务地址</Description>
+			<Value>10.1.3.220</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPServerPort</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]获取报表文件的FTP服务端口</Description>
+			<Value>21</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPServerUser</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]获取报表文件的登录用户名</Description>
+			<Value>username</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPServerPassword</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]获取报表文件的登录密码</Description>
+			<Value>password</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>ftpDirPath</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]获取报表文件FTP存放目录</Description>
+			<Value>/opt/aspire/product/ssms/temp/ssms/</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>localDirPath</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改]本地文件存放目录</Description>
+			<Value>D:/bea/user_projects/domains/mydomain/myserver/ssms/temp
+			</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>global_softorgame_list</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改]软件游戏类作品人气综合推荐指数TOP60榜单数据目录及文件名配置</Description>
+			<Value>global_softorgame_list</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>global_incubate_list</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改]创意孵化类作品人气综合推荐指数TOP30榜单数据目录及文件名配置</Description>
+			<Value>global_incubate_list</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>star_softorgame_list</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改]软件游戏类作品星探推荐得分TOP50榜单数据目录及文件名配置</Description>
+			<Value>star_softorgame_list</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>star_incubate_list</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改]创意孵化类作品星探推荐得分TOP50榜单数据目录及文件名配置</Description>
+			<Value>star_incubate_list</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>cy2011_product_add_value</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改]每日创业大赛作品运营属性数据目录及文件名配置</Description>
+			<Value>cy2011_product_add_value</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>mark_pk_fee_list</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改]市场PK应用累计到当前收入</Description>
+			<Value>cy2011_content_fee</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>cyUpdateTaskNum</Name>
+			<Description>[3:必须修改项]创业大赛数据更新启动的任务数</Description>
+			<Value>50</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>cyMaxReceivedNum</Name>
+			<Description>[3:必须修改项]创业大赛数据更新运行器队列的最大容量</Description>
+			<Value>10000</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>fileDay</Name>
+			<Description>[2:可选修改]更新数据文件名的时间，默认为前一天</Description>
+			<Value>-1</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>mailTo</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]公用发送邮件用例中邮件的接受方的邮件地址，支持多个，并用英文逗号隔开
+			</Description>
+			<Value>test@aspire-tech.com</Value>
+			<Reserved />
+		</ConfigItem>
+	</ModuleConfig>
+	<!-- 报表榜单数据文件处理任务 结束 -->
+
+	<!-- new139新音乐信息同步 开始 -->
+	<ModuleConfig Name="newmusic139" Description="new139新音乐信息同步属性配置">
+		<ConfigItem>
+			<Name>startTime</Name>
+			<Id>0</Id>
+			<Description>信息同步开始时间</Description>
+			<Value>11:06</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>frequency</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]自动任务执行的频率，其值只能为day和week</Description>
+			<Value>day</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>sourceFTPServerIP</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]导入139音乐数据FTP服务地址</Description>
+			<Value>10.1.3.201</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>sourceFTPServerPort</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]导入139音乐数据的FTP服务端口</Description>
+			<Value>21</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>sourceFTPServerUser</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]导入139音乐数据的FTP登录用户名</Description>
+			<Value>max</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>sourceFTPServerPassword</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]导入139音乐数据的FTP登录密码</Description>
+			<Value>1qazZAQ!</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>localDir</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]本地临时文件目录 </Description>
+			<Value>D:/bea/user_projects/domains/mydomain/myserver/ssms/temp
+			</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>newFileFTPDir</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]榜单，专辑，关键字，标签文件FTP路径 </Description>
+			<Value>temp/ssms/</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>encoding</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]文件编码格式 </Description>
+			<Value>UTF-8</Value>
+			<Reserved />
+		</ConfigItem>
+
+		<ConfigItem>
+			<Name>destFTPServerIP</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]上传139图片资源服务器的FTP服务地址</Description>
+			<Value>10.1.3.201</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>destFTPServerPort</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]上传139图片资源服务器的FTP服务端口</Description>
+			<Value>21</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>destFTPServerUser</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]上传139图片资源服务器的FTP登录用户名</Description>
+			<Value>max</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>destFTPServerPassword</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]上传139图片资源服务器的FTP登录密码</Description>
+			<Value>1qazZAQ!</Value>
+			<Reserved />
+		</ConfigItem>
+
+		<ConfigItem>
+			<Name>mailTo</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]公用发送邮件用例中邮件的接受方的邮件地址，支持多个，并用英文逗号隔开
+			</Description>
+			<Value>dongke@aspire-tech.com</Value>
+			<Reserved />
+		</ConfigItem>
+
+		<ConfigItem>
+			<Name>newAlbumFileName</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]专辑名称</Description>
+			<Value>new_album_~DyyyyMMdd~.txt</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>newAlbumPicUrl</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]专辑图片URL前缀，有斜杠 URL+filename</Description>
+			<Value>http://10.201.11.26:38080/new/album/</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>newBillboardFileName</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]榜单文件名称 </Description>
+			<Value>new_billboard_~DyyyyMMdd~.txt</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>newBillboardPicUrl</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]榜单图片URL前缀 </Description>
+			<Value>http://10.201.11.26:38080/new/billboard/</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>newKeywordFileName</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]关键字文件名 </Description>
+			<Value>new_keyword_~DyyyyMMdd~.txt</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>newTagFileName</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]标签文件名 </Description>
+			<Value>new_tag_~DyyyyMMdd~.txt</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>newMusicPicUrl</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]音乐图片URL前缀 </Description>
+			<Value>http://10.201.11.26:38080/new/billboard/</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>newSourceAlbumFTPDir</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]专辑图片FTP地址 </Description>
+			<Value>/img/new/album/</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>newSourceBillboardFTPDir</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]榜单图片FTP地址 </Description>
+			<Value>/img/new/billboard/</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>newSourceMusicFTPDir</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]音乐图片FTP地址 </Description>
+			<Value>/img/new/song/</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>newDestAlbumFTPDir</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]专辑图片资源服务器地址 </Description>
+			<Value>/res/img/new/album/</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>newDestBillboardFTPDir</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]榜单图片资源服务器地址 </Description>
+			<Value>/res/img/new/billboard/</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>newdestMusicFTPDir</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]音乐图片资源服务器地址 </Description>
+			<Value>/res/img/new/song/</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>cloumsplit</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]每行列分隔符 </Description>
+			<Value>|</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>baseAlbumCategoryId</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]专辑基础货架 </Description>
+			<Value>100000003</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>baseBillboardCategoryId</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]榜单基础货架 </Description>
+			<Value>100000002</Value>
+			<Reserved />
+		</ConfigItem>
+	</ModuleConfig>
+	<!-- new139新音乐信息同步 结束 -->
+	<!-- 扩展属性相关配置 开始 -->
+	<ModuleConfig Name="keyBaseConfig" Description="扩展属性相关配置">
+		<ConfigItem>
+			<Name>keytable</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改]配置可增加扩展属性的表名，必须为系统中已存在的数据表，格式为表名|表名描述，支持多个，并用英文逗号隔开
+			</Description>
+			<Value>t_r_category|MM货架表,t_r_gcontent|内容表,t_r_reference|商品表,t_mb_category_new|音乐货架表,t_mb_music_new|音乐表,t_rb_category|图书货架表,t_rb_book|图书表,t_rb_category_new|基地图书货架表,t_rb_book_new|基地图书表,t_vo_category|基地视频货架表,t_vo_program|基地视频表,t_rb_author_new|基地阅读作者表,t_mb_singer_new|基地音乐歌手表
+			</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>keytablebyid</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改]配置可增加扩展属性的表名的id信息，格式为表名|表名描述，支持多个，并用英文逗号隔开
+			</Description>
+			<Value>t_r_category|categoryid,t_r_gcontent|contentid,t_r_reference|goodsid,t_mb_category_new|categoryid,t_mb_music_new|musicid,t_rb_category|categoryid,t_rb_book|bookid,t_rb_category_new|id,t_rb_book_new|bookid,t_vo_category|id,t_vo_program|programid,t_rb_author_new|authorid,t_mb_singer_new|sid
+			</Value>
+			<Reserved />
+		</ConfigItem>
+	</ModuleConfig>
+	<!-- 扩展属性相关配置 结束 -->
+
+	<!-- 生成浙江MStore营销平台数据文件配置 开始 -->
+	<ModuleConfig Name="BaseFileConfig" Description="用于生成文件的基础配置">
+		<ConfigItem>
+			<Name>startTime</Name>
+			<Id>0</Id>
+			<Description>任务执行时间，格式：(24小时制)，格式： HH:MM</Description>
+			<Value>18:30</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>mailTo</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]任务完成后的邮件地址，支持多个，并用英文逗号隔开</Description>
+			<Value>test@aspire-tech.com</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPIP</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]用于上传生成文件的FTP地址</Description>
+			<Value>10.1.3.201</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPPort</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]用于上传生成文件的FTP端口</Description>
+			<Value>21</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPName</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]用于上传生成文件的FTP登录用户名</Description>
+			<Value>max</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPPassWord</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]用于上传生成文件的FTP登录密码</Description>
+			<Value>1qazZAQ!</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPPath</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]用于上传生成文件的FTP存放路径</Description>
+			<Value>BSB</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>logFileStartTime</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]生成日志维表的任务执行时间，格式：(24小时制)，格式： HH:MM
+			</Description>
+			<Value>18:30</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>logFilemailTo</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]生成日志维表文件任务完成后的邮件地址，支持多个，并用英文逗号隔开</Description>
+			<Value>test@aspire-tech.com</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>logFTPPath</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]用于上传生成日志维表文件的FTP存放路径</Description>
+			<Value>Log</Value>
+			<Reserved />
+		</ConfigItem>
+	</ModuleConfig>
+	<!-- 生成浙江MStore营销平台数据文件配置 结束 -->
+
+
+	<!-- 基地视频数据接入接口配置 开始 -->
+	<ModuleConfig Name="BaseVideoFileConfig" Description="基地视频数据接入接口配置">
+		<ConfigItem>
+			<Name>sysDayByWeek</Name>
+			<Id>0</Id>
+			<Description>为基地确定的每周几执行全量导入的周数</Description>
+			<Value>7</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>getWeekNum</Name>
+			<Id>0</Id>
+			<Description>取全量基地视频物理文件的周期，0:星期日,1:星期一,2:星期一,3:星期三,4:星期四,5:星期五,6:星期六
+			</Description>
+			<Value>1</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>logopathTime</Name>
+			<Id>0</Id>
+			<Description>任务执行时间，格式：(24小时制)，格式： HH:MM</Description>
+			<Value>14:05</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>startTime</Name>
+			<Id>0</Id>
+			<Description>任务执行时间，格式：(24小时制)，格式： HH:MM</Description>
+			<Value>18:30</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>startMinutes</Name>
+			<Id>0</Id>
+			<Description>[3: 必须修改项] 按小时增量同步基地视频文件数据开始时间分钟数，值范围:[0-59]
+			</Description>
+			<Value>15</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>mailTo</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]任务完成后的邮件地址，支持多个，并用英文逗号隔开</Description>
+			<Value>test@aspire-tech.com</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPIP</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]存放基地视频数据文件的FTP地址</Description>
+			<Value>10.1.3.201</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPPort</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]存放基地视频数据文件的FTP端口</Description>
+			<Value>21</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPName</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]用存放基地视频数据文件的FTP登录用户名</Description>
+			<Value>max</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPPassWord</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]存放基地视频数据文件的FTP登录密码</Description>
+			<Value>1qazZAQ!</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPPath</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]存放基地视频数据文件的FTP存放路径</Description>
+			<Value>Video</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>getDateNum</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]取文件的日期，0：为当天，1：为前一天，2：为前二天</Description>
+			<Value>0</Value>
+			<Reserved />
+		</ConfigItem>
+
+		<ConfigItem>
+			<Name>getTimeNum</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]取文件的时间，0：为当小时，1：为前小时，2：为前两小时</Description>
+			<Value>0</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>syncDataTimeIntervalByTime</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]按小时增量同步视频与栏目详情时间,多个用|隔开</Description>
+			<Value>8|12|17|20</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>xpasUrlPortalConfig</Name>
+			<Id>0</Id>
+			<Description>[3:可选修改项]通知MOXPAS门户的UPL</Description>
+			<Value>http://10.1.3.220:10066/xpas/videoSyncProcServlet.do</Value>
+			<Reserved />
+		</ConfigItem>
+
+		<ConfigItem>
+			<Name>verDataSpacers</Name>
+			<Id>0</Id>
+			<Description>[3:可选修改项]校验文件字段间隔符</Description>
+			<Value>|</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>logoPath</Name>
+			<Id>0</Id>
+			<Description>[3:可选修改项]默认栏目图片路径</Description>
+			<Value>http://ota.mmarket.com:38080/rs/res/video/node/default_video120x80-2.jpg
+			</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>taskRunnerNum</Name>
+			<Id>0</Id>
+			<Description>[3:可选修改项]最大线程执行数</Description>
+			<Value>5</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>taskMaxReceivedNum</Name>
+			<Id>0</Id>
+			<Description>[3:可选修改项]任务队列最大容量。0表示不限制容量</Description>
+			<Value>20000</Value>
+			<Reserved />
+		</ConfigItem>
+
+		<ConfigItem>
+			<Name>ipListConfig</Name>
+			<Id>0</Id>
+			<Description>[3:可选修改项]请求的可信任IP队列以｜隔开</Description>
+			<Value>127.0.0.1|10.1.31.115|10.101.1.89|10.101.1.90|10.101.10.133|10.101.1.68
+			</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>urlPortalConfig</Name>
+			<Id>0</Id>
+			<Description>[3:可选修改项]通知门户的UPL队列以｜隔开</Description>
+			<Value>http://127.0.0.1:7001/video/deleteProgram|http://127.0.0.1:7001/video/deleteProgram|http://10.1.3.220:10066/xpas/videoSyncProcServlet.do
+			</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>phoneList</Name>
+			<Id>0</Id>
+			<Description>[3:可选修改项]删除失败时用来短信通知的手机号队列以｜隔开</Description>
+			<Value>15986761932|15989860820</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>wapProcedureName</Name>
+			<Id>0</Id>
+			<Description>[3:可选修改项]执行WAP数据库函数</Description>
+			<Value>call NLTESTA.func_insert@DL_LINK_WAP(?)</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FromFTPIP</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]基地视频提供的logo图片的FTP服务地址</Description>
+			<Value>10.1.3.201</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FromFTPPort</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]基地视频提供的logo图片的FTP服务端口</Description>
+			<Value>21</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FromFTPUser</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]基地视频提供的logo图片的FTP服务的登录用户名</Description>
+			<Value>max</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FromFTPPassword</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]基地视频提供的logo图片的FTP服务的登录密码</Description>
+			<Value>1qazZAQ!</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FromProgramFTPDir</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]基地视频提供的节目logo图片的FTP服务器上文件存放的目录</Description>
+			<Value>res/video/videodetail</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FromNodeFTPDir</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]基地视频提供的栏目logo图片的FTP服务器上文件存放的目录</Description>
+			<Value>res/video/node</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>nodelogoTemplocalDir</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]基地视频提供的logo图片的本地临时文件存放的目录</Description>
+			<Value>/opt/aspire/product/ssms/ssmsdomain/ssmsserver/ssms/datasync/video/node
+			</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>prologoTemplocalDir</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]基地视频提供的logo图片的本地临时文件存放的目录</Description>
+			<Value>/opt/aspire/product/ssms/ssmsdomain/ssmsserver/ssms/datasync/video/videodetail
+			</Value>
+			<Reserved />
+		</ConfigItem>
+
+		<ConfigItem>
+			<Name>ToFTPIP</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]存放基地视频提供的logo图片的自有FTP服务地址</Description>
+			<Value>10.1.3.201</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>ToFTPPort</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]存放基地视频提供的logo图片的自有FTP服务端口</Description>
+			<Value>21</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>ToFTPUser</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]存放基地视频提供的logo图片的自有FTP服务的登录用户名</Description>
+			<Value>max</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>ToFTPPassword</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]存放基地视频提供的logo图片的自有FTP服务的登录密码</Description>
+			<Value>1qazZAQ!</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>ToNodeFTPDir</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]存放基地视频提供的栏目logo图片的自有FTP服务器文件存放的目录</Description>
+			<Value>res/video/node</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>ToProgramFTPDir</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]存放基地视频提供的节目logo图片的自有FTP服务器文件存放的目录</Description>
+			<Value>res/video/videodetail</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>NodeLogoPath</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]用来存放数据库中栏目logo前缀HTTP的URL配置</Description>
+			<Value>temp/ssms/logo</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>ProgramLogoPath</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]用来存放数据库中节目logo前缀HTTP的URL配置</Description>
+			<Value>temp/ssms/logo</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>bakSuffix</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改项]备份的表名后缀</Description>
+			<Value>_bak</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>defSuffix</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改项]入库的表名后缀</Description>
+			<Value>_tra</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>renameTables</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改项]需要修改的入库同步表名</Description>
+			<Value>t_vo_video,t_vo_node,t_vo_program,t_vo_live,t_vo_reference,t_vo_category
+			</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>resServerPath</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]扩展字段资源服务器文件存放的目录</Description>
+			<Value>temp/ssms</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>SHELLPATH</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]shell文件所在绝对路径</Description>
+			<Value>/opt/aspire/product/mm_dcmq/dcmq/domain/AdminServer/ssms/ftpdata/baseData/
+			</Value>
+			<Reserved />
+		</ConfigItem>
+
+		<ConfigItem>
+			<Name>CollectImgUrl</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]内容集图片前缀</Description>
+			<Value>http://ota.mmarket.com:38080/rs/res/video/node/</Value>
+			<Reserved />
+		</ConfigItem>
+
+	</ModuleConfig>
+
+	<!-- 基地阅读 -->
+	<ModuleConfig Name="baseread" Description="基地阅读配置项">
+		<ConfigItem>
+			<Name>FTPServerIP</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]基地图书的FTP服务地址</Description>
+			<Value>10.1.3.201</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPServerPort</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]基地图书的FTP服务端口</Description>
+			<Value>21</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPServerUser</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]基地图书的FTP服务的登录用户名</Description>
+			<Value>max</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPServerPassword</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]基地图书的FTP服务的登录密码</Description>
+			<Value>1qazZAQ!</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPDir</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]基地图书的FTP服务器上音乐信息接口文件文件存放的目录</Description>
+			<Value>temp/ssms</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>localDir</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]基地图书的本地临时上图书信息接口文件文件存放的目录</Description>
+			<Value>D:/bea/user_projects/domains/mydomain/myserver/ssms/report/temp
+			</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>errorFileDir</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]基地图书的导入失败的文件存放的目录</Description>
+			<Value>D:/bea/user_projects/domains/mydomain/myserver/ssms/report/temp/error
+			</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BaseBookSynStartTime</Name>
+			<Description>[2:可选修改]基地图书数据导入自动任务执行的时间(24小时制)，格式： HH:MM</Description>
+			<Value>19:02</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BaseBookSynMailto</Name>
+			<Description>[3:必须修改项]基地图书数据同步结果邮件接收人，使用英文逗号分割</Description>
+			<Value>x_zhailiqing@aspire-tech.com</Value>
+			<Reserved />
+		</ConfigItem>
+
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BaseBookSynTaskNum</Name>
+			<Description>[3:必须修改项]基地图书查询启动的任务数</Description>
+			<Value>50</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BaseBookMaxReceivedNum</Name>
+			<Description>[3:必须修改项]基地图书运行器队列的最大容量</Description>
+			<Value>10000</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>baseBookThresholdNum</Name>
+			<Description>[3:必须修改项]基地阅读全量同步时用于删除时判定的阀值</Description>
+			<Value>10000</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>fileEncoding</Name>
+			<Description>[3:必须修改项]基地图书文件编码</Description>
+			<Value>UTF-8</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BBookListSep</Name>
+			<Description>[2:可选修改项]基地图书文件字段间隔符</Description>
+			<Value>0x1F</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BBookVerfListSep</Name>
+			<Description>[2:可选修改项]基地图书文件字段间隔符</Description>
+			<Value>|</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>synBaseBookSubject</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改]基地图书同步结果邮件的标题</Description>
+			<Value>基地阅读同步提示邮件！！！</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BookTypeRegex</Name>
+			<Description>[2:可选修改项]基地图书分类清单文件名</Description>
+			<Value>i_b-type_~DyyyyMMdd~_[0-9]{6}.txt</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BookTypeVerfRegex</Name>
+			<Description>[2:可选修改项]基地图书分类清单校验文件名</Description>
+			<Value>i_b-type_~DyyyyMMdd~.verf</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BookAuthorRegex</Name>
+			<Description>[2:可选修改项]基地图书作者信息文件名</Description>
+			<Value>i_b-author_~DyyyyMMdd~_[0-9]{6}.txt</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BookAuthorVerfRegex</Name>
+			<Description>[2:可选修改项]基地图书作者信息校验文件名</Description>
+			<Value>i_b-author_~DyyyyMMdd~.verf</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BookRegex</Name>
+			<Description>[2:可选修改项]基地图书信息文件名</Description>
+			<Value>i_b-book_~DyyyyMMdd~_[0-9]{6}.txt</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BookVerfRegex</Name>
+			<Description>[2:可选修改项]基地图书信息校验文件名</Description>
+			<Value>i_b-book_~DyyyyMMdd~.verf</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BookMonthRegex</Name>
+			<Description>[2:可选修改项]基地图书包月信息文件名</Description>
+			<Value>a_b-package_~DyyyyMMdd~_[0-9]{6}.txt</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BookMonthVerfRegex</Name>
+			<Description>[2:可选修改项]基地图书包月信息校验文件名</Description>
+			<Value>a_b-package_~DyyyyMMdd~.verf</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BookBagContentRegex</Name>
+			<Description>[2:可选修改项]基地图书包月内容信息文件名</Description>
+			<Value>a_b-packageContent_~DyyyyMMdd~_[0-9]{6}.txt</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BookBagContentVerfRegex</Name>
+			<Description>[2:可选修改项]基地图书包月内容信息校验文件名</Description>
+			<Value>a_b-packageContent_~DyyyyMMdd~.verf</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>MoDirectoryRegex</Name>
+			<Description>[2:可选修改项]基地图书终端目录信息文件名</Description>
+			<Value>i_b-catalogid_~DyyyyMMdd~_[0-9]{6}.txt</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>MoDirectoryVerfRegex</Name>
+			<Description>[2:可选修改项]基地图书终端目录信息校验文件名</Description>
+			<Value>i_b-catalogid_~DyyyyMMdd~.verf</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BookRecommendRegex</Name>
+			<Description>[2:可选修改项]基地图书推荐信息文件名</Description>
+			<Value>a_b-recommend_~DyyyyMMdd~_[0-9]{6}.txt</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BookRecommendVerfRegex</Name>
+			<Description>[2:可选修改项]基地图书推荐信息校验文件名</Description>
+			<Value>a_b-recommend_~DyyyyMMdd~.verf</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BookCountRegex</Name>
+			<Description>[2:可选修改项]基地图书统计信息文件名</Description>
+			<Value>i_b-statistics_~DyyyyMMdd~_[0-9]{6}.txt</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BookCountVerfRegex</Name>
+			<Description>[2:可选修改项]基地图书统计信息校验文件名</Description>
+			<Value>i_b-statistics_~DyyyyMMdd~.verf</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BookUpdateRegex</Name>
+			<Description>[2:可选修改项]基地图书更新信息文件名</Description>
+			<Value>a_b-updated_~DyyyyMMdd~_[0-9]{6}.txt</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BookUpdateVerfRegex</Name>
+			<Description>[2:可选修改项]基地图书更新信息校验文件名</Description>
+			<Value>a_b-updated_~DyyyyMMdd~.verf</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BookAreaRegex</Name>
+			<Description>[2:可选修改项]基地专区信息文件名</Description>
+			<Value>a_b-catalog_~DyyyyMMdd~_[0-9]{6}.txt</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BookAreaVerfRegex</Name>
+			<Description>[2:可选修改项]基地专区信息校验文件名</Description>
+			<Value>a_b-catalog_~DyyyyMMdd~.verf</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BookAreaReferenceRegex</Name>
+			<Description>[2:可选修改项]基地专区内容信息文件名</Description>
+			<Value>a_b-catalogContent_~DyyyyMMdd~_[0-9]{6}.txt</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BookAreaReferenceVerfRegex</Name>
+			<Description>[2:可选修改项]基地专区内容信息校验文件名</Description>
+			<Value>a_b-catalogContent_~DyyyyMMdd~.verf</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BookTotalRankRegex</Name>
+			<Description>[2:可选修改项]基地图书排行榜信息文件名</Description>
+			<Value>i_b-ranktotal_~DyyyyMMdd~_[0-9]{6}.txt</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BookTotalRankVerfRegex</Name>
+			<Description>[2:可选修改项]基地图书排行榜信息校验文件名</Description>
+			<Value>i_b-ranktotal_~DyyyyMMdd~.verf</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BookMonthRankRegex</Name>
+			<Description>[2:可选修改项]基地图书月排行榜信息文件名</Description>
+			<Value>i_b-rankmonth_~DyyyyMMdd~_[0-9]{6}.txt</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BookMonthRankVerfRegex</Name>
+			<Description>[2:可选修改项]基地图书月排行榜信息校验文件名</Description>
+			<Value>i_b-rankmonth_~DyyyyMMdd~.verf</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BookWeekRankRegex</Name>
+			<Description>[2:可选修改项]基地图书周排行榜信息文件名</Description>
+			<Value>i_b-rankweek_~DyyyyMMdd~_[0-9]{6}.txt</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BookWeekRankVerfRegex</Name>
+			<Description>[2:可选修改项]基地图书周排行榜信息校验文件名</Description>
+			<Value>i_b-rankweek_~DyyyyMMdd~.verf</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BookMonthCityRegex</Name>
+			<Description>[2:可选修改项]基地阅读包月书包地域信息文件名</Description>
+			<Value>i_b-package-area_~DyyyyMMdd~_[0-9]{6}.txt</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BookMonthCityVerfRegex</Name>
+			<Description>[2:可选修改项]基地阅读包月书包地域信息校验文件名</Description>
+			<Value>i_b-package-area_~DyyyyMMdd~.verf</Value>
+			<Reserved />
+		</ConfigItem>
+
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BookLikeHisReadRegex</Name>
+			<Description>[2:可选修改项]基地阅读猜你喜欢历史阅读推荐文件名</Description>
+			<Value>i_b-labellike_~DyyyyMMdd~_[0-9]{6}.txt</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BookLikeHisReadVerfRegex</Name>
+			<Description>[2:可选修改项]基地阅读猜你喜欢历史阅读推荐校验文件名</Description>
+			<Value>i_b-labellike_~DyyyyMMdd~.verf</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BookLikeAuthorRegex</Name>
+			<Description>[2:可选修改项]基地阅读猜你喜欢名家推荐文件名</Description>
+			<Value>i_b-authorlike_~DyyyyMMdd~_[0-9]{6}.txt</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BookLikeAuthorVerfRegex</Name>
+			<Description>[2:可选修改项]基地阅猜你喜欢名家推荐校验文件名</Description>
+			<Value>i_b-authorlike_~DyyyyMMdd~.verf</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BookLikeReadPercentageRegex</Name>
+			<Description>[2:可选修改项]基地阅读猜你喜欢图书级阅读关联推荐文件名</Description>
+			<Value>i_b-relationbook_read_~DyyyyMMdd~_[0-9]{6}.txt</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BookLikeReadPercentageVerfRegex</Name>
+			<Description>[2:可选修改项]基地阅读猜你喜欢图书级阅读关联推荐校验文件名</Description>
+			<Value>i_b-relationbook_read_~DyyyyMMdd~.verf</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BookLikeOrderPercentageRegex</Name>
+			<Description>[2:可选修改项]基地阅读猜你喜欢图书级订购关联推荐文件名</Description>
+			<Value>a_b-relationbook_order_~DyyyyMMdd~_[0-9]{6}.txt</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BookLikeOrderPercentageVerfRegex</Name>
+			<Description>[2:可选修改项]基地阅读猜你喜欢图书级订购关联推荐校验文件名</Description>
+			<Value>a_b-relationbook_order_~DyyyyMMdd~.verf</Value>
+			<Reserved />
+		</ConfigItem>
+
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>BookMonthCityCount</Name>
+			<Description>[2:可选修改项]基地阅读包月书包地域数据导入阀值</Description>
+			<Value>500</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>bookPicURl</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]资源服务器上图片预览图保存目录（相对ftp登录后的目录），要有读写权限，当前路径配置空
+			</Description>
+			<Value>book/ssms/</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>bookAuthorPicURl</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]资源服务器上图片预览图保存目录（相对ftp登录后的目录），要有读写权限，当前路径配置空
+			</Description>
+			<Value>res/book/author/</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>resServerPath</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]扩展字段资源服务器文件存放的目录</Description>
+			<Value>temp/ssms</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>picUrl</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]用于存放图书图片路径前段标准url,其中#bookid#将会被动态替换
+			</Description>
+			<Value>http://base.fr18.mmarket.com/read/logo/#bookid#.jpg</Value>
+			<Reserved />
+		</ConfigItem>
+	</ModuleConfig>
+	<!-- 基地阅读配置结束 -->
+
+	<!-- 商品库优化开始 -->
+	<ModuleConfig Name="syncAndroid" Description="商品库优化相关配置">
+		<ConfigItem>
+			<Name>ROOT_CATEGORYID</Name>
+			<Id>0</Id>
+			<Description>[1:必须修改项]商品库的根货架ID</Description>
+			<Value>678936436</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>VIRTUAL_ROOT_CATEGORYID</Name>
+			<Id>0</Id>
+			<Description>[1:必须修改项]虚拟货架的根货架ID</Description>
+			<Value>634044754</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>OPERATE_ROOT_CATEGORYID</Name>
+			<Id>0</Id>
+			<Description>487659139(android新品速递)、218637126必备、218637125专栏、1782551专题区
+			</Description>
+			<Value>487659139|218637126|218637125|1782551</Value>
+			<Reserved />
+		</ConfigItem>   
+
+		<ConfigItem>
+			<Name>MESSAGES_SIZE</Name>
+			<Id>0</Id>
+			<Description>消息最大长度</Description>
+			<Value>3000</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>SEARCH_ISOPEN</Name>
+			<Id>0</Id>
+			<Description>是否开放搜索0：不开放，1：开放</Description>
+			<Value>0</Value>
+			<Reserved />
+		</ConfigItem>
+
+		<ConfigItem>
+			<Name>ReceiveChangeLimit</Name>
+			<Id>0</Id>
+			<Description>商品库优化从接受表每个周期处理多少个应用</Description>
+			<Value>2000</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>ThreadLimit</Name>
+			<Id>0</Id>
+			<Description>商品库优化处理电子流时候线程池的大小</Description>
+			<Value>4</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>SYNC_MODE</Name>
+			<Id>0</Id>
+			<Description>同步模式的选择，一般情况应该写0的。0:是正常情况，1:要有上下架消息，要处理FULLDEVICEID字段
+			</Description>
+			<Value>1</Value>
+			<Reserved />
+		</ConfigItem>
+
+
+		<ConfigItem>
+			<Name>DC_LIST_URL</Name>
+			<Id>0</Id>
+			<Description>[1:必须修改项]商品库的根货架ID</Description>
+			<Value>http://10.101.10.44:11079/list.do</Value>
+			<Reserved />
+		</ConfigItem>
+
+		<ConfigItem>
+			<Name>JMS_ACTIVEMQ_URL</Name>
+			<Id>0</Id>
+			<Description>[1:必须修改项]商品库的根货架ID</Description>
+			<Value>failover:(tcp://10.101.10.46:61616)&amp;maxReconnectDelay=10000
+			</Value>
+			<Reserved />
+		</ConfigItem>
+
+		<ConfigItem>
+			<Name>ppms_Interval</Name>
+			<Id>0</Id>
+			<Description>[1:必须修改项]PPMS的读取频率</Description>
+			<Value>1</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>ppms_Interval_pretreat</Name>
+			<Id>0</Id>
+			<Description>[1:必须修改项]PPMS与处理表的读取频率</Description>
+			<Value>2</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>gAppChange</Name>
+			<Id>0</Id>
+			<Description>修改t_d_reference商品表的信息接口</Description>
+			<Value>https://10.1.5.52:18022/gAppChange.do</Value>
+			<Reserved />
+		</ConfigItem>
+		
+		<ConfigItem>
+			<Name>appoffline</Name>
+			<Id>0</Id>
+			<Description>从t_d_reference表中下架商品接口</Description>
+			<Value>https://10.1.5.52:18022/appoffline.do</Value>
+			<Reserved />
+		</ConfigItem>
+
+		<ConfigItem>
+			<Name>dc_Interval</Name>
+			<Id>0</Id>
+			<Description>[1:必须修改项]DC的消息发送频率</Description>
+			<Value>5</Value>
+			<Reserved />
+		</ConfigItem>
+
+		<ConfigItem>
+			<Name>ssms_Interval</Name>
+			<Id>0</Id>
+			<Description>[1:必须修改项]榜单的更新频率</Description>
+			<Value>5</Value>
+			<Reserved />
+		</ConfigItem>
+
+		<ConfigItem>
+			<Name>cssp_Interval</Name>
+			<Id>0</Id>
+			<Description>[1:必须修改项]CSSP的更新频率</Description>
+			<Value>5</Value>
+			<Reserved />
+		</ConfigItem>
+
+		<ConfigItem>
+			<Name>dc_limit</Name>
+			<Id>0</Id>
+			<Description>[1:必须修改项]无事务消息批量处理</Description>
+			<Value>25</Value>
+			<Reserved />
+		</ConfigItem>
+
+		<ConfigItem>
+			<Name>cssp_startDate</Name>
+			<Id>0</Id>
+			<Description>[1:必须修改项]CSSP的开始年月日时,因为CSSP文件太庞大，不希望晚上发布的时候同步当天的文件，而是从第二天开始入库。
+			</Description>
+			<Value>2013-04-25-09</Value>
+			<Reserved />
+		</ConfigItem>
+
+		<ConfigItem>
+			<Name>FTPServerIP</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]CSSP的FTP服务地址</Description>
+			<Value>10.101.1.108</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPServerPort</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]CSSP的FTP服务端口</Description>
+			<Value>22</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPServerUser</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]CSSP的FTP服务的登录用户名</Description>
+			<Value>ftp_mm</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPServerPassword</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]CSSP的FTP服务的登录密码</Description>
+			<Value>jkgqOaoYX-hnYbv_</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPDir</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]CSSP的FTP服务器上PUSH,PUSHREPORT接口文件文件存放的目录
+			</Description>
+			<Value>others</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>localDir</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]动漫基地的本地临时上接口文件文件存放的目录</Description>
+			<Value>/opt/aspire/product/ssms/weblogic/user_projects/domains/ssmsdomain/AdminServer/ssms/ftpdata/syncAndroid
+			</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>SYNC_ANDROID_SUBJECT</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改]商品库优化邮件的标题</Description>
+			<Value>商品库优化邮件！！！</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>SYNC_ANDROID_MAILTO</Name>
+			<Description>[3:必须修改项]商品库优化邮件接收人，使用英文逗号分割</Description>
+			<Value>bihui@aspirecn.com,mm724@aspirecn.com,mm_gd@aspirecn.com,dongke@aspirecn.com,chenzili@aspirecn.com,wangjun@aspirecn.com,aiyan@aspirecn.com
+			</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>min_android_list_num</Name>
+			<Id>0</Id>
+			<Description>[1:必须修改项]t_a_android_list_compare的最小记录数目</Description>
+			<Value>50000</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>abs_android_list_num</Name>
+			<Id>0</Id>
+			<Description>[1:必须修改项]t_a_android_list_compare和t_a_android_list两个表数目差的绝对值
+			</Description>
+			<Value>5000</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>down_android_list_num</Name>
+			<Id>0</Id>
+			<Description>[1:必须修改项]商品库优化计算榜单的时候下线数目阀值</Description>
+			<Value>5000</Value>
+			<Reserved />
+		</ConfigItem>
+		<!-- add by fanqh begin -->
+		<!-- 免费应用ftp配置开始 -->
+		<ConfigItem>
+			<Name>freeFTPServerIP</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]免费应用的FTP服务地址</Description>
+			<Value>10.1.3.203</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>freeFTPServerPort</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]免费应用的FTP服务端口</Description>
+			<Value>22</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>freeFTPServerUser</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]免费应用的FTP服务的登录用户名</Description>
+			<Value>mm_dcmq</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>freeFTPServerPassword</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]免费应用的FTP服务的登录密码</Description>
+			<Value>mm_dcmq</Value>
+			<Reserved />
+		</ConfigItem>
+		<!-- 免费应用ftp配置结束 -->
+		<!-- 免费应用下载回执日志配置开始 -->
+		<ConfigItem>
+			<Name>FTPfreeDLReportDir</Name>
+			<Id>0</Id>
+			<Description>[1:必须修改项]FTP服务器上免费应用下载回执日志文件存放的目录</Description>
+			<Value>/opt/aspire/product/mm_dcmq/fanqh</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>localfreeDLReportDir</Name>
+			<Id>0</Id>
+			<Description>[2:必须修改项]免费应用下载回执日志本地临时文件存放的目录</Description>
+			<Value>H:\\test</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>dLReportTypeDirs</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]免费应用下载回执日志目录</Description>
+			<Value>notify</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>dLReportChangeDirs</Name>
+			<Id>0</Id>
+			<Description>[4:必须修改项]免费应用下载回执日志目录多个,用|隔开</Description>
+			<Value>ftpFiles|ftpFiles1|ftpFiles2</Value>
+			<Reserved />
+		</ConfigItem>
+		<!-- 免费应用下载回执日志配置结束 -->
+		<!-- 免费应用订购记录配置开始 -->
+		<ConfigItem>
+			<Name>FTPfreeDLOrderDir</Name>
+			<Id>0</Id>
+			<Description>[1:必须修改项]FTP服务器上免费应用订购记录文件存放的目录</Description>
+			<Value>/opt/aspire/product/mm_dcmq/fanqh</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>localfreeDLOrderDir</Name>
+			<Id>0</Id>
+			<Description>[2:必须修改项]免费应用订购记录本地临时文件存放的目录</Description>
+			<Value>H:\\test</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>freeDLOrderTypeDirs</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]免费应用订购记录目录</Description>
+			<Value>FDSS</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>freeDLOrderChangeDirs</Name>
+			<Id>0</Id>
+			<Description>[4:必须修改项]免费应用订购记录目录多个,用|隔开</Description>
+			<Value>ftpFiles|ftpFiles1|ftpFiles2</Value>
+			<Reserved />
+		</ConfigItem>
+		<!-- 免费应用订购记录配置结束 -->
+		<!-- add by fanqh end -->
+		<ConfigItem>
+			<Name>SafeCenterNotifyUrl</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]货架-安全中心实时同步程序包更新信息接口服务器访问地址</Description>
+			<Value>http://202.104.67.6:8072/mmsafesyn/service</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>SafeCenterNotifyCheckNum</Name>
+			<Id>0</Id>
+			<Description>[4:必须修改项]货架-安全中心实时同步程序包更新信息接口一次发送的数据条数</Description>
+			<Value>10</Value>
+			<Reserved />
+		</ConfigItem>
+	</ModuleConfig>
+
+	<ModuleConfig Name="syncAndroid_virtual_1" Description="商品库优化相关配置">
+		<ConfigItem>
+			<Name>Portal</Name>
+			<Id>0</Id>
+			<Description>[1:必须修改项]门户</Description>
+			<Value>W</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>Source</Name>
+			<Id>0</Id>
+			<Description>[1:必须修改项]来源</Description>
+			<Value>MM</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>Ispage</Name>
+			<Id>0</Id>
+			<Description>[1:必须修改项]是否需要分页（0：需要分页；1：不需要分页）</Description>
+			<Value>0</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>RecordsPage</Name>
+			<Id>0</Id>
+			<Description>[1:必须修改项]查询每页的记录数</Description>
+			<Value>10</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>QueryPage</Name>
+			<Id>0</Id>
+			<Description>[1:必须修改项]查询页码（大于等于1的数字，默认值：1）</Description>
+			<Value>1</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>Sorttype</Name>
+			<Id>0</Id>
+			<Description>[1:必须修改项]排序规则（待补充） 时间、下载、sortid</Description>
+			<Value>lupdate_desc</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>Isfilter</Name>
+			<Id>0</Id>
+			<Description>[1:必须修改项]0：免费1：付费-1：所有价格</Description>
+			<Value>-1</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>Isneedsortchild</Name>
+			<Id>0</Id>
+			<Description>[1:必须修改项]是否需要查询机型货架，Isneedsortchild=0：需要；为0时Devicename为必选Isneedsortchild=-1：不需要默认值为-1
+			</Description>
+			<Value>-1</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>Fields</Name>
+			<Id>0</Id>
+			<Description>[1:必须修改项]内容数据需要返回的字段列表</Description>
+			<Value>NAME|SPNAME|ICPCODE|ICPSERVID|CATENAME|LUPDATE|SERVATTR|CONTENTID
+			</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>CFields</Name>
+			<Id>0</Id>
+			<Description>[1:必须修改项]货架数据需要返回的字段列表</Description>
+			<Value></Value>
+			<Reserved />
+		</ConfigItem>
+	</ModuleConfig>
+	<!-- 商品库优化结束 -->
+
+
+	<!-- 基地视频数据接入接口配置 开始 -->
+	<ModuleConfig Name="BaseColorComicConfig" Description="基地彩漫数据接入接口配置">
+		<ConfigItem>
+			<Name>startTime</Name>
+			<Id>0</Id>
+			<Description>任务执行时间，格式：(24小时制)，格式： HHMM</Description>
+			<Value>1830</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>mailTo</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]任务完成后的邮件地址，支持多个，并用英文逗号隔开</Description>
+			<Value>test@aspire-tech.com</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPIP</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]存放基地彩漫数据文件的FTP地址</Description>
+			<Value>10.1.3.201</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPPort</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]存放基地彩漫数据文件的FTP端口</Description>
+			<Value>21</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPName</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]用存放基地彩漫数据文件的FTP登录用户名</Description>
+			<Value>max</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPPassWord</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]存放基地彩漫数据文件的FTP登录密码</Description>
+			<Value>1qazZAQ!</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPPath</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]存放基地彩漫数据文件的FTP存放路径</Description>
+			<Value>ColorComic</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>getDateNum</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]取文件的日期，0：为当天，1：为前一天，2：为前二天</Description>
+			<Value>0</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>verDataSpacers</Name>
+			<Id>0</Id>
+			<Description>[3:可选修改项]校验文件字段间隔符</Description>
+			<Value>|</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>taskRunnerNum</Name>
+			<Id>0</Id>
+			<Description>[3:可选修改项]最大线程执行数</Description>
+			<Value>5</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>taskMaxReceivedNum</Name>
+			<Id>0</Id>
+			<Description>[3:可选修改项]任务队列最大容量。0表示不限制容量</Description>
+			<Value>20000</Value>
+			<Reserved />
+		</ConfigItem>
+	</ModuleConfig>
+
+	<!-- AWMS 开始 -->
+	<ModuleConfig Name="AWMSConfig" Description="AWMS接口配置">
+		<ConfigItem>
+			<Name>SynStartTime</Name>
+			<Id>0</Id>
+			<Description>AWMS货架和商品同步时间</Description>
+			<Value>05:00</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>ssms_root_categoryid</Name>
+			<Id>0</Id>
+			<Description>SSMS开放运营终端门户根货架</Description>
+			<Value>100038105</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>awms_root_categoryid</Name>
+			<Id>0</Id>
+			<Description>AWMS开放运营终端门户根货架</Description>
+			<Value>600037366</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>subject</Name>
+			<Id>0</Id>
+			<Description>[2:可选修改]客户端开放运营功能二期同步邮件的标题</Description>
+			<Value>客户端开放运营功能二期同步邮件！！！</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>mailto</Name>
+			<Description>[3:必须修改项]同步结果邮件接收人，使用英文逗号分割</Description>
+			<Value>bihui@aspirecn.com,mm724@aspirecn.com,mm_gd@aspirecn.com,dongke@aspirecn.com,chenzili@aspirecn.com,wangjun@aspirecn.com,aiyan@aspirecn.com
+			</Value>
+			<Reserved />
+		</ConfigItem>
+	</ModuleConfig>
+	<!-- AWMS 开始 -->
+
+	<!-- 向数据中心同步自动更新货架配置 开始 -->
+	<ModuleConfig Name="autoSyncCategory" Description="向数据中心同步自动更新货架配置">
+		<ConfigItem>
+			<Name>startTime</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]发送商品库同步自动更新的货架 触发时间 (24小时制)，格式： HHMM
+			</Description>
+			<Value>1000</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>mailTo</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]发送商品库同步自动更新的货架 邮件发送人 ，使用英文逗号分割。</Description>
+			<Value>wangminlong@aspirecn.com</Value>
+			<Reserved />
+		</ConfigItem>
+	</ModuleConfig>
+	<!-- 向数据中心同步自动更新货架配置 结束 -->
+
+	<!-- 每天监控重点系列指定时间（一周）内和娱乐IAP榜单数量配置 开始 -->
+	<ModuleConfig Name="iapSendMail" Description="每天监控重点系列指定时间（一周）内和娱乐IAP榜单数量配置">
+		<ConfigItem>
+			<Name>startTime</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]每天监控重点系列指定时间（一周）内和娱乐IAP榜单数量触发时间 (24小时制)，格式：
+				HHMM</Description>
+			<Value>1010</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>mailTo</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项] 每天监控重点系列指定时间（一周）内和娱乐IAP榜单数量 邮件发送人 ，使用英文逗号分割。
+			</Description>
+			<Value>baojun@aspirecn.com,baojun_2008@126.com,576918869@qq.com
+			</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>countNum</Name>
+			<Id>0</Id>
+			<Description>[3:可选修改项] 指定数量（少于指定数量，发送邮件通知）</Description>
+			<Value>10</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>categoryId1</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]9折优惠区货架编码ID</Description>
+			<Value>100000901</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>deviceId1</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]9折优惠区重点系列机型ID，多个使用英文逗号分割。</Description>
+			<Value>1081,509,510,511,512,513,519,520</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>categoryId2</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]MM币消费区货架编码 ID</Description>
+			<Value>100000349</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>deviceId2</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]MM币消费区重点系列机型ID，多个使用英文逗号分割。</Description>
+			<Value>7216,509,510,511,512,513,519,520</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>mailTitle1</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]9折优惠区货架发送邮件标题</Description>
+			<Value>M赏专区-9折优惠区AP数量预警</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>mailTitle2</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]MM币消费区货架发送邮件标题</Description>
+			<Value>M赏专区-MM币消费区AP数量预警</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>mailContent1</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]9折优惠区货架发送邮件内容</Description>
+			<Value>9折优惠区货架重点系列和娱乐IAP榜单数量:{1}，少过指定数量（{2}个）</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>mailContent2</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]MM币消费区货架发送邮件内容</Description>
+			<Value>MM币消费区货架重点系列和娱乐IAP榜单数量:{1}，少过指定数量（{2}个）</Value>
+			<Reserved />
+		</ConfigItem>
+	</ModuleConfig>
+	<!-- 每天监控重点系列指定时间（一周）内和娱乐IAP榜单数量 结束 -->
+
+	<!-- 基地视频重构数据接入接口配置 开始 -->
+	<ModuleConfig Name="BaseVideoConfig" Description="基地视频新数据接入接口配置">
+		<ConfigItem>
+			<Name>startTime</Name>
+			<Id>0</Id>
+			<Description>任务执行时间，格式：(24小时制)，格式： HH:MM</Description>
+			<Value>14:40</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>startMinutes</Name>
+			<Id>0</Id>
+			<Description>[3: 必须修改项] 按小时增量同步基地视频文件数据开始时间分钟数，值范围:[0-59]
+			</Description>
+			<Value>15</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>getDateNum</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]取文件的日期，0：为当天，1：为前一天，2：为前二天</Description>
+			<Value>0</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>getTimeNum</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]取文件的时间，0：为当小时，1：为前小时，2：为前两小时</Description>
+			<Value>0</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>syncDataTimeIntervalByTime</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]按小时增量同步视频与栏目详情时间,多个用|隔开</Description>
+			<Value>8|12|17|20</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>mailTo</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]任务完成后的邮件地址，支持多个，并用英文逗号隔开</Description>
+			<Value>test@aspire-tech.com</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPIP</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]存放基地视频数据文件的FTP地址</Description>
+			<Value>10.1.3.203</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPPort</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]存放基地视频数据文件的FTP端口</Description>
+			<Value>22</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPName</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]用存放基地视频数据文件的FTP登录用户名</Description>
+			<Value>mm_dcmq</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPPassWord</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]存放基地视频数据文件的FTP登录密码</Description>
+			<Value>mm_dcmq</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPPath</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]存放基地视频数据文件的FTP存放根路径</Description>
+			<Value>/opt/aspire/product/mm_dcmq/max/video</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>ProgramContentImagePath</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]用来存放视频节目内容图片前缀HTTP的URL配置</Description>
+			<Value>temp/ssms/image</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>VideoCategoryPicFTPDir</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]上传新视频货架图片资源服务器的FTP存放目录</Description>
+			<Value>max/video/pic</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>verDataSpacers</Name>
+			<Id>0</Id>
+			<Description>[3:可选修改项]校验文件字段间隔符</Description>
+			<Value>###</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>taskRunnerNum</Name>
+			<Id>0</Id>
+			<Description>[3:可选修改项]最大线程执行数</Description>
+			<Value>5</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>taskMaxReceivedNum</Name>
+			<Id>0</Id>
+			<Description>[3:可选修改项]任务队列最大容量。0表示不限制容量</Description>
+			<Value>20000</Value>
+			<Reserved />
+		</ConfigItem>
+
+		<ConfigItem>
+			<Name>baseUrl</Name>
+			<Id>0</Id>
+			<Description>api请求的url</Description>
+			<Value>http://221.181.100.51:8088/poms-admin/json/getContOutputData.html
+			</Value>
+			<Reserved />
+		</ConfigItem>
+
+		<ConfigItem>
+			<Name>userId</Name>
+			<Id>0</Id>
+			<Description>api请求的调用系统用户名</Description>
+			<Value>output001mmjd</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>apiStartTime</Name>
+			<Id>0</Id>
+			<Description>任务执行时间，格式：(24小时制)，格式： HH:MM</Description>
+			<Value>14:40</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>apiDuration</Name>
+			<Id>0</Id>
+			<Description>api请求的间隔时间</Description>
+			<Value>1</Value>
+			<Reserved />
+		</ConfigItem>
+
+	</ModuleConfig>
+
+	<!-- 应用信息入库配置 开始 -->
+	<ModuleConfig Name="AppXmlFileConfig" Description="配置启动任务时间">
+		<ConfigItem>
+			<Name>startTime</Name>
+			<Id>0</Id>
+			<Description>任务执行时间，格式：(24小时制)，格式： HH:MM</Description>
+			<Value>22:02</Value>
+			<Reserved />
+		</ConfigItem>
+
+		<ConfigItem>
+			<Name>getDateNum</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]取文件的日期，0：为当天，1：为前一天，2：为前二天</Description>
+			<Value>1</Value>
+			<Reserved />
+		</ConfigItem>
+
+		<ConfigItem>
+			<Name>FTPIP</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]存放基地视频数据文件的FTP地址</Description>
+			<Value>10.1.3.203</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPPort</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]存放基地视频数据文件的FTP端口</Description>
+			<Value>22</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPName</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]用存放基地视频数据文件的FTP登录用户名</Description>
+			<Value>mm_dcmq</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPPassWord</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]存放基地视频数据文件的FTP登录密码</Description>
+			<Value>mm_dcmq</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>FTPPath</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]压缩文件存放目录</Description>
+			<Value>/opt/aspire/product/mm_dcmq/max/video/</Value>
+			<Reserved />
+		</ConfigItem>
+
+		<ConfigItem>
+			<Name>AppInfoTaskNum</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]最大线程数</Description>
+			<Value>5</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>AppInfoTaskMaxReceivedNum</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]运行期队列的最大容量</Description>
+			<Value>20000</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>mailTo</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]邮件联系人</Description>
+			<Value>baojun@aspirecn.com</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>RESERVERPATH</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]图片存放存放目录</Description>
+			<Value>max/video/pic</Value>
+			<Reserved />
+		</ConfigItem>
+	</ModuleConfig>
+	<!-- 应用信息入库配置 开始 -->
+	<ModuleConfig Name="BaseAppInfoConfig" Description="图片存放路径">
+		<ConfigItem>
+			<Name>AppInfoCategoryPicFTPDir</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]图片存放路径</Description>
+			<Value>/opt/aspire/product/mm_app/appic/</Value>
+			<Reserved />
+		</ConfigItem>
+	</ModuleConfig>
+
+	<!-- 重点应用监控配置 开始 -->
+	<ModuleConfig Name="pivotAppMonitor" Description="重点应用监控配置">
+		<ConfigItem>
+			<Name>startTime</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]重点应用监控触发时间 (24小时制)，格式： HHMM</Description>
+			<Value>1010</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>mailTo</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项] 重点应用监控触 邮件发送人 ，使用英文逗号分割。</Description>
+			<Value>baojun@aspirecn.com,baojun_2008@126.com,576918869@qq.com
+			</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>mailCc</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项] 重点应用监控 邮件抄送人 ，使用英文逗号分割。</Description>
+			<Value>baojun@aspirecn.com,baojun_2008@126.com,576918869@qq.com
+			</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>mailTitle</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]重点应用监控发送邮件标题</Description>
+			<Value>重点应用监控日报-yyyyMMdd</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>mailContent</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]重点应用监控发送邮件内容</Description>
+			<Value>各位领导、同事，大家好。</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>DataCenterUrl</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]数据中心（客户端门户）监控url地址</Description>
+			<Value>http://10.1.5.50:18080/getContent.do</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>MMSearchUrl</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]搜索系统监控url地址</Description>
+			<Value>http://10.12.3.119:12201/mmsearch/query</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>taskRunnerNum</Name>
+			<Id>0</Id>
+			<Description>[3:可选修改项]最大线程执行数</Description>
+			<Value>5</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>taskMaxReceivedNum</Name>
+			<Id>0</Id>
+			<Description>[3:可选修改项]任务队列最大容量。0表示不限制容量</Description>
+			<Value>20000</Value>
+			<Reserved />
+		</ConfigItem>
+	</ModuleConfig>
+	<!-- 重点应用监控配置 结束 -->
+
+
+	<!-- 游戏图片默认的url -->
+	<ModuleConfig Name="BaseGameInfoConfig" Description="游戏图片存放路径">
+		<ConfigItem>
+			<Name>GameInfoAndroidPicDir</Name>
+			<Id>0</Id>
+			<Description>安卓门户封面图</Description>
+			<Value>/opt/aspire/product/mm_app/appic/</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>GameInfoPicDir</Name>
+			<Id>0</Id>
+			<Description>游戏截图</Description>
+			<Value>/opt/aspire/product/mm_app/appic/1</Value>
+			<Reserved />
+		</ConfigItem>
+
+	</ModuleConfig>
+	<!-- 商品中心配置 -->
+	<ModuleConfig Name="goodscenterConfig" Description="商品中心配置">
+		<!-- <ConfigItem> <Name>interval</Name> <Id>0</Id> <Description>间隔时间</Description> 
+			<Value>43200000</Value> <Reserved/> </ConfigItem> -->
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>syncDataTime</Name>
+			<Description>[3:必须修改项] 每天从商品中心同步数据的时间,一定要写成4位数字格式hhmm（小时、分钟）,例如:0400
+			</Description>
+			<Value>0400</Value>
+			<Reserved />
+		</ConfigItem>
+	</ModuleConfig>
+	
+	
+	
+	<ModuleConfig Name="pushAdvConfig" Description="推送管理配置">
+		<!-- <ConfigItem> <Name>interval</Name> <Id>0</Id> <Description>间隔时间</Description> 
+			<Value>43200000</Value> <Reserved/> </ConfigItem> -->
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>DestFTPDir</Name>
+			<Description>[3:必须修改项] 每天从商品中心同步数据的时间,一定要写成4位数字格式hhmm（小时、分钟）,例如:0400
+			</Description>
+			<Value>temp/ssmspps</Value>
+			<Reserved />
+		</ConfigItem>
+	</ModuleConfig>
+	
+		
+	<ModuleConfig Name="rankConfig" Description="包名统一管理">
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>IP</Name>
+			<Description>[3:必须修改项]ftp上传的ip地址</Description>
+			<Value>10.153.80.29</Value>
+			<Reserved />
+		</ConfigItem>
+        <ConfigItem>
+			<Id>0</Id>
+			<Name>username</Name>
+			<Description>[3:必须修改项]ftp上传的用户名</Description>
+			<Value>mmbd</Value>
+			<Reserved />
+		</ConfigItem>
+        <ConfigItem>
+			<Id>0</Id>
+			<Name>password</Name>
+			<Description>[3:必须修改项]ftp上传的密码</Description>
+			<Value>mmbd<>=8029</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Id>0</Id>
+			<Name>dir</Name>
+			<Description>[3:必须修改项]ftp取文件的目录</Description>
+			<Value>/data/sftp_data/mmbd/ssms_mt_rank_index</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>startTime</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]触发时间 (24小时制)，格式： HHMM</Description>
+			<Value>1010</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>localPath</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]本地缓存路口</Description>
+			<Value>/data</Value>
+			<Reserved />
+		</ConfigItem>
+		<ConfigItem>
+			<Name>remoteFile</Name>
+			<Id>0</Id>
+			<Description>[3:必须修改项]本地缓存路口</Description>
+			<Value>v_ssms_mt_rank_index_d</Value>
+			<Reserved />
+		</ConfigItem>		
+	</ModuleConfig>
+
+
+</XMLSystemConfig>

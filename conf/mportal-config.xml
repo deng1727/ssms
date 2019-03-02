@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mportal>
+	<authorizeUrl>http://221.179.8.167:17011/mportal/message</authorizeUrl>
+	<loginUrl>http://221.179.8.167:17011/mportal/login.html</loginUrl>
+	<authErrorUrl>http://221.179.8.167:17011/mportal/common/authError.html</authErrorUrl>
+</mportal>

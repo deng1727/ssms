@@ -1,0 +1,503 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<repository>
+  <nodes>
+
+    <node>
+      <type>nt:base</type>
+      <class>com.aspire.ponaadmin.web.repository.Node</class>
+      <tables>
+        <table name="t_r_base" key="id">
+          <row name="id" classField="id" type="String"/>
+          <row name="parentID" classField="parentID" type="String"/>
+          <row name="path" classField="path" type="String"/>
+          <row name="type" classField="type" type="String"/>
+        </table>
+      </tables>
+    </node>
+
+    <node>
+      <type>nt:entity</type>
+      <extend>nt:base</extend>
+      <class>com.aspire.ponaadmin.web.repository.Entitynode</class>
+      <tables/>
+    </node>
+
+    <node>
+      <type>nt:category</type>
+      <extend>nt:entity</extend>
+      <class>com.aspire.ponaadmin.web.repository.Category</class>
+      <tables>
+        <table name="t_r_category" key="id">
+          <row name="name" classField="name" type="String"/>
+          <row name="descs" classField="desc" type="String"/>
+          <row name="sortid" classField="sortID" type="int"/>
+          <row name="ctype" classField="ctype" type="int"/>
+          <row name="categoryID" classField="categoryID" type="String"/>
+          <row name="delFlag" classField="delFlag" type="int"/>
+          <row name="changeDate" classField="changeDate" type="String"/>
+          <row name="state" classField="state" type="int"/>
+          <row name="parentCategoryID" classField="parentCategoryID" type="String"/>
+          <row name="relation" classField="relation" type="String"/>
+		  <row name="picURL" classField="picURL" type="String"/>
+		  <row name="statistic" classField="statistic" type="long"/>
+		  <row name="deviceCategory" classField="deviceCategory" type="int"/>
+		  <row name="platForm" classField="platForm" type="String"/>
+		  <row name="cityId" classField="cityId" type="String"/>
+		  <row name="startDate" classField="startDate" type="String"/>
+		 <row name="endDate" classField="endDate" type="String"/>
+		 <row name="othernet" classField="othernet" type="String"/>
+		  <row name="multiurl" classField="multiurl" type="String"/>
+		  <row name="CLASSIFY_STATUS" classField="classifyStatus" type="String"/>
+		  <row name="goods_status" classField="goodsStatus" type="String"/>
+		  <row name="delpro_status" classField="delproStatus" type="String"/>
+		  <row name="islock" classField="isLock" type="int"/>
+		  <row name="locktime" classField="lockTime" type="String"/>
+        </table>
+      </tables>
+    </node>
+
+    <node>
+      <type>nt:reference</type>
+      <extend>nt:base</extend>
+      <class>com.aspire.ponaadmin.web.repository.ReferenceNode</class>
+      <refType>nt:gcontent</refType>
+      <refKeyRow>refNodeID</refKeyRow>
+      <tables>
+        <table name="t_r_reference" key="id">
+          <row name="refNodeID" classField="refNodeID" type="String"/>
+          <row name="sortID" classField="sortID" type="int"/>
+          <row name="goodsID" classField="goodsID" type="String"/>
+          <row name="categoryID" classField="categoryID" type="String"/>
+          <row name="loadDate" classField="loadDate" type="String"/>
+		  <row name="variation" classField="variation" type="int"/>
+		  <row name="verify_Status" classField="verifyStatus" type="String"/>
+		  <row name="delFlag" classField="delFlag" type="String"/>
+		  <row name="isLock" classField="isLock" type="int"/>
+		  <row name="locktime" classField="lockTime" type="String"/>
+		  <row name="lockUser" classField="lockUser" type="String"/>
+		  <row name="lockNum" classField="lockNum" type="int"/>
+		  <row name="appId" classField="appId" type="String"/>
+        </table>
+      </tables>
+    </node>
+
+    <node>
+      <type>nt:gcontent</type>
+      <extend>nt:entity</extend>
+      <class>com.aspire.dotcard.gcontent.GContent</class>
+      <tables>
+        <table name="t_r_gcontent" key="id">
+          <row name="name" classField="name" type="String"/>
+          <row name="cateName" classField="cateName" type="String"/>
+          <row name="spName" classField="spName" type="String"/>
+          <row name="mapname" classField="mapname" type="String"/>
+          <row name="icpCode" classField="icpCode" type="String"/>
+          <row name="icpServId" classField="icpServId" type="String"/>      
+          <row name="contentTag" classField="contentTag" type="String"/>
+          <row name="introduction" classField="introduction" type="String"/>
+          <row name="contentID" classField="contentID" type="String"/>
+          <row name="companyID" classField="companyID" type="String"/>
+          <row name="productID" classField="productID" type="String"/>
+          <row name="keywords" classField="keywords" type="String"/>
+          <row name="createDate" classField="createDate" type="String"/>
+          <row name="marketDate" classField="marketDate" type="String"/>
+          <row name="lupdDate" classField="lupdDate" type="String"/> 
+          <row name="searchTimes" classField="searchTimes" type="int"/>  
+          <row name="weekSearchTimes" classField="weekSearchTimes" type="int"/>  
+          <row name="monthSearchTimes" classField="monthSearchTimes" type="int"/>
+          <row name="daySearchTimes" classField="daySearchTimes" type="int"/>
+          <row name="scanTimes" classField="scanTimes" type="int"/>  
+          <row name="weekScanTimes" classField="weekScanTimes" type="int"/>  
+          <row name="monthScanTimes" classField="monthScanTimes" type="int"/>
+          <row name="dayScanTimes" classField="dayScanTimes" type="int"/>
+          <row name="orderTimes" classField="orderTimes" type="int"/>  
+          <row name="weekOrderTimes" classField="weekOrderTimes" type="int"/>  
+          <row name="monthOrderTimes" classField="monthOrderTimes" type="int"/>
+          <row name="dayOrderTimes" classField="dayOrderTimes" type="int"/>
+          <row name="commentTimes" classField="commentTimes" type="int"/>  
+          <row name="weekCommentTimes" classField="weekCommentTimes" type="int"/>  
+          <row name="monthCommentTimes" classField="monthCommentTimes" type="int"/>
+          <row name="dayCommentTimes" classField="dayCommentTimes" type="int"/>
+          <row name="markTimes" classField="markTimes" type="int"/>  
+          <row name="weekMarkTimes" classField="weekMarkTimes" type="int"/>  
+          <row name="monthMarkTimes" classField="monthMarkTimes" type="int"/>
+          <row name="dayMarkTimes" classField="dayMarkTimes" type="int"/>
+          <row name="commendTimes" classField="commendTimes" type="int"/>  
+          <row name="weekCommendTimes" classField="weekCommendTimes" type="int"/>  
+          <row name="monthCommendTimes" classField="monthCommendTimes" type="int"/>
+          <row name="dayCommendTimes" classField="dayCommendTimes" type="int"/>
+          <row name="collectTimes" classField="collectTimes" type="int"/>                   
+          <row name="weekCollectTimes" classField="weekCollectTimes" type="int"/>                   
+          <row name="monthCollectTimes" classField="monthCollectTimes" type="int"/>                 
+          <row name="dayCollectTimes" classField="dayCollectTimes" type="int"/>                 
+          <row name="averageMark" classField="averageMark" type="int"/>	
+          <row name="servAttr" classField="servAttr" type="String"/>
+		  <row name="subType" classField="subType" type="String"/>
+		  <row name="fulldeviceName" classField="fulldeviceName" type="text"/>
+		  <row name="fulldeviceID" classField="fulldeviceID" type="text"/>
+		  <row name="match_Deviceid" classField="match_Deviceid" type="text"/>
+		  <row name="NAMELETTER" classField="contestYear" type="String"/>
+		  <row name="moDayOrderTimes" classField="moDayOrderTimes" type="int"/>
+		  <row name="plupdDate" classField="plupdDate" type="String"/> 
+		  <row name="OTHERNET" classField="otherNet" type="String"/> 
+		  <row name="RICHAPPDESC" classField="richAppdesc" type="text"/>
+		  <row name="ADVERTPIC" classField="advertPic" type="String"/>
+		  <row name="funcdesc" classField="funcdesc" type="String"/>
+		  <row name="auditionUrl" classField="auditionUrl" type="String"/>
+		  <row name="channeldisptype" classField="channeldisptype" type="String"/>
+		  <row name="appId" classField="appId" type="String"/>
+        </table>
+      </tables>
+    </node>
+    
+    <node>
+      <type>nt:gcontent:colorring</type>
+      <typeDesc>彩铃</typeDesc>
+      <extend>nt:gcontent</extend>
+      <class>com.aspire.dotcard.gcontent.GColorring</class>
+      <tables>
+        <table name="t_r_gcontent" key="id">
+          <row name="singer" classField="singer" type="String"/>
+          <row name="price" classField="price" type="String"/>
+          <row name="expire" classField="expire" type="String"/>
+          <row name="nameletter" classField="tonenameletter" type="String"/>
+          <row name="singerletter" classField="singerletter" type="String"/>
+          <row name="downloadtimes" classField="downloadtimes" type="int"/>
+          <row name="settimes" classField="settimes" type="int"/>
+          <row name="bigcatename" classField="tonebigtype" type="String"/>
+          <row name="auditionUrl" classField="auditionUrl" type="String"/>
+          <row name="cartoonPicture" classField="clientAuditionUrl" type="String"/>
+        </table>
+      </tables>
+    </node>
+    
+    <node>
+      <type>nt:gcontent:audio</type>
+      <typeDesc>A8全曲</typeDesc>
+      <extend>nt:gcontent</extend>
+      <class>com.aspire.dotcard.gcontent.GAudio</class>
+      <tables>
+        <table name="t_r_gcontent" key="id">
+          <row name="appCateName" classField="audioLanguage" type="String"/>
+          <row name="singer" classField="singer" type="String"/>
+          <row name="auditionUrl" classField="aacAuditionUrl" type="String"/>
+          <row name="bigcatename" classField="singerZone" type="String"/>
+          <row name="manual" classField="lrcURL" type="String"/>
+          <row name="cartoonPicture" classField="mp3AuditionUrl" type="String"/>
+          <row name="provider" classField="special" type="String"/>
+          <row name="userGuidePicture" classField="specialURL" type="String"/>
+		  <row name="clientPreviewPicture1" classField="KAacAuditionUrl" type="String"/>
+		  <row name="clientPreviewPicture2" classField="KMp3AuditionUrl" type="String"/>
+		  <row name="clientPreviewPicture3" classField="KLrcURL" type="String"/>
+		  <row name="settimes" classField="audioLength" type="int"/>
+        </table>
+      </tables>
+    </node>
+    
+    <node>
+      <type>nt:gcontent:app</type>
+      <typeDesc>应用</typeDesc>
+      <extend>nt:gcontent</extend>
+      <class>com.aspire.dotcard.gcontent.GAppContent</class>
+      <tables/>
+    </node>
+
+    <node>
+      <type>nt:gcontent:appGame</type>
+      <typeDesc>游戏</typeDesc>
+      <extend>nt:gcontent:app</extend>
+      <class>com.aspire.dotcard.gcontent.GAppGame</class>
+      <tables>
+        <table name="t_r_gcontent" key="id">
+          <row name="deviceName" classField="deviceName01" type="String"/>
+          <row name="deviceName02" classField="deviceName02" type="String"/>
+          <row name="deviceName03" classField="deviceName03" type="String"/>
+          <row name="deviceName04" classField="deviceName04" type="String"/>
+          <row name="deviceName05" classField="deviceName05" type="String"/>
+          <row name="deviceName06" classField="deviceName06" type="String"/>
+          <row name="deviceName07" classField="deviceName07" type="String"/>
+          <row name="deviceName08" classField="deviceName08" type="String"/>
+          <row name="deviceName09" classField="deviceName09" type="String"/>
+          <row name="deviceName10" classField="deviceName10" type="String"/>
+          <row name="deviceName11" classField="deviceName11" type="String"/>
+          <row name="deviceName12" classField="deviceName12" type="String"/>
+          <row name="deviceName13" classField="deviceName13" type="String"/>
+          <row name="deviceName14" classField="deviceName14" type="String"/>
+          <row name="deviceName15" classField="deviceName15" type="String"/>
+          <row name="deviceName16" classField="deviceName16" type="String"/>
+          <row name="deviceName17" classField="deviceName17" type="String"/>
+          <row name="deviceName18" classField="deviceName18" type="String"/>
+          <row name="deviceName19" classField="deviceName19" type="String"/>
+          <row name="deviceName20" classField="deviceName20" type="String"/>         
+          <row name="appCateName" classField="appCateName" type="String"/>
+          <row name="appCateID" classField="appCateID" type="String"/>
+          <row name="provider" classField="provider" type="String"/>
+          <row name="language" classField="language" type="String"/>
+          <row name="WWWPropaPicture1" classField="WWWPropaPicture1" type="String"/>
+          <row name="WWWPropaPicture2" classField="WWWPropaPicture2" type="String"/>
+          <row name="WWWPropaPicture3" classField="WWWPropaPicture3" type="String"/>
+          <row name="clientPreviewPicture1" classField="clientPreviewPicture1" type="String"/>
+          <row name="clientPreviewPicture2" classField="clientPreviewPicture2" type="String"/>
+          <row name="clientPreviewPicture3" classField="clientPreviewPicture3" type="String"/>
+          <row name="clientPreviewPicture4" classField="clientPreviewPicture4" type="String"/>
+          <row name="LOGO1" classField="LOGO1" type="String"/>
+          <row name="LOGO2" classField="LOGO2" type="String"/>
+          <row name="LOGO3" classField="LOGO3" type="String"/>
+          <row name="LOGO4" classField="LOGO4" type="String"/>
+          <row name="LOGO5" classField="LOGO5" type="String"/>
+          <row name="LOGO6" classField="LOGO6" type="String"/>
+          <row name="cartoonPicture" classField="cartoonPicture" type="String"/>
+          <row name="gameVideo" classField="gameVideo" type="String"/>
+          <row name="handBook" classField="handBook" type="String"/>
+          <row name="handBookPicture" classField="handBookPicture" type="String"/>
+          <row name="userGuide" classField="userGuide" type="String"/>
+          <row name="userGuidePicture" classField="userGuidePicture" type="String"/>
+          <row name="isSupportDotcard" classField="isSupportDotcard" type="String"/>
+          <row name="programSize" classField="programSize" type="int"/>
+		  <row name="programID" classField="programID" type="String"/>
+		  <row name="onlineType" classField="onlineType" type="int"/>
+		  <row name="version" classField="version" type="String"/>
+		  <row name="picture1" classField="picture1" type="String"/>
+	      <row name="picture2" classField="picture2" type="String"/>
+	      <row name="picture3" classField="picture3" type="String"/>
+	      <row name="picture4" classField="picture4" type="String"/>
+	      <row name="picture5" classField="picture5" type="String"/>
+	      <row name="picture6" classField="picture6" type="String"/>
+	      <row name="picture7" classField="picture7" type="String"/>
+	      <row name="picture8" classField="picture8" type="String"/>
+	      <row name="platform" classField="platform" type="String"/>
+	      <row name="chargeTime" classField="chargeTime" type="String"/>
+	      <row name="brand" classField="brand" type="String"/>
+	      <row name="pvcID" classField="pvcID" type="String"/>
+	      <row name="cityID" classField="cityID" type="String"/>
+	      <row name="expPrice" classField="expPrice" type="int"/>
+	      <row name="bigcatename" classField="countFlag" type="String"/>
+	      <row name="ismmtoevent" classField="ismmtoevent" type="String"/>
+	      <row name="copyrightFlag" classField="copyrightFlag" type="String"/>
+        </table>
+      </tables>
+    </node>
+    
+   <node>
+      <type>nt:gcontent:appTheme</type>
+      <typeDesc>主题</typeDesc>
+      <extend>nt:gcontent:app</extend>
+      <class>com.aspire.dotcard.gcontent.GAppTheme</class>
+      <tables>
+        <table name="t_r_gcontent" key="id">
+          <row name="deviceName" classField="deviceName01" type="String"/>
+          <row name="deviceName02" classField="deviceName02" type="String"/>
+          <row name="deviceName03" classField="deviceName03" type="String"/>
+          <row name="deviceName04" classField="deviceName04" type="String"/>
+          <row name="deviceName05" classField="deviceName05" type="String"/>
+          <row name="deviceName06" classField="deviceName06" type="String"/>
+          <row name="deviceName07" classField="deviceName07" type="String"/>
+          <row name="deviceName08" classField="deviceName08" type="String"/>
+          <row name="deviceName09" classField="deviceName09" type="String"/>
+          <row name="deviceName10" classField="deviceName10" type="String"/>
+          <row name="deviceName11" classField="deviceName11" type="String"/>
+          <row name="deviceName12" classField="deviceName12" type="String"/>
+          <row name="deviceName13" classField="deviceName13" type="String"/>
+          <row name="deviceName14" classField="deviceName14" type="String"/>
+          <row name="deviceName15" classField="deviceName15" type="String"/>
+          <row name="deviceName16" classField="deviceName16" type="String"/>
+          <row name="deviceName17" classField="deviceName17" type="String"/>
+          <row name="deviceName18" classField="deviceName18" type="String"/>
+          <row name="deviceName19" classField="deviceName19" type="String"/>
+          <row name="deviceName20" classField="deviceName20" type="String"/>
+          <row name="appCateName" classField="appCateName" type="String"/>
+          <row name="appCateID" classField="appCateID" type="String"/>
+          <row name="provider" classField="provider" type="String"/>
+          <row name="language" classField="language" type="String"/>
+          <row name="WWWPropaPicture1" classField="WWWPropaPicture1" type="String"/>
+          <row name="WWWPropaPicture2" classField="WWWPropaPicture2" type="String"/>
+          <row name="WWWPropaPicture3" classField="WWWPropaPicture3" type="String"/>
+          <row name="clientPreviewPicture1" classField="clientPreviewPicture1" type="String"/>
+          <row name="clientPreviewPicture2" classField="clientPreviewPicture2" type="String"/>
+          <row name="clientPreviewPicture3" classField="clientPreviewPicture3" type="String"/>
+          <row name="clientPreviewPicture4" classField="clientPreviewPicture4" type="String"/>
+          <row name="LOGO1" classField="LOGO1" type="String"/>
+          <row name="LOGO2" classField="LOGO2" type="String"/>
+          <row name="LOGO3" classField="LOGO3" type="String"/>
+          <row name="LOGO4" classField="LOGO4" type="String"/>
+          <row name="LOGO5" classField="LOGO5" type="String"/>
+          <row name="LOGO6" classField="LOGO6" type="String"/>
+          <row name="cartoonPicture" classField="cartoonPicture" type="String"/>
+          <row name="isSupportDotcard" classField="isSupportDotcard" type="String"/>
+          <row name="programSize" classField="programSize" type="int"/>
+	      <row name="programID" classField="programID" type="String"/>
+	      <row name="onlineType" classField="onlineType" type="int"/>
+	      <row name="version" classField="version" type="String"/>
+	      <row name="picture1" classField="picture1" type="String"/>
+	      <row name="picture2" classField="picture2" type="String"/>
+	      <row name="picture3" classField="picture3" type="String"/>
+	      <row name="picture4" classField="picture4" type="String"/>
+	      <row name="picture5" classField="picture5" type="String"/>
+	      <row name="picture6" classField="picture6" type="String"/>
+	      <row name="picture7" classField="picture7" type="String"/>
+	      <row name="picture8" classField="picture8" type="String"/>
+	      <row name="platform" classField="platform" type="String"/>
+	      <row name="chargeTime" classField="chargeTime" type="String"/>
+		  <row name="brand" classField="brand" type="String"/>
+		  <row name="pvcID" classField="pvcID" type="String"/>
+	      <row name="cityID" classField="cityID" type="String"/>
+	      <row name="handBook" classField="handBook" type="String"/>
+		  <row name="handBookPicture" classField="handBookPicture" type="String"/>
+          <row name="ismmtoevent" classField="ismmtoevent" type="String"/>
+	      <row name="copyrightFlag" classField="copyrightFlag" type="String"/>
+        </table>
+      </tables>
+    </node>
+
+   <node>
+      <type>nt:gcontent:appSoftWare</type>
+      <typeDesc>软件</typeDesc>
+      <extend>nt:gcontent:app</extend>
+      <class>com.aspire.dotcard.gcontent.GAppSoftWare</class>
+      <tables>
+        <table name="t_r_gcontent" key="id">
+          <row name="deviceName" classField="deviceName01" type="String"/>
+          <row name="deviceName02" classField="deviceName02" type="String"/>
+          <row name="deviceName03" classField="deviceName03" type="String"/>
+          <row name="deviceName04" classField="deviceName04" type="String"/>
+          <row name="deviceName05" classField="deviceName05" type="String"/>
+          <row name="deviceName06" classField="deviceName06" type="String"/>
+          <row name="deviceName07" classField="deviceName07" type="String"/>
+          <row name="deviceName08" classField="deviceName08" type="String"/>
+          <row name="deviceName09" classField="deviceName09" type="String"/>
+          <row name="deviceName10" classField="deviceName10" type="String"/>
+          <row name="deviceName11" classField="deviceName11" type="String"/>
+          <row name="deviceName12" classField="deviceName12" type="String"/>
+          <row name="deviceName13" classField="deviceName13" type="String"/>
+          <row name="deviceName14" classField="deviceName14" type="String"/>
+          <row name="deviceName15" classField="deviceName15" type="String"/>
+          <row name="deviceName16" classField="deviceName16" type="String"/>
+          <row name="deviceName17" classField="deviceName17" type="String"/>
+          <row name="deviceName18" classField="deviceName18" type="String"/>
+          <row name="deviceName19" classField="deviceName19" type="String"/>
+          <row name="deviceName20" classField="deviceName20" type="String"/>
+          <row name="appCateName" classField="appCateName" type="String"/>
+          <row name="appCateID" classField="appCateID" type="String"/>
+          <row name="provider" classField="provider" type="String"/>
+          <row name="language" classField="language" type="String"/>
+          <row name="WWWPropaPicture1" classField="WWWPropaPicture1" type="String"/>
+          <row name="WWWPropaPicture2" classField="WWWPropaPicture2" type="String"/>
+          <row name="WWWPropaPicture3" classField="WWWPropaPicture3" type="String"/>
+          <row name="clientPreviewPicture1" classField="clientPreviewPicture1" type="String"/>
+          <row name="clientPreviewPicture2" classField="clientPreviewPicture2" type="String"/>
+          <row name="clientPreviewPicture3" classField="clientPreviewPicture3" type="String"/>
+          <row name="clientPreviewPicture4" classField="clientPreviewPicture4" type="String"/>
+          <row name="LOGO1" classField="LOGO1" type="String"/>
+          <row name="LOGO2" classField="LOGO2" type="String"/>
+          <row name="LOGO3" classField="LOGO3" type="String"/>
+          <row name="LOGO4" classField="LOGO4" type="String"/>
+          <row name="LOGO5" classField="LOGO5" type="String"/>
+          <row name="LOGO6" classField="LOGO6" type="String"/>
+          <row name="cartoonPicture" classField="cartoonPicture" type="String"/>
+          <row name="manual" classField="manual" type="String"/>
+          <row name="isSupportDotcard" classField="isSupportDotcard" type="String"/>
+          <row name="programSize" classField="programSize" type="int"/>
+	      <row name="programID" classField="programID" type="String"/>
+	      <row name="onlineType" classField="onlineType" type="int"/>
+	      <row name="version" classField="version" type="String"/>
+	      <row name="picture1" classField="picture1" type="String"/>
+	      <row name="picture2" classField="picture2" type="String"/>
+	      <row name="picture3" classField="picture3" type="String"/>
+	      <row name="picture4" classField="picture4" type="String"/>
+	      <row name="picture5" classField="picture5" type="String"/>
+	      <row name="picture6" classField="picture6" type="String"/>
+	      <row name="picture7" classField="picture7" type="String"/>
+	      <row name="picture8" classField="picture8" type="String"/>
+	      <row name="platform" classField="platform" type="String"/>
+	      <row name="chargeTime" classField="chargeTime" type="String"/>
+		  <row name="brand" classField="brand" type="String"/>
+		  <row name="pvcID" classField="pvcID" type="String"/>
+	      <row name="cityID" classField="cityID" type="String"/>
+		  <row name="handBookPicture" classField="handBookPicture" type="String"/>
+		  <row name="handBook" classField="handBook" type="String"/>
+    	 <row name="ismmtoevent" classField="ismmtoevent" type="String"/>
+	      <row name="copyrightFlag" classField="copyrightFlag" type="String"/>
+	      <row name="appId" classField="appId" type="String"/>
+        </table>
+      </tables>
+    </node>
+    <node>
+      <type>nt:gcontent:video</type>
+      <typeDesc>基地视频</typeDesc>
+      <extend>nt:gcontent</extend>
+      <class>com.aspire.dotcard.gcontent.GVideo</class>
+      <tables>
+        <table name="t_r_gcontent" key="id">
+          <row name="auditionUrl" classField="pkgURL" type="String"/>
+          <row name="LOGO1" classField="pkgPICURL1" type="String"/>
+          <row name="LOGO2" classField="pkgPICURL2" type="String"/>
+          <row name="LOGO3" classField="pkgPICURL3" type="String"/>
+          <row name="LOGO4" classField="pkgPICURL4" type="String"/>
+          <row name="settimes" classField="sortnumber" type="int"/>
+          <row name="chargeTime" classField="changetype" type="String"/>
+        </table>
+      </tables>
+    </node>
+    
+    <node>
+      <type>nt:gcontent:book</type>
+      <typeDesc>广东图书</typeDesc>
+      <extend>nt:gcontent</extend>
+      <class>com.aspire.dotcard.gcontent.GBook</class>
+      <tables>
+        <table name="t_r_gcontent" key="id">
+          <row name="handBook" classField="bookTitle" type="String"/>
+          <row name="singer" classField="author" type="String"/>
+          <row name="auditionUrl" classField="contentUrl" type="String"/>
+          <row name="chargetime" classField="changeType" type="String"/>
+		</table>
+      </tables>
+    </node>
+    
+    <node>
+      <type>nt:gcontent:music</type>
+      <typeDesc>基地音乐</typeDesc>
+      <extend>nt:gcontent</extend>
+      <class>com.aspire.dotcard.gcontent.GMusic</class>
+      <tables>
+        <table name="t_r_gcontent" key="id">
+          <row name="singer" classField="singer" type="String"/>
+          <row name="provider" classField="album" type="String"/>
+          <row name="chargeTime" classField="changeType" type="String"/>
+        </table>
+      </tables>
+    </node>
+	<node>
+      <type>nt:gcontent:read</type>
+      <typeDesc>基地图书</typeDesc>
+      <extend>nt:gcontent</extend>
+      <class>com.aspire.dotcard.gcontent.GRead</class>
+      <tables>
+        <table name="t_r_gcontent" key="id">
+          <row name="singer" classField="singer" type="String"/>
+          <row name="auditionUrl" classField="contentUrl" type="String"/>
+          <row name="chargetime" classField="changeType" type="String"/>
+		  <row name="handBook" classField="handBook" type="String"/>
+		  <row name="EXPIRE" classField="chargeType" type="String"/>
+          <row name="PRICE" classField="fee" type="String"/>
+		  <row name="isSupportDotcard" classField="isFinish" type="String"/>
+        </table>
+      </tables>
+    </node>
+    <node>
+      <type>nt:gcontent:comic</type>
+      <typeDesc>动漫</typeDesc>
+      <extend>nt:gcontent</extend>
+      <class>com.aspire.dotcard.gcontent.GComic</class>
+      <tables>
+        <table name="t_r_gcontent" key="id">        
+          <row name="SINGER" classField="author" type="String"/>         
+          <row name="auditionUrl" classField="contentUrl" type="String"/>
+          <row name="EXPIRE" classField="invalidTime" type="String"/>
+          <row name="chargeTime" classField="changeType" type="String"/>
+		</table>
+      </tables>
+    </node>
+
+  </nodes>
+</repository>

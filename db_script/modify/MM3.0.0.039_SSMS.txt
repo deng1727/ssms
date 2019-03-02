@@ -1,0 +1,94 @@
+create table MID_TABLE
+(
+  appid    VARCHAR2(12) not null,
+  hotlist  NUMBER(12,2),
+  riselist NUMBER(12,2)
+);
+create table MID_TABLE2
+(
+  appid    VARCHAR2(12) not null,
+  m1  NUMBER(12,2),
+  m2 NUMBER(12,2)
+);
+create table MID_TABLE3
+(
+  appid    VARCHAR2(12) not null,
+  d3  NUMBER(12,2)
+);
+
+CREATE OR REPLACE PROCEDURE P_mt_rank_index 
+as
+     z NUMBER(12,2);
+     z1 NUMBER(12,2);
+     z2 NUMBER(12,2);
+     b NUMBER(12,2);
+     d1 NUMBER(12,2);
+     d2 NUMBER(12,2);
+     d3 NUMBER(12,2);
+     m1 NUMBER(12,2);
+     m2 NUMBER(12,2);
+     m1max NUMBER(12,2);
+     m1min NUMBER(12,2);
+     m2max NUMBER(12,2);
+     m2min NUMBER(12,2);  
+     a NUMBER(12,2);  
+cursor s_cur is
+        select * from t_mt_rank_index_d where DL_15DAYS_CNT>50;
+        cursor s_cur2 is
+        select * from t_mt_rank_index_d where DL_15DAYS_CNT>50;
+begin
+  delete from MID_TABLE;
+ for r in s_cur loop
+   
+    for r1 in s_cur2 loop      
+      if r1.PRD_TYPE_ID=r.PRD_TYPE_ID then
+      select (r1.CLASS_DL_CNT*0.15+r1.SEARCH_DL_CNT*0.4+r1.HOT_DL_CNT*0.25+r1.MAN_DL_CNT*0.2)*exp(r1.COM_CNT/sum(COM_CNT)) into a
+    from t_mt_rank_index_d where DL_15DAYS_CNT>50 and PRD_TYPE_ID=r.PRD_TYPE_ID;
+    
+    insert into MID_TABLE3 values(r1.content_id,a);
+    
+    select (r1.CLASS_DL_CNT*0.15+r1.SEARCH_DL_CNT*0.4+r1.HOT_DL_CNT*0.25+r1.MAN_DL_CNT*0.2)*exp(r1.COM_CNT/sum(COM_CNT)) into d3
+    from t_mt_rank_index_d where DL_15DAYS_CNT>50 and PRD_TYPE_ID=r.PRD_TYPE_ID;
+    select  (r1.CLASS_DL_CNT1*0.15+r1.SEARCH_DL_CNT1*0.4+r1.HOT_DL_CNT1*0.25+r1.MAN_DL_CNT1*0.2)*exp(r1.COM_CNT1/sum(COM_CNT1)) into d2
+    from t_mt_rank_index_d where DL_15DAYS_CNT>50 and PRD_TYPE_ID=r.PRD_TYPE_ID;
+    select (r1.CLASS_DL_CNT2*0.15+r1.SEARCH_DL_CNT2*0.4+r1.HOT_DL_CNT2*0.25+r1.MAN_DL_CNT2*0.2)*exp(r1.COM_CNT2/sum(COM_CNT2)) into d1
+    from t_mt_rank_index_d where DL_15DAYS_CNT>50 and PRD_TYPE_ID=r.PRD_TYPE_ID;
+     m1:=(d1+d2+d3)/(r1.ADD_DL_CNT*0.2+d1+d2+d3+1)*ln(r1.ADD_DL_CNT*0.2+d1+d2+d3+1);
+     m2:=(r1.fee+r1.fee1+r1.fee2)/((r1.add_fee+1)*ln(r1.add_fee+1));  
+        insert into MID_TABLE2 values(r1.content_id,m1,m2);
+         END if;
+       end loop;     
+    select sum(d3) into b from MID_TABLE3; 
+    delete from MID_TABLE3;
+    --Create By Lixin King
+    select (r.CLASS_DL_CNT*0.15+r.SEARCH_DL_CNT*0.4+r.HOT_DL_CNT*0.25+r.MAN_DL_CNT*0.2)*exp(r.COM_CNT/sum(COM_CNT))/b
+    *ln(b) into z1 from t_mt_rank_index_d where DL_15DAYS_CNT>50 and PRD_TYPE_ID=r.PRD_TYPE_ID;   
+    select r.fee/sum(fee)*ln(sum(fee)) into z2 from t_mt_rank_index_d where DL_15DAYS_CNT>50 and PRD_TYPE_ID=r.PRD_TYPE_ID;  
+   
+    z:=z2*0.35+z1*0.65;
+  
+    select (r.CLASS_DL_CNT*0.15+r.SEARCH_DL_CNT*0.4+r.HOT_DL_CNT*0.25+r.MAN_DL_CNT*0.2)*exp(r.COM_CNT/sum(COM_CNT)) into d3
+    from t_mt_rank_index_d where DL_15DAYS_CNT>50 and PRD_TYPE_ID=r.PRD_TYPE_ID;
+    select  (r.CLASS_DL_CNT1*0.15+r.SEARCH_DL_CNT1*0.4+r.HOT_DL_CNT1*0.25+r.MAN_DL_CNT1*0.2)*exp(r.COM_CNT1/sum(COM_CNT1)) into d2
+    from t_mt_rank_index_d where DL_15DAYS_CNT>50 and PRD_TYPE_ID=r.PRD_TYPE_ID;
+    select (r.CLASS_DL_CNT2*0.15+r.SEARCH_DL_CNT2*0.4+r.HOT_DL_CNT2*0.25+r.MAN_DL_CNT2*0.2)*exp(r.COM_CNT2/sum(COM_CNT2)) into d1
+    from t_mt_rank_index_d where DL_15DAYS_CNT>50 and PRD_TYPE_ID=r.PRD_TYPE_ID;
+
+
+     m1:=(d1+d2+d3)/(r.ADD_DL_CNT*0.2+d1+d2+d3+1)*ln(r.ADD_DL_CNT*0.2+d1+d2+d3+1);
+     m2:=(r.fee+r.fee1+r.fee2)/(r.add_fee+1)*ln(r.add_fee+1);  
+    
+    select max(m1)into m1max from MID_TABLE2;
+    select min(m1)into m1min from MID_TABLE2;
+    select max(m2)into m2max from MID_TABLE2;
+    select min(m2)into m2min from MID_TABLE2;
+    insert into MID_TABLE values(r.content_id,z,((m1-m1min) / (m1max-m1min))*0.7+((m2-m2min) / (m2max-m2min))*0.3);
+    delete from MID_TABLE2;
+    --insert into MID_TABLE values(r.content_id,z,0);
+    end loop;
+    commit;
+    exception
+    when others then
+    rollback;
+end;
+

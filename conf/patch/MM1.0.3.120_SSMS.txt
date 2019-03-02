@@ -1,0 +1,6 @@
+PatchID=MM1.0.3.120_SSMS
+PatchName=MM1.0.3.120_SSMS
+UpdateTime=2011/12/30
+Description=[none]
+Amended=[none]
+Added=[none]

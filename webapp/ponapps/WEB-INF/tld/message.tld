@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE taglib
+  PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.2//EN"
+  "http://java.sun.com/dtd/web-jsptaglibrary_1_2.dtd">
+
+<taglib>
+
+  <tlib-version>1.0</tlib-version>
+  <jsp-version>1.2</jsp-version>
+  <short-name>webportal tags</short-name>
+  <description>
+    message taglib.
+  </description>
+
+ <tag>
+    <name>messageList</name>
+    <tag-class>com.aspire.ponaadmin.web.taglib.MessageListTag</tag-class>
+    <body-content>JSP</body-content>
+    <description>
+      display all message.
+    </description>
+ </tag>
+ <tag>
+    <name>messageDisplay</name>
+    <tag-class>com.aspire.ponaadmin.web.taglib.MessageDisplayTag</tag-class>
+    <body-content>JSP</body-content>
+    <description>
+      display the message you choosed (by key).
+    </description>
+    <attribute>
+      <name>key</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+ </tag>
+ <tag>
+    <name>UserStateDisplay</name>
+    <tag-class>com.aspire.ponaadmin.web.taglib.UserStateDisplayTag</tag-class>
+    <body-content>JSP</body-content>
+    <description>
+      display the user state .
+    </description>
+    <attribute>
+      <name>state</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+ </tag>
+<tag>
+    <name>strwrap</name>
+    <tag-class>com.aspire.ponaadmin.web.taglib.StrWrapTag</tag-class>
+    <body-content>empty</body-content>
+    <attribute>
+    <name>name</name>
+    <required>true</required>
+    <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+    <name>property</name>
+    <required>false</required>
+    <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+    <name>scope</name>
+    <required>false</required>
+    <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+    <name>padStr</name>
+    <required>false</required>
+    <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+    <name>wraplen</name>
+    <required>false</required>
+    <rtexprvalue>true</rtexprvalue>
+    </attribute>
+</tag>
+
+</taglib>

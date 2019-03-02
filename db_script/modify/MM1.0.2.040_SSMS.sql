@@ -1,0 +1,3 @@
+
+insert into dbversion(DBSEQ,DBVERSION,LASTDBVERSION,PATCHVERSION) values (SEQ_DB_VERSION.nextval,'1.0.0.0','MM1.0.2.035_SSMS','MM1.0.2.040_SSMS');
+commit;

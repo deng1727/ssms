@@ -1,0 +1,847 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+  <form-beans>
+    <form-bean name="LockMgrForm" type="com.aspire.ponaadmin.web.base.lock.LockMgrForm" />
+    <form-bean name="contentForm" type="com.aspire.ponaadmin.web.repository.web.ContentForm" />
+    <form-bean name="dataImportForm" type="com.aspire.ponaadmin.web.repository.web.DataImportForm" />
+    
+    <form-bean name="dataImportForm2" type="com.aspire.ponaadmin.web.channelUser.action.DataImportForm" />
+     <form-bean name="FileForm" type="com.aspire.ponaadmin.web.newmusicsys.action.FileForm" />
+     
+    <form-bean name="dissQueryForm" type="com.aspire.ponaadmin.web.dissertation.DissQueryForm"></form-bean>
+    <form-bean name="dissAddForm" type="com.aspire.ponaadmin.web.dissertation.DissAddForm"></form-bean>
+  </form-beans>
+  <global-forwards>
+    <forward name="commonFailure" path="/web/common/error.jsp" />
+    <forward name="commonSuccess" path="/web/common/success.jsp" />
+    <!-- 渠道商用户 -->
+    <forward name="loginHintForChannelUser" path="/web/channelUser/login_hint.jsp" />
+  </global-forwards>
+  <action-mappings>
+ 
+    <action path="/web/actionlog/queryLog" scope="request" type="com.aspire.ponaadmin.web.actionlog.QueryLogAction">
+      <forward name="logList" path="/web/actionlog/log.jsp" />
+    </action>
+    <action path="/web/actionlog/getDetail" scope="request" type="com.aspire.ponaadmin.web.actionlog.GetLogDetailAction">
+      <forward name="logDetail" path="/web/actionlog/log_detail.jsp" />
+    </action>
+	
+    <action path="/web/login" scope="request" type="com.aspire.ponaadmin.web.usermanager.LoginAction">
+      <forward name="main" path="/web/main.jsp" redirect="true" />
+      <forward name="loginHint" path="/web/login_hint.jsp" />
+      <forward name="relogin" path="/web/index.jsp" />
+    </action>
+	
+      <action path="/web/userCenterLogin" scope="request" type="com.aspire.ponaadmin.web.usermanager.UserCenterLoginAction">
+      <forward name="main" path="/web/main.jsp" redirect="true" />
+      <forward name="loginHint" path="/web/login_hint.jsp" />
+      <forward name="relogin" path="/web/index.jsp" />
+    </action>
+	<action path="/web/dissertation/queryDiss" scope="request"
+     name="dissQueryForm" validate="false" type="com.aspire.ponaadmin.web.dissertation.DissAction"
+     input="/web/dissertation/dissertation.jsp">
+      <forward name="dissList" path="/web/dissertation/dissertation.jsp" />
+    </action>
+     <action path="/web/dissertation/addDiss" scope="request"
+     name="dissAddForm" validate="false" type="com.aspire.ponaadmin.web.dissertation.DissAddUpdateAction"
+     input="/web/dissertation/add_diss.jsp">
+      <forward name="addDissJsp" path="/web/dissertation/add_diss.jsp" />
+      <forward name="detail" path="/web/dissertation/diss_detail.jsp" />
+    </action>
+	<!-- 
+    <action path="/web/usermanager/register" scope="request" type="com.aspire.ponaadmin.web.usermanager.RegisterAction">
+      <forward name="registerInfo" path="/web/usermanager/reg_fillinfo.jsp" />
+      <forward name="registerAgain" path="/web/usermanager/reg_id.jsp" />
+    </action>
+	-->
+    <action path="/web/usermanager/registerInfo" scope="request" type="com.aspire.ponaadmin.web.usermanager.RegisterInfoAction" />
+    <action path="/web/usermanager/viewUserInfo" scope="request" type="com.aspire.ponaadmin.web.usermanager.ViewUserInfoAction">
+      <forward name="viewUserInfo" path="/web/usermanager/user_info.jsp" />
+    </action>
+    <action path="/web/usermanager/editUserInfo" scope="request" type="com.aspire.ponaadmin.web.usermanager.EditUserInfoAction">
+      <forward name="editUserInfo" path="/web/usermanager/modify_person.jsp" />
+      <forward name="registerInfo" path="/web/usermanager/reg_fillinfo.jsp" />
+    </action>
+	<!-- 
+    <action path="/web/usermanager/modUserPwd" scope="request" type="com.aspire.ponaadmin.web.usermanager.ModUserPwdAction">
+      <forward name="redo" path="/web/usermanager/modify_pwd.jsp" />
+    </action>
+	-->
+    <action path="/web/usermanager/saveUserInfo" scope="request" type="com.aspire.ponaadmin.web.usermanager.SaveUserInfoAction" />
+    <action path="/web/usermanager/queryUncheckUser" scope="request" type="com.aspire.ponaadmin.web.usermanager.QueryUncheckUserAction">
+      <forward name="uncheckUserList" path="/web/usermanager/user_check.jsp" />
+    </action>
+    <action path="/web/usermanager/checkUser" scope="request" type="com.aspire.ponaadmin.web.usermanager.CheckUserAction" />
+    <action path="/web/usermanager/batchCheckUser" scope="request" type="com.aspire.ponaadmin.web.usermanager.BatchCheckUserAction" />
+    <action path="/web/usermanager/queryUser" scope="request" type="com.aspire.ponaadmin.web.usermanager.QueryUserListAction">
+      <forward name="userList" path="/web/usermanager/user_list.jsp" />
+    </action>
+    <action path="/web/usermanager/lockUser" scope="request" type="com.aspire.ponaadmin.web.usermanager.LockUserAction" />
+    <action path="/web/usermanager/unlockUser" scope="request" type="com.aspire.ponaadmin.web.usermanager.UnlockUserAction" />
+    <action path="/web/usermanager/resetPwd" scope="request" type="com.aspire.ponaadmin.web.usermanager.ResetPwdAction" />
+    <action path="/web/usermanager/editUserRole" scope="request" type="com.aspire.ponaadmin.web.usermanager.EditUserRoleAction">
+      <forward name="editUserRole" path="/web/usermanager/modify_role.jsp" />
+    </action>
+    <action path="/web/usermanager/saveUserRole" scope="request" type="com.aspire.ponaadmin.web.usermanager.SaveUserRoleAction">
+      <forward name="userList" path="/web/usermanager/user_list.jsp" />
+    </action>
+    <action path="/web/notLogin" scope="request" type="com.aspire.ponaadmin.web.rightmanager.action.NotLoginAction">
+      <forward name="login" path="/web/index.jsp" />
+    </action>
+    <!-- rightmanager start-->
+    <action path="/web/rightmanager/roleManager" scope="request" type="com.aspire.ponaadmin.web.rightmanager.action.RoleAction" />
+    <action path="/web/rightmanager/roleList" scope="request" type="com.aspire.ponaadmin.web.rightmanager.action.RoleListAction">
+      <forward name="getAllRole" path="/web/rightmanager/role_list.jsp" />
+    </action>
+    <action path="/web/rightmanager/oneRole" scope="request" type="com.aspire.ponaadmin.web.rightmanager.action.GetRoleByIDAction">
+      <forward name="editRoleInfo" path="/web/rightmanager/add_role.jsp" />
+      <forward name="viewRoleInfo" path="/web/rightmanager/role_info.jsp" />
+    </action>
+    <action path="/web/rightmanager/delRole" scope="request" type="com.aspire.ponaadmin.web.rightmanager.action.DelRoleAction" />
+    <action path="/web/rightmanager/roleRights" scope="request" type="com.aspire.ponaadmin.web.rightmanager.action.RoleRightsAction" />
+    <action path="/web/rightmanager/editRoleUser" scope="request" type="com.aspire.ponaadmin.web.rightmanager.action.EditRoleUserAction">
+      <forward name="editRoleUser" path="/web/rightmanager/user_modify.jsp" />
+    </action>
+    <action path="/web/rightmanager/saveRoleUser" scope="request" type="com.aspire.ponaadmin.web.rightmanager.action.SaveRoleUserAction" />
+    <action path="/web/rightmanager/rightList" scope="request" type="com.aspire.ponaadmin.web.rightmanager.action.RightAction">
+      <forward name="editRoleRights" path="/web/rightmanager/right_modify.jsp" />
+    </action>
+    <action path="/web/rightmanager/chooseRight" scope="request" type="com.aspire.ponaadmin.web.rightmanager.action.ChooseRightAction">
+      <forward name="right" path="/web/rightmanager/choose_right.jsp" />
+    </action>
+    <!-- rightmanager end-->
+
+    <!-- resource mgr start-->
+        <action path="/web/resourcemgr/manUpdateCategory" type="com.aspire.ponaadmin.web.category.ManUpdateCategoryAction">
+      <forward name="showCateResult" path="/web/resourcemgr/man_mupdate.jsp" />
+    </action>
+    <action path="/web/resourcemgr/categoryTree" type="com.aspire.ponaadmin.web.repository.web.CategoryTreeAction">
+      <forward name="showTree" path="/web/resourcemgr/category_main.jsp" />
+    </action>
+    <action path="/web/resourcemgr/categoryInfo" type="com.aspire.ponaadmin.web.repository.web.CategoryInfoAction">
+      <forward name="show" path="/web/resourcemgr/category_info.jsp" />
+    </action>
+    <action path="/web/resourcemgr/categoryDevice" type="com.aspire.ponaadmin.web.repository.web.CategoryDeviceAction">
+      <forward name="device" path="/web/resourcemgr/category_device.jsp" />
+    </action>
+	<action path="/web/resourcemgr/categoryCity" type="com.aspire.ponaadmin.web.repository.web.CategoryCityAction">
+      <forward name="city" path="/web/resourcemgr/category_city.jsp" />
+    </action>
+	<action path="/web/resourcemgr/categoryPlatForm" type="com.aspire.ponaadmin.web.repository.web.CategoryPlatFormAction">
+      <forward name="platForm" path="/web/resourcemgr/category_platForm.jsp" />
+    </action>
+	<action path="/web/resourcemgr/categoryEdit" type="com.aspire.ponaadmin.web.repository.web.CategoryEditAction">
+      <forward name="edit" path="/web/resourcemgr/category_edit.jsp" />
+    </action>
+    <action path="/web/resourcemgr/categorySave"  name="FileForm"  type="com.aspire.ponaadmin.web.repository.web.CategorySaveAction"/>
+    <action path="/web/resourcemgr/categoryDel" type="com.aspire.ponaadmin.web.repository.web.CategoryDelAction"/>
+    <action path="/web/resourcemgr/contentTree" type="com.aspire.ponaadmin.web.repository.web.ContentTreeAction">
+      <forward name="showTree" path="/web/resourcemgr/content_main.jsp" />
+    </action>
+    <action path="/web/resourcemgr/categoryImport" name="dataImportForm" type="com.aspire.ponaadmin.web.repository.web.CgyContentImportAction"/>
+    <action path="/web/resourcemgr/chooseType" type="com.aspire.ponaadmin.web.repository.web.ChooseTypeAction">
+      <forward name="chooseType" path="/web/resourcemgr/choose_type.jsp" />
+    </action>
+    <action path="/web/resourcemgr/contentList" type="com.aspire.ponaadmin.web.repository.web.ContentListAction">
+      <forward name="showList" path="/web/resourcemgr/content_list.jsp" />
+      <forward name="modelWindow" path="/web/resourcemgr/content_choose.jsp" />
+	  <forward name="contentHint" path="/web/resourcemgr/content_hint.jsp" />
+    </action>
+    <action path="/web/resourcemgr/contentEdit" type="com.aspire.ponaadmin.web.repository.web.ContentEditAction">
+      <forward name="edit" path="/web/resourcemgr/content_edit.jsp" />
+    </action>
+    <action name="contentForm" path="/web/resourcemgr/contentSave" type="com.aspire.ponaadmin.web.repository.web.ContentSaveAction" scope="request" >
+    </action>
+    <action path="/web/resourcemgr/contentInfo" type="com.aspire.ponaadmin.web.repository.web.ContentInfoAction">
+      <forward name="show" path="/web/resourcemgr/content_info.jsp" />
+    </action>
+    <action path="/web/resourcemgr/contentDel" type="com.aspire.ponaadmin.web.repository.web.ContentDelAction"/>
+    <action path="/web/resourcemgr/contentTag" type="com.aspire.ponaadmin.web.repository.web.ContentTagAction"/>
+
+    <action path="/web/resourcemgr/cgyContentTree" type="com.aspire.ponaadmin.web.repository.web.CgyContentTreeAction">
+      <forward name="showTree" path="/web/resourcemgr/cgy_content_main.jsp" />
+    </action>
+    <action path="/web/resourcemgr/cgyContentList" type="com.aspire.ponaadmin.web.repository.web.CgyContentListAction">
+      <forward name="showList" path="/web/resourcemgr/cgy_content_list.jsp" />
+      <forward name="showListVirtual" path="/web/resourcemgr/cgy_content_list_virtual.jsp" />
+    </action>
+     <action path="/web/resourcemgr/cgyContentTaxis" type="com.aspire.ponaadmin.web.repository.web.CgyContentTaxisAction">
+      <forward name="showTaxis" path="/web/resourcemgr/cgy_content_taxis.jsp" />
+    </action>
+    <action path="/web/resourcemgr/cgyNotContentList" type="com.aspire.ponaadmin.web.repository.web.CgyNotContentListAction">
+      <forward name="showList" path="/web/resourcemgr/cgy_not_content_list.jsp" />
+    </action>
+    <action path="/web/resourcemgr/cgyContentAdd" type="com.aspire.ponaadmin.web.repository.web.CgyContentAddAction">
+      <forward name="showResult" path="/web/resourcemgr/cgy_content_add_hint.jsp" />
+    </action>
+    <action path="/web/resourcemgr/cgyContentRemove" type="com.aspire.ponaadmin.web.repository.web.CgyContentRemoveAction"/>
+    <action path="/web/resourcemgr/contentAddToCgy" type="com.aspire.ponaadmin.web.repository.web.ContentAddToCgyAction">
+      <forward name="showTree" path="/web/resourcemgr/choose_category.jsp" />
+    </action>
+     <action path="/web/upload/resourceList" type="com.aspire.ponaadmin.web.upload.ResourceListAction">
+      <forward name="resourceList" path="/web/upload/resource_list.jsp" />
+    </action>
+    <!-- 货架分类管理  审批发布  -->
+    <action path="/web/resourcemgr/categoryApprovalList" type="com.aspire.ponaadmin.web.repository.web.CategoryApprovalListAction">
+      <forward name="categoryApprovalList" path="/web/resourcemgr/category_approval_list.jsp" />
+    </action>
+    <action path="/web/resourcemgr/categoryApproval" type="com.aspire.ponaadmin.web.repository.web.CategoryApprovalAction">
+    </action>
+    <action path="/web/resourcemgr/categoryGoodsList" type="com.aspire.ponaadmin.web.repository.web.CategoryGoodsListAction">
+      <forward name="showList" path="/web/resourcemgr/cgy_content_release.jsp" />
+      <forward name="back" path="/web/resourcemgr/Category_approval_status.jsp" />
+    </action>
+    
+    <!-- resource mgr end-->
+<action path="/web/catemonitor/monitorContentTree" scope="request"  type="com.aspire.ponaadmin.web.repository.camonitor.MonitorContentTreeAction">
+      <forward name="showMonitorTree" path="/web/catemonitor/mo_content_main.jsp" />
+    </action>
+ <action path="/web/catemonitor/moContentList" type="com.aspire.ponaadmin.web.repository.camonitor.MoContentListAction">
+      <forward name="showList" path="/web/catemonitor/mo_content_list.jsp" />
+    </action>
+    <action path="/web/catemonitor/monitorSetDeviceName" type="com.aspire.ponaadmin.web.repository.camonitor.MonitorSetDeviceNameAction">
+      <forward name="showCamonitor" path="/web/catemonitor/cate_monitor.jsp" />
+    </action>
+    <!--业务、内容同步-->
+    <action path="/web/resourcemgr/dataImport" scope="request" type="com.aspire.ponaadmin.web.repository.web.DataImportAction"/>
+    <action path="/web/systemmgr/tactic" scope="request" type="com.aspire.dotcard.syncData.tactic.TacticAction">
+	  <forward name="tacticList" path="/web/tactic/tactic_list.jsp" />
+      <forward name="modify" path="/web/tactic/modify.jsp" />
+    </action>
+      <!--DCMP资讯数据同步-->
+    <action path="/web/resourcemgr/ftpdcmp" scope="request" type="com.aspire.dotcard.dcmpmgr.FTPDCMPAction"/>
+      <!--彩铃数据同步-->
+    <action path="/web/resourcemgr/colorringDataImport" scope="request" type="com.aspire.dotcard.hwcolorring.ColorringDataImportAction"/>
+    <!--业务、内容同步-->
+    <action path="/web/resourcemgr/A8DataImport" scope="request" type="com.aspire.dotcard.a8.A8DataImportAction"/>
+    <action path="/web/resourcemgr/DataExport" scope="request" type="com.aspire.dotcard.export.ExportFileAction" />
+    <!-- 数据同步任务 -->
+    <action path="/web/resourcemgr/dataSync" scope="request" type="com.aspire.ponaadmin.web.datasync.DataSyncAction">
+      <forward name="dataImport" path="web/resourcemgr/data_import.jsp" />
+      <forward name="waitPage" path="/web/resourcemgr/data_import_wait.jsp"></forward>
+    </action>
+    <!--手动同步报表数据 -->
+    <action path="/web/resourcemgr/ReportImport" scope="request" type="com.aspire.dotcard.reportdata.ReportImportAction"/>
+	<!--手动同步TOP及创业大赛报表数据 -->
+    <action path="/web/resourcemgr/ReportTopListImport" scope="request" type="com.aspire.dotcard.reportdata.cystatistic.ReportTopListImportAction"/>
+     <!-- 内容应用黑名单 -->
+     <action path="/web/blacklist/black" scope="request" type="com.aspire.ponaadmin.web.blacklist.action.BlackListAction">
+        <forward name="blackList" path="/web/blacklist/blacklist.jsp" />
+     </action>
+     <action path="/web/blacklist/blackMain" scope="request" type="com.aspire.ponaadmin.web.blacklist.action.BlackAction">
+        <forward name="toUpdate" path="/web/blacklist/black_add.jsp" />
+     </action>
+     <action path="/web/blacklist/importBlack" name="dataImportForm" scope="request" type="com.aspire.ponaadmin.web.blacklist.action.BlackImportAction">
+     </action>     
+     <action path="/web/blacklist/ctList" name="dataImportForm" scope="request" type="com.aspire.ponaadmin.web.blacklist.action.ContentListAction">
+         <forward name="ctList" path="/web/blacklist/contentlist.jsp" />
+     </action>   
+     
+     <action path="/web/blacklist/approval" name="dataImportForm" scope="request" type="com.aspire.ponaadmin.web.blacklist.action.BlackApprovalAction">
+         <forward name="showList" path="/web/blacklist/blacklist_approval.jsp" />
+     </action>           
+     
+     <!-- 自动更新应用 -->
+     <action path="/web/autoupdate/categoryRuleList" scope="request" type="com.aspire.ponaadmin.web.category.ui.CategoryUpdateQueryAction">
+         <forward name="list" path="/web/autoupdate/query_category_rule.jsp" />
+     </action>
+	 <action path="/web/autoupdate/categoryRuleView" scope="request" type="com.aspire.ponaadmin.web.category.ui.CategoryUpdateAction">
+         <forward name="view" path="/web/autoupdate/view_category_rule.jsp" />
+     </action>
+	 <action path="/web/autoupdate/categoryRuleEditView" scope="request" type="com.aspire.ponaadmin.web.category.ui.CategoryUpdateAction">
+         <forward name="editView" path="/web/autoupdate/edit_category_rule.jsp" />
+     </action>
+	 <action path="/web/autoupdate/categoryRuleEdit" scope="request" type="com.aspire.ponaadmin.web.category.ui.CategoryUpdateAction">
+     </action>
+	 <action path="/web/autoupdate/categoryRuleDellView" scope="request" type="com.aspire.ponaadmin.web.category.ui.CategoryUpdateAction">
+     </action>
+	 <action path="/web/autoupdate/categoryRuleAdd" scope="request" type="com.aspire.ponaadmin.web.category.ui.CategoryUpdateAction">
+     </action>
+	 <action path="/web/autoupdate/categoryRuleIdQuery" scope="request" type="com.aspire.ponaadmin.web.category.ui.CategoryQueryAction">
+		<forward name="list" path="/web/autoupdate/query_category_id.jsp" />
+     </action>
+	 <action path="/web/autoupdate/ruleList" scope="request" type="com.aspire.ponaadmin.web.category.ui.rule.RuleQueryAction">
+		<forward name="list" path="/web/autoupdate/query_rule.jsp" />
+     </action>
+	 <action path="/web/autoupdate/ruleView" scope="request" type="com.aspire.ponaadmin.web.category.ui.rule.RuleUpdateAction">
+		<forward name="editView" path="/web/autoupdate/edit_rule.jsp" />
+     </action>
+	 <action path="/web/autoupdate/ruleEdit" scope="request" type="com.aspire.ponaadmin.web.category.ui.rule.RuleUpdateAction">
+     </action>
+	 <action path="/web/autoupdate/conditionAddView" scope="request" type="com.aspire.ponaadmin.web.category.ui.condition.ConditionUpdateAction">
+		<forward name="addView" path="/web/autoupdate/add_cond.jsp" />
+     </action>
+	 <action path="/web/autoupdate/conditionAdd" scope="request" type="com.aspire.ponaadmin.web.category.ui.condition.ConditionUpdateAction">
+     </action>
+	 <action path="/web/autoupdate/conditionEditView" scope="request" type="com.aspire.ponaadmin.web.category.ui.condition.ConditionUpdateAction">
+		<forward name="editView" path="/web/autoupdate/edit_cond.jsp" />
+     </action>
+	 <action path="/web/autoupdate/conditionEdit" scope="request" type="com.aspire.ponaadmin.web.category.ui.condition.ConditionUpdateAction">
+     </action>
+     
+		<!-- 人工干预管理 -->
+	 <action forward="/web/intervenor/intervenor_main.jsp" path="/web/intervenor/intervenorList" />
+	 <action path="/web/intervenor/intervenorListView" scope="request" type="com.aspire.ponaadmin.web.category.intervenor.IntervenorQueryAction">
+         <forward name="list" path="/web/intervenor/query_intervenor.jsp" />
+     </action>
+	 <action path="/web/intervenor/intervenorView" name="dataImportForm" scope="request" type="com.aspire.ponaadmin.web.category.intervenor.IntervenorQueryAction">
+         <forward name="editView" path="/web/intervenor/view_intervenor.jsp" />
+		 <forward name="view" path="/web/intervenor/view_new_intervenor.jsp" />
+     </action>
+	 <action path="/web/intervenor/intervenorDel" scope="request" type="com.aspire.ponaadmin.web.category.intervenor.IntervenorQueryAction" />
+	 <action path="/web/intervenor/intervenorEdit" scope="request" type="com.aspire.ponaadmin.web.category.intervenor.IntervenorQueryAction" />
+	 <action path="/web/intervenor/intervenorDelContent" scope="request" type="com.aspire.ponaadmin.web.category.intervenor.IntervenorQueryAction" />
+	 <action path="/web/intervenor/intervenorSetSort" scope="request" type="com.aspire.ponaadmin.web.category.intervenor.IntervenorQueryAction" />
+	 <action path="/web/intervenor/intervenorAdd" scope="request" type="com.aspire.ponaadmin.web.category.intervenor.IntervenorQueryAction" />
+	 <action path="/web/intervenor/contentList" scope="request" type="com.aspire.ponaadmin.web.category.intervenor.IntervenorQueryAction">
+	 	<forward name="queryContent" path="/web/intervenor/add_gcontent.jsp" />
+	 </action>
+	 <action path="/web/intervenor/contentAdd" scope="request" type="com.aspire.ponaadmin.web.category.intervenor.IntervenorQueryAction" />
+	 <action path="/web/intervenor/categoryList" scope="request" type="com.aspire.ponaadmin.web.category.intervenor.category.IntervenorCategoryAction">
+         <forward name="listCategory" path="/web/intervenor/query_category.jsp" />
+     </action>
+	 <action path="/web/intervenor/categoryRelatingView" scope="request" type="com.aspire.ponaadmin.web.category.intervenor.category.IntervenorCategoryAction">
+         <forward name="relatingView" path="/web/intervenor/edit_category.jsp" />
+     </action>
+     
+     <action path="/web/intervenor/categoryRelatingView2" scope="request" type="com.aspire.ponaadmin.web.category.intervenor.category.IntervenorCategoryAction">
+         <forward name="relatingView2" path="/web/intervenor/edit_category2.jsp" />
+     </action>
+     
+	 <action path="/web/intervenor/categoryRelating" scope="request" type="com.aspire.ponaadmin.web.category.intervenor.category.IntervenorCategoryAction" />
+	 <action path="/web/intervenor/categoryDelRelating" scope="request" type="com.aspire.ponaadmin.web.category.intervenor.category.IntervenorCategoryAction" />
+	 <action path="/web/intervenor/categorySetSortId" scope="request" type="com.aspire.ponaadmin.web.category.intervenor.category.IntervenorCategoryAction" />
+	 <action path="/web/intervenor/categoryAddIntervenor" scope="request" type="com.aspire.ponaadmin.web.category.intervenor.category.IntervenorCategoryAction" >
+	 	<forward name="addIntervenor" path="/web/intervenor/add_intervenor_id.jsp" />
+	 </action>	 
+	 <action path="/web/intervenor/intervenorExe" scope="request" type="com.aspire.ponaadmin.web.category.intervenor.category.IntervenorCategoryAction" />
+		  
+	 <!-- 基地业务数字内容推荐 -->	  
+	 <action path="/web/baserecomm/baseGameQuery" scope="request" type="com.aspire.ponaadmin.web.baserecomm.basegame.BaseGameQueryAction" >
+	 	<forward name="list" path="/web/baserecomm/query_baseGame.jsp" />
+	 </action>	
+	 <action path="/web/baserecomm/baseGameTemp" scope="request" type="com.aspire.ponaadmin.web.baserecomm.basegame.BaseGameAction" >
+	 	<forward name="list" path="/web/baserecomm/query_baseGame_temp.jsp" />
+	 </action>
+	 
+	 <action path="/web/baserecomm/baseMusicQuery" scope="request" type="com.aspire.ponaadmin.web.baserecomm.basemusic.BaseMusicQueryAction" >
+	 	<forward name="list" path="/web/baserecomm/query_baseMusic.jsp" />
+	 </action>	
+	 <action path="/web/baserecomm/baseMusicTemp" scope="request" type="com.aspire.ponaadmin.web.baserecomm.basemusic.BaseMusicAction" >
+	 	<forward name="list" path="/web/baserecomm/query_baseMusic_temp.jsp" />
+	 </action>
+	 
+	 <action path="/web/baserecomm/baseBookQuery" scope="request" type="com.aspire.ponaadmin.web.baserecomm.basebook.BaseBookQueryAction" >
+	 	<forward name="list" path="/web/baserecomm/query_baseBook.jsp" />
+	 </action>	
+	 <action path="/web/baserecomm/baseBookTemp" scope="request" type="com.aspire.ponaadmin.web.baserecomm.basebook.BaseBookAction" >
+	 	<forward name="list" path="/web/baserecomm/query_baseBook_temp.jsp" />
+	 </action>
+	 
+	 <action path="/web/baserecomm/baseVideoQuery" scope="request" type="com.aspire.ponaadmin.web.baserecomm.basevideo.BaseVideoQueryAction" >
+	 	<forward name="list" path="/web/baserecomm/query_baseVideo.jsp" />
+	 </action>	
+	 <action path="/web/baserecomm/baseVideoTemp" scope="request" type="com.aspire.ponaadmin.web.baserecomm.basevideo.BaseVideoAction" >
+	 	<forward name="list" path="/web/baserecomm/query_baseVideo_temp.jsp" />
+	 </action>
+	<action path="/web/wapCategoryExport/export" scope="request" type="com.aspire.ponaadmin.web.dataexport.wapcategory.WapCategoryExportAction" />
+	  <action path="/web/appsExport/export" scope="request" type="com.aspire.ponaadmin.web.dataexport.appexp.AppsExpAction" />
+	    	 	   <action path="/web/music139/query" scope="request" type="com.aspire.ponaadmin.web.music139.query.Music139QueryAction" />
+	   <action path="/web/music139/ablumsynchro" scope="request" type="com.aspire.ponaadmin.web.music139.album.AblumSynchroAction" >
+			<forward name="result" path="/web/resourcemgr/result.jsp" />
+	   </action>
+	   <action path="/web/catesyn" scope="request" type="com.aspire.ponaadmin.web.catesyn.CateSynAction" />
+	 
+	 <!-- 新音乐货架管理 -->
+	 <action path="/web/newmusicsys/categoryTree"  name="FileForm"  type="com.aspire.ponaadmin.web.newmusicsys.action.NewMusicCategoryAction" >
+	 	<forward name="tree" path="/web/newmusicsys/category_tree.jsp" />
+		<forward name="add" path="/web/newmusicsys/add_category.jsp" />
+		<forward name="query" path="/web/newmusicsys/query_category.jsp" />		
+		<forward name="mod" path="/web/newmusicsys/mod_category.jsp" />	
+	 </action>
+	 
+   <action path="/web/newmusicsys/categoryApprovalList"  name="FileForm"  type="com.aspire.ponaadmin.web.newmusicsys.action.CategoryApprovalListAction" >
+    <forward name="categoryApprovalList" path="/web/newmusicsys/category_approval_list.jsp" />
+   </action>
+   
+   <action path="/web/newmusicsys/categoryApproval"  name="FileForm"  type="com.aspire.ponaadmin.web.newmusicsys.action.CategoryApprovalAction" >
+       <forward name="query" path="/web/newmusicsys/category_goods_approval.jsp" />
+       <forward name="success" path="/web/newmusicsys/category_approval_status.jsp" />
+   </action>
+	 
+	 <action path="/web/newmusicsys/referenceTree" scope="request" type="com.aspire.ponaadmin.web.newmusicsys.action.NewMusicCategoryAction" >
+	 	<forward name="tree" path="/web/newmusicsys/reference_tree.jsp" />
+	 </action>
+	 <action path="/web/newmusicsys/queryReference"   name="FileForm"  scope="request" type="com.aspire.ponaadmin.web.newmusicsys.action.NewMusicRefAction" >
+	 	<forward name="query" path="/web/newmusicsys/query_reference.jsp" />
+		<forward name="queryMusic" path="/web/newmusicsys/query_music.jsp" />
+		<forward name="showMusic" path="/web/newmusicsys/key_musicResource_edit.jsp" />
+		<forward name="saveMusic" path="/web/newmusicsys/query_music.jsp" />
+	 </action>
+	 <action path="/web/resourcemgr/newCategoryCity" type="com.aspire.ponaadmin.web.repository.web.NewMusicCategoryCityAction">
+      <forward name="city" path="/web/resourcemgr/new_category_city.jsp" />
+    </action>
+	<action path="/web/newmusicsys/importReference" name="dataImportForm" type="com.aspire.ponaadmin.web.newmusicsys.action.NewMusicRefAction" />
+	
+	<!-- 动漫货架管理 -->
+	 <action path="/web/comic/categoryTree"  name="FileForm"  type="com.aspire.ponaadmin.web.comic.action.CategoryAction" >
+		<forward name="query" path="/web/comic/query_category.jsp" />	
+		<forward name="add" path="/web/comic/add_category.jsp" />
+		<forward name="mod" path="/web/comic/mod_category.jsp" />	
+	 </action>
+	 <action path="/web/comic/importReference" name="dataImportForm" type="com.aspire.ponaadmin.web.comic.action.ReferenceAction"/>
+	
+	<action path="/web/comic/categoryApprovalList"  name="FileForm"  type="com.aspire.ponaadmin.web.comic.action.CategoryApprovalListAction" >
+		<forward name="categoryApprovalList" path="/web/comic/category_approval_list.jsp" />
+	 </action>
+	 
+	 <action path="/web/comic/categoryApproval"  name="FileForm"  type="com.aspire.ponaadmin.web.comic.action.CategoryApprovalAction" >
+	     <forward name="query" path="/web/comic/category_goods_approval.jsp" />
+	     <forward name="success" path="/web/comic/category_approval_status.jsp" />
+	 </action>
+	 
+	 <action path="/web/comic/referenceTree" scope="request" type="com.aspire.ponaadmin.web.comic.action.ReferenceAction" >
+	 	<forward name="query" path="/web/comic/query_reference.jsp" />
+		<forward name="queryItem" path="/web/comic/query_item.jsp" />
+		<forward name="queryChapter" path="/web/comic/query_chapter.jsp" />
+	 </action>
+	 
+	 <!-- fanqh add 动漫黑名单 begin -->
+	  <action path="/web/comic/black" scope="request" type="com.aspire.ponaadmin.web.comic.action.BlackAction" >
+	 	<forward name="query" path="/web/comic/query_black.jsp" />
+	 </action>
+	  <action path="/web/comic/queryCbContent" scope="request" type="com.aspire.ponaadmin.web.comic.action.BlackAction" >
+	 	<forward name="query_cb_content" path="/web/comic/query_cb_content.jsp" />
+	 </action>
+	 <action path="/web/comic/importBlack" name="dataImportForm" type="com.aspire.ponaadmin.web.comic.action.BlackAction"/>
+	 <!-- fanqh add 动漫黑名单 end -->
+	 
+	 
+	<!-- 图书货架管理 -->
+	<action path="/web/book/categorySave" name="FileForm"  type="com.aspire.ponaadmin.web.book.action.BookCategoryAction" />
+	 <action path="/web/book/categoryTree"  name="FileForm"   scope="request" type="com.aspire.ponaadmin.web.book.action.BookCategoryAction" >
+	 	<forward name="tree" path="/web/book/category_tree.jsp" />
+		<forward name="add" path="/web/book/add_category.jsp" />
+		<forward name="query" path="/web/book/query_category.jsp" />		
+		<forward name="mod" path="/web/book/mod_category.jsp" />	
+	 </action>
+	 <action path="/web/book/bookCategoryCity" type="com.aspire.ponaadmin.web.repository.web.BookCategoryCityAction">
+      <forward name="city" path="/web/resourcemgr/book_category_city.jsp" />
+	 </action>
+	 <action path="/web/book/referenceTree" scope="request" type="com.aspire.ponaadmin.web.book.action.BookCategoryAction" >
+	 	<forward name="tree" path="/web/book/reference_tree.jsp" />
+	 </action> 
+	 <action path="/web/book/queryReference" scope="request" name="FileForm" type="com.aspire.ponaadmin.web.book.action.BookRefAction" >
+	 	<forward name="query" path="/web/book/query_reference.jsp" />
+		<forward name="queryBook" path="/web/book/query_book.jsp" />
+		<forward name="showBook" path="/web/book/key_bookResource_edit.jsp" />
+	 </action>   
+	<action path="/web/book/importReference" name="dataImportForm" type="com.aspire.ponaadmin.web.book.action.BookRefAction" />
+	
+	<!-- resource mgr start-->
+	<action path="/web/datafield/contentList" type="com.aspire.ponaadmin.web.datafield.action.ContentListAction">
+      <forward name="showList" path="/web/datafield/contentList_query.jsp" />
+	</action>
+	<action path="/web/datafield/contentInfo" type="com.aspire.ponaadmin.web.datafield.action.ContentInfoAction">
+      <forward name="showList" path="/web/datafield/key_resource_edit.jsp" />
+	</action>
+	<action path="/web/datafield/resourceUpdate" name="FileForm" type="com.aspire.ponaadmin.web.datafield.action.ResourceUpdateAction" />
+		<action path="/web/datafield/keyBaseList" type="com.aspire.ponaadmin.web.datafield.action.KeyBaseListAction">
+      <forward name="showList" path="/web/datafield/key_base_query.jsp" />
+	</action>
+	<action path="/web/datafield/keyBaseInfo" type="com.aspire.ponaadmin.web.datafield.action.KeyBaseInfoAction">
+      <forward name="showInfo" path="/web/datafield/key_base_edit.jsp" />
+	</action>
+	<action path="/web/datafield/keyBaseUpdate" type="com.aspire.ponaadmin.web.datafield.action.KeyBaseUpdateAction" />
+	<action path="/web/datafield/keyBaseDel" type="com.aspire.ponaadmin.web.datafield.action.KeyBaseDelAction" />
+	<action path="/web/datafield/keyBaseAdd" type="com.aspire.ponaadmin.web.datafield.action.KeyBaseAddAction">
+      <forward name="add" path="/web/datafield/key_base_add.jsp" />
+	</action>
+	<action path="/web/datafield/keyBaseImput" type="com.aspire.ponaadmin.web.datafield.action.KeyBaseImputAction">
+      <forward name="imput" path="/web/datafield/key_base_imput.jsp" />
+	</action>
+	<action path="/web/datafield/keyImputData" name="dataImportForm" type="com.aspire.ponaadmin.web.datafield.action.KeyBaseImputDataAction" />
+	<action path="/web/datafield/keyBaseInsert" type="com.aspire.ponaadmin.web.datafield.action.KeyBaseInsertAction" />
+	<!-- resource end-->
+	
+	<!-- 紧急上线应用 -->
+	<action path="/web/exigence/queryExigence" scope="request" type="com.aspire.ponaadmin.web.repository.web.ContentExigenceAction" >
+	 	<forward name="query" path="/web/resourcemgr/query_exigence.jsp" />
+	</action>  
+	<action path="/web/exigence/importExigence" name="dataImportForm" type="com.aspire.ponaadmin.web.repository.web.ContentExigenceAction" />
+	
+	<!-- 重点机型、重点应用 -->
+	<action path="/web/pivot/importDevice" name="dataImportForm"  type="com.aspire.ponaadmin.web.pivot.action.PivotDeviceAction" />
+	<action path="/web/pivot/device" scope="request" type="com.aspire.ponaadmin.web.pivot.action.PivotDeviceAction" >
+		<forward name="query" path="/web/pivot/query_device.jsp" />
+	</action>
+	<action path="/web/pivot/importContent" name="dataImportForm"  type="com.aspire.ponaadmin.web.pivot.action.PivotContentAction" />
+	<action path="/web/pivot/content" scope="request" type="com.aspire.ponaadmin.web.pivot.action.PivotContentAction" >
+		<forward name="query" path="/web/pivot/query_content.jsp" />
+		<forward name="detail" path="/web/pivot/detail_content.jsp" />
+	</action>
+	<!-- contentExt start-->
+	<action path="/web/datafield/contentExtList" type="com.aspire.ponaadmin.web.datafield.action.ContentExtListAction">
+		<forward name="showList" path="/web/datafield/contentExtList_query.jsp" />
+	</action>
+	<action forward="/web/datafield/contentExtAdd.jsp" path="/web/datafield/contentExtAdd" />
+	<action path="/web/datafield/contentExtAddQuery" type="com.aspire.ponaadmin.web.datafield.action.ContentExtAddQueryAction">
+		<forward name="showList" path="/web/datafield/contentExtAddQuery.jsp" />
+	</action>
+
+	
+	<action path="/web/datafield/contentExtSave" type="com.aspire.ponaadmin.web.datafield.action.ContentExtSaveAction"/>
+	
+	
+	 <action path="/web/datafield/contentExtImport" name="dataImportForm" type="com.aspire.ponaadmin.web.datafield.action.ContentExtImportAction"/>
+	
+	
+	
+	<action path="/web/datafield/extDel" type="com.aspire.ponaadmin.web.datafield.action.ContentExtDelAction" />
+	<action path="/web/datafield/contentExtInfo" type="com.aspire.ponaadmin.web.datafield.action.ContentExtInfoAction">
+		<forward name="showInfo" path="/web/datafield/contentExtInfo.jsp" />
+	</action>
+	<action path="/web/datafield/contentExtUpdate" type="com.aspire.ponaadmin.web.datafield.action.ContentExtUpdateAction" />
+	<action path="/web/resourcemgr/baseFileExport" type="com.aspire.ponaadmin.web.dataexport.basefile.action.BaseFileAction">
+	</action>
+	<action path="/web/resourcemgr/logFileExport" type="com.aspire.ponaadmin.web.dataexport.basefile.action.LogFileAction">
+	</action>
+	<!-- contentExt end-->
+	
+	<action path="/web/singlecategory/singleCategoryTreeAction" scope="request"  type="com.aspire.ponaadmin.web.repository.singlecategory.action.SingleCategoryTreeAction">
+      <forward name="showSingleCategoryTree" path="/web/singlecategory/single_category_main.jsp" />
+    </action>
+    
+    <action path="/web/singlecategory/singleCategoryUserGroupAction" scope="request" type="com.aspire.ponaadmin.web.repository.singlecategory.action.SingleCategoryUserGroupAction">
+         <forward name="list" path="/web/singlecategory/single_category_usergroup_query.jsp" />
+         <forward name="toCategory" path="/web/singlecategory/query_category_id.jsp" />
+         <forward name="toUpdate" path="/web/singlecategory/single_category_usergroup_update.jsp" />
+     </action>
+     
+    <action path="/web/singlecategory/singleCgyContentTreeAction" scope="request"  type="com.aspire.ponaadmin.web.repository.singlecategory.action.SingleCgyContentTreeAction">
+      <forward name="showSingleCgyContentTree" path="/web/singlecategory/single_cgy_content_main.jsp" />
+    </action>
+    
+    <action path="/web/queryapp/QueryAppAction" scope="request"  type="com.aspire.ponaadmin.web.queryapp.action.QueryAppAction">
+      <forward name="app_content_query" path="/web/queryapp/app_content_query.jsp" />
+      <forward name="toQueryAppDetail" path="/web/queryapp/app_content_detail_query.jsp" />
+      <forward name="app_add_query" path="/web/queryapp/app_add_query.jsp" />
+    </action>
+    
+     <action path="/web/baseVideo/categoryApproval"  name="FileForm"  type="com.aspire.dotcard.baseVideo.action.CategoryApprovalAction" >
+	     <forward name="query" path="/web/video/category_goods_approval.jsp" />
+	     <forward name="success" path="/web/video/category_approval_status.jsp" />
+	 </action>
+    
+    <action path="/web/baseVideo/categoryApprovalList"  name="FileForm"  type="com.aspire.dotcard.baseVideo.action.CategoryApprovalListAction" >
+		<forward name="categoryApprovalList" path="/web/video/category_approval_list.jsp" />
+	 </action>
+	
+	<action path="/web/baseVideo/baseVideoImport" scope="request"  type="com.aspire.dotcard.baseVideo.action.BaseVideoFileAction">
+    </action>
+	<action path="/web/baseVideo/categoryTree" scope="request" name="FileForm" type="com.aspire.dotcard.baseVideo.action.VideoAction">
+		<forward name="tree" path="/web/video/category_tree.jsp" />
+		<forward name="add" path="/web/video/add_category.jsp" />
+		<forward name="query" path="/web/video/query_category.jsp" />		
+		<forward name="mod" path="/web/video/mod_category.jsp" />	
+	</action>
+		<action path="/web/baseVideo/product" scope="request" name="dataImportForm"  type="com.aspire.dotcard.baseVideo.action.ProductAction">
+		<forward name="listProduct" path="/web/video/videoProduct_list.jsp" />
+		
+	</action>
+	<action path="/web/baseVideo/videoNode" scope="request" name="dataImportForm"  type="com.aspire.dotcard.baseVideo.action.VideoNodeAction">
+		<forward name="showList" path="/web/video/videoNodeExtList_query.jsp" />
+												
+	</action>
+	<action path="/web/baseVideo/referenceTree" scope="request" type="com.aspire.dotcard.baseVideo.action.VideoAction" >
+	 	<forward name="tree" path="/web/video/reference_tree.jsp" />
+	 </action> 
+	 <action path="/web/baseVideo/queryReference" scope="request" name="FileForm" type="com.aspire.dotcard.baseVideo.action.VideoReference" >
+	 	<forward name="query" path="/web/video/query_reference.jsp" />
+		<forward name="queryVideo" path="/web/video/query_video.jsp" />
+		<forward name="showVideo" path="/web/video/key_videoResource_edit.jsp" />
+	 </action>   
+	<action path="/web/baseVideo/importReference" name="dataImportForm" type="com.aspire.dotcard.baseVideo.action.VideoReference" />
+	
+	<action path="/web/baseVideo/queryProgram" name="dataImportForm" type="com.aspire.dotcard.baseVideo.action.VideoProgramAction" >
+		<forward name="query" path="/web/video/query_videoprogram.jsp" />
+	</action>
+	
+	
+	<action path="/web/baseRead/baseReadImport" scope="request"  type="com.aspire.dotcard.baseread.action.BaseReadAction">
+    </action>
+    
+   <action path="/web/baseRead/categoryApprovalList"  name="FileForm"  type="com.aspire.dotcard.baseread.action.CategoryApprovalListAction" >
+    <forward name="categoryApprovalList" path="/web/book/category_approval_list.jsp" />
+   </action>
+   
+   <action path="/web/baseRead/categoryApproval"  name="FileForm"  type="com.aspire.dotcard.baseread.action.CategoryApprovalAction" >
+       <forward name="query" path="/web/book/category_goods_approval.jsp" />
+       <forward name="success" path="/web/book/category_approval_status.jsp" />
+   </action>
+	
+	<action path="/web/baseRead/categorySave" name="FileForm"  type="com.aspire.dotcard.baseread.action.BaseReadCategoryAction" />
+	<action path="/web/baseRead/categoryTree" scope="request"  type="com.aspire.dotcard.baseread.action.BaseReadCategoryAction">
+		<forward name="add" path="/web/book/new_add_category.jsp" />
+		<forward name="query" path="/web/book/new_query_category.jsp" />		
+		<forward name="mod" path="/web/book/new_mod_category.jsp" />	
+		<forward name="city" path="/web/resourcemgr/read_category_city.jsp" />
+		<forward name="categoryQuery" path="/web/book/new_category_query.jsp" />
+    </action>
+   
+   	 <action path="/web/baseRead/queryReference" scope="request" name="FileForm" type="com.aspire.dotcard.baseread.action.BaseReadReferenceAction" >
+	 	<forward name="query" path="/web/book/new_query_reference.jsp" />
+		<forward name="queryRead" path="/web/book/new_query_book.jsp" />
+		<forward name="showRead" path="/web/book/new_key_bookResource_edit.jsp" />
+	 </action>   
+	<action path="/web/baseRead/importReference" name="dataImportForm" type="com.aspire.dotcard.baseread.action.BaseReadReferenceAction" />
+	
+	<action path="/web/baseRead/queryAuthor" scope="request" name="FileForm" type="com.aspire.dotcard.baseread.action.BaseAuthorAction">
+		<forward name="query" path="/web/book/query_author.jsp" />
+		<forward name="mod" path="/web/book/mod_author.jsp" />
+    </action>
+    <action path="/web/baseRead/importAuthor" name="dataImportForm" type="com.aspire.dotcard.baseread.action.BaseAuthorAction" />
+    
+	<action path="/web/baseMusic/querySinger" scope="request" name="FileForm" type="com.aspire.dotcard.basemusic.action.BaseSingerAction">
+		<forward name="query" path="/web/newmusicsys/query_singer.jsp" />
+		<forward name="mod" path="/web/newmusicsys/mod_singer.jsp" />
+    </action>
+    <action path="/web/baseMusic/importSinger" name="dataImportForm" type="com.aspire.dotcard.basemusic.action.BaseSingerAction" />
+    
+    <action path="/web/exportData/queryExport" scope="request"  type="com.aspire.ponaadmin.web.dataexport.sqlexport.action.DataExportAction" >
+    	<forward name="query" path="/web/exportData/query_dataexport.jsp" />
+    </action>
+    
+    <action path="/web/baseGame/queryGameTW" scope="request"  type="com.aspire.ponaadmin.web.game.action.TWGameAction" >
+    	<forward name="query" path="/web/game/query_tw_game.jsp" />
+    </action>
+    <action path="/web/baseGame/importGameTW" name="dataImportForm" type="com.aspire.ponaadmin.web.game.action.TWGameAction" />
+    
+     <!-- fanqh add 基地游戏黑名单-->
+	  <action path="/web/basegame/black" scope="request" type="com.aspire.ponaadmin.web.baserecomm.basegame.BlackAction" >
+	 	<forward name="query" path="/web/baserecomm/query_black.jsp" />
+	 	<forward name="queryItem" path="/web/baserecomm/query_item.jsp" />
+	 </action>
+	 <action path="/web/basegame/importBlack" name="dataImportForm" type="com.aspire.ponaadmin.web.baserecomm.basegame.BlackAction"/>
+	 <!-- tolson add 视频基地黑名单-->
+	 
+	  <action path="/web/baseVideo/black" scope="request" type="com.aspire.dotcard.baseVideo.action.BlackAction" >
+	 	<forward name="query" path="/web/video/query_black.jsp" />
+	 </action>
+	   <action path="/web/baseVideo/queryVbContent" scope="request" type="com.aspire.dotcard.baseVideo.action.BlackAction" >
+	 	<forward name="query_vb_content" path="/web/video/query_vb_content.jsp" />
+	 </action>
+	    <action path="/web/baseVideo/remove" scope="request" type="com.aspire.dotcard.baseVideo.action.BlackAction" >
+	 	<forward name="remove" path="/web/video/query_black.jsp" />
+	 </action>
+	  <action path="/web/baseVideo/add" scope="request" type="com.aspire.dotcard.baseVideo.action.BlackAction" >
+	 	<forward name="add" path="/web/video/query_vb_content.jsp" />
+	 </action>
+	 <action path="/web/baseVideo/importBlack" name="dataImportForm" type="com.aspire.dotcard.baseVideo.action.BlackAction"/>
+	
+	
+	 <action path="/web/baseVideo/collection" scope="request" type="com.aspire.dotcard.baseVideo.action.CollectionAction" >
+	 	<forward name="query" path="/web/video/content_collection.jsp" />
+	 </action>
+	 <action path="/web/baseVideo/importCollection" name="dataImportForm" type="com.aspire.dotcard.baseVideo.action.CollectionAction"/>
+	
+	
+	
+	  <!-- fanqh add 稽核管理-->
+	  <action path="/web/audit/checklog" scope="request" type="com.aspire.ponaadmin.web.audit.action.CheckLogAction" >
+	 	<forward name="query" path="/web/audit/query_checklog.jsp" />
+	 	<forward name="queryDetail" path="/web/audit/query_checkdetail.jsp" />
+	 </action>
+
+	<!-- 基地音乐歌曲图片 --> 
+	<action path="/web/baseMusic/queryMusicPic" scope="request" name="FileForm" type="com.aspire.dotcard.basemusic.action.BaseMusicPicAction">
+		<forward name="query" path="/web/newmusicsys/query_music_pic.jsp" />
+	</action>
+    <action path="/web/baseMusic/importMusicPic" name="dataImportForm" type="com.aspire.dotcard.basemusic.action.BaseMusicPicAction" />
+    
+    <!-- 新基地视频管理     开始 -->
+    <action path="/web/newVideo/videoImport" scope="request"  type="com.aspire.dotcard.basevideosync.action.BaseFileExportAction">
+    </action>
+    <action path="/web/newVideo/videoCategory" scope="request" name="FileForm" type="com.aspire.dotcard.basevideosync.action.VideoCategoryAction">
+		<forward name="tree" path="/web/newvideo/category_tree.jsp" />
+		<forward name="query" path="/web/newvideo/query_category.jsp" />		
+		<forward name="toAdd" path="/web/newvideo/add_category.jsp" />
+		<forward name="toUpdate" path="/web/newvideo/update_category.jsp" />	
+	</action>
+	<action path="/web/newVideo/referenceTree" scope="request" type="com.aspire.dotcard.basevideosync.action.VideoCategoryAction" >
+	 	<forward name="tree" path="/web/newvideo/reference_tree.jsp" />
+	 </action>
+	<action path="/web/newVideo/videoReference" scope="request" name="FileForm" type="com.aspire.dotcard.basevideosync.action.VideoReferenceAction">
+		<forward name="query" path="/web/newvideo/query_reference.jsp" />
+		<forward name="queryProgram" path="/web/newvideo/query_program.jsp" />
+	</action>
+    <!-- 新基地视频管理    结束 -->
+      
+    <!-- wp汇聚应用管理     开始 -->
+    <action path="/web/wpInfo/appInfoCategory" scope="request" name="FileForm" type="com.aspire.dotcard.wpinfo.action.AppInfoCategoryAction">
+		<forward name="tree" path="/web/wpinfo/category_tree.jsp" />
+		<forward name="query" path="/web/wpinfo/query_category.jsp" />		
+		<forward name="toAdd" path="/web/wpinfo/add_category.jsp" />
+		<forward name="toUpdate" path="/web/wpinfo/update_category.jsp" />	
+	</action>
+	<action path="/web/wpInfo/referenceTree" scope="request" type="com.aspire.dotcard.wpinfo.action.AppInfoCategoryAction" >
+	 	<forward name="tree" path="/web/wpinfo/reference_tree.jsp" />
+	 </action>
+	<action path="/web/wpInfo/appInfoReference" scope="request" name="FileForm" type="com.aspire.dotcard.wpinfo.action.AppInfoReferenceAction">
+		<forward name="query" path="/web/wpinfo/query_reference.jsp" />
+		<forward name="queryProgram" path="/web/wpinfo/query_program.jsp" />
+	</action>
+    <!-- wp汇聚应用管理    结束 -->
+    
+    <!-- 渠道商用户 开始 -->
+    <action path="/web/channelUser/channelLogin" scope="request" type="com.aspire.ponaadmin.web.channelUser.action.ChannelLoginAction">
+      <forward name="main" path="/web/channelUser/main.jsp" redirect="true"/>
+      <forward name="relogin" path="/web/channelUser/index.jsp" />
+    </action>
+    <action path="/web/channelUser/channelUserMenu" scope="request" type="com.aspire.ponaadmin.web.channelUser.action.ChannelUserMenuAction">
+    	 <forward name="category_main" path="/web/channelUser/ztree/category_main.jsp" />
+    	 <forward name="cgy_content_main" path="/web/channelUser/ztree/cgy_content_main.jsp" />
+      	<forward name="channelInfo" path="/web/channelUser/channelInfo.jsp" />
+      	 <forward name="toUpdateChannelPwd" path="/web/channelUser/editChannelPwd.jsp" />
+    </action>
+    <action path="/web/channelUser/updateChannelPwd" scope="request" type="com.aspire.ponaadmin.web.channelUser.action.UpdateChannelPwdAction">
+      <forward name="success" path="/web/channelUser/updatePwdSuccess.jsp" />
+      <forward name="pwdNoMatch" path="/web/channelUser/editChannelPwd.jsp" />
+    </action>
+    <action path="/web/channelUser/channelCategoryManage" scope="request" type="com.aspire.ponaadmin.web.channelUser.action.ChannelCategoryManageAction">
+      <forward name="getChannelCategoryList" path="/web/channelUser/channelCategoryList.jsp" />
+    </action>
+    	<!-- 渠道商用户  货架分类管理begin -->
+     <action path="/web/channelUser/categoryInfo" type="com.aspire.ponaadmin.web.channelUser.action.CategoryInfoAction">
+      <forward name="show" path="/web/channelUser/category_info.jsp" />
+    </action>
+    <action path="/web/channelUser/categoryEdit" type="com.aspire.ponaadmin.web.channelUser.action.CategoryEditAction">
+      <forward name="edit" path="/web/channelUser/category_edit.jsp" />
+    </action>
+    <action path="/web/channelUser/categoryCity" type="com.aspire.ponaadmin.web.channelUser.action.CategoryCityAction">
+      <forward name="city" path="/web/channelUser/category_city.jsp" />
+    </action>
+    <action path="/web/channelUser/categorySave"  name="FileForm"  type="com.aspire.ponaadmin.web.channelUser.action.CategorySaveAction"/>
+    <action path="/web/channelUser/categoryDel" type="com.aspire.ponaadmin.web.channelUser.action.CategoryDelAction"/>
+    <action path="/web/channelUser/categoryDevice" type="com.aspire.ponaadmin.web.channelUser.action.CategoryDeviceAction">
+      <forward name="device" path="/web/channelUser/category_device.jsp" />
+    </action>
+    <action path="/web/channelUser/categoryPlatForm" type="com.aspire.ponaadmin.web.channelUser.action.CategoryPlatFormAction">
+      <forward name="platForm" path="/web/channelUser/category_platForm.jsp" />
+    </action>
+    	<!-- 渠道商用户  货架分类管理end -->
+    	<!-- 渠道商用户  货架商品管理 begin -->
+     <action path="/web/channelUser/cgyContentList" type="com.aspire.ponaadmin.web.channelUser.action.CgyContentListAction">
+      <forward name="showList" path="/web/channelUser/cgy_content_list.jsp" />
+      <forward name="showListVirtual" path="/web/channelUser/cgy_content_list_virtual.jsp" />
+    </action>
+    <action path="/web/channelUser/contentInfo" type="com.aspire.ponaadmin.web.channelUser.action.ContentInfoAction">
+      <forward name="show" path="/web/channelUser/content_info.jsp" />
+    </action>
+    <action path="/web/channelUser/cgyNotContentList" type="com.aspire.ponaadmin.web.channelUser.action.CgyNotContentListAction">
+      <forward name="showList" path="/web/channelUser/cgy_not_content_list.jsp" />
+    </action>
+     <action path="/web/channelUser/cgyContentTaxis" type="com.aspire.ponaadmin.web.channelUser.action.CgyContentTaxisAction">
+      <forward name="showTaxis" path="/web/channelUser/cgy_content_taxis.jsp" />
+    </action>
+    <action path="/web/channelUser/cgyContentRemove" type="com.aspire.ponaadmin.web.channelUser.action.CgyContentRemoveAction"/>
+    <action path="/web/channelUser/contentAddToCgy" type="com.aspire.ponaadmin.web.channelUser.action.ContentAddToCgyAction">
+     <forward name="showTree" path="/web/channelUser/choose_category.jsp" />
+    </action>
+    <action path="/web/channelUser/cgyContentAdd" type="com.aspire.ponaadmin.web.channelUser.action.CgyContentAddAction">
+      <forward name="showResult" path="/web/channelUser/cgy_content_add_hint.jsp" />
+    </action>
+    <action path="/web/channelUser/categoryImport" name="dataImportForm2" type="com.aspire.ponaadmin.web.channelUser.action.CgyContentImportAction"/>
+    <action path="/web/channelUser/tactic" scope="request" type="com.aspire.dotcard.syncData.tactic.TacticAction">
+	  <forward name="tacticList" path="/web/channelUser/tactic_list.jsp" />
+      <forward name="modify" path="/web/channelUser/modify.jsp" />
+    </action>
+    
+     <action path="/web/channelUser/RSAPublicKey" scope="request" type="com.aspire.ponaadmin.web.channelUser.action.RSAPublicKeyAction">
+     </action>
+    	<!-- 渠道商用户  货架商品管理end -->
+    	<!-- 渠道商用户  TAC码库管理 begin -->
+     <action path="/web/channelUser/tacCode" name="dataImportForm" type="com.aspire.ponaadmin.web.taccode.action.TacCodeAction">
+      <forward name="query" path="/web/channelUser/tac/taccode_list.jsp" />
+    </action>
+         <!-- 渠道商用户  TAC码库管理 end -->
+         <!-- 渠道商用户  推送广告管理 begin -->
+     <action path="/web/channelUser/pushAdv" name="dataImportForm" type="com.aspire.ponaadmin.web.pushadv.action.PushAdvAction">
+      <forward name="add" path="/web/channelUser/push/pushadv_add.jsp" />
+      <forward name="query" path="/web/channelUser/push/pushadv_list.jsp" />
+      <forward name="edit" path="/web/channelUser/push/pushadv_edit.jsp" />
+      <forward name="info" path="/web/channelUser/push/pushadv_info.jsp" />
+      <forward name="content" path="/web/channelUser/push/contentlist.jsp" />
+    </action>
+         <!-- 渠道商用户  推送广告管理 end -->
+    <!-- 渠道商用户 结束 -->
+    
+    <!--渠道商管理    开始  -->
+    <action path="/web/channeladmin/queryOpenChannelsList" scope="request" name="FileForm" type="com.aspire.ponaadmin.web.channeladmin.action.OpenChannelsAction">
+		<forward name="queryOpenChannelsList" path="/web/channeladmin/open_channels.jsp" />
+		<forward name="add" path="/web/channeladmin/add_channels.jsp"></forward>
+		<forward name="update" path="/web/channeladmin/update_channels.jsp"></forward>
+		<forward name="updatePwd" path="/web/channeladmin/updatePwd_channels.jsp"></forward>
+		<forward name="list" path="/web/channeladmin/channels_list.jsp"></forward>
+	</action>
+    <!--渠道商管理    结束  -->
+    <!-- 客户端渠道相关配置action -->
+    <action path="/web/channeladmin/openChannelMoList" scope="request" type="com.aspire.ponaadmin.web.channeladmin.action.OpenChannelMoAction">
+    	<forward name="add" path="/web/channeladmin/open_channel_mo_add.jsp"/>
+    	<forward name="queryList" path="/web/channeladmin/open_channels_list.jsp"/>
+    	<forward name="list" path="/web/channeladmin/open_channel_mo_list.jsp"/>
+    </action>
+    
+    <!-- 根货架配置 -->
+    <action path="/web/channeladmin/categoryRuleIdQuery" scope="request" type="com.aspire.ponaadmin.web.channeladmin.action.CategoryQueryAction">
+		<forward name="list" path="/web/channeladmin/query_category_id.jsp" />
+     </action>
+    <action path="/web/channeladmin/openChannelsCategory" scope="request" type="com.aspire.ponaadmin.web.channeladmin.action.OpenChannelsCategoryAction">
+    	<forward name="add" path="/web/channeladmin/open_channels_category_add.jsp"/>
+    </action>
+    
+    <!-- 开发运营渠道相关配置action -->
+    <action path="/web/channeladmin/openOperationList" scope="request" type="com.aspire.ponaadmin.web.channeladmin.action.OpenOperationListAction">
+    	<forward name="add" path="/web/channeladmin/open_operation_list_add.jsp"/>
+    	<forward name="list" path="/web/channeladmin/open_operation_list.jsp"/>
+    </action>
+        
+    <!-- 待审核 -->
+    <action path="/web/toaudit/toAuditListAction" scope="request" type="com.aspire.ponaadmin.web.auditManagement.action.AuditAction">
+    	<forward name="queryList" path="/web/auditManagement/to_audit.jsp"/>
+    	<forward name="detail" path="/web/auditManagement/to_audit_details.jsp"/>
+    </action>
+    
+    <action path="/web/cooperation/cooperationList" scope="request" type="com.aspire.ponaadmin.web.coManagement.action.CoManagementList">
+    	<forward name="list" path="/web/co-management/partners_list.jsp" />
+    	<forward name="add" path="/web/co-management/partners_add.jsp" />
+    	<forward name="edit" path="/web/co-management/partners_edit.jsp" />
+    	<forward name="detail" path="/web/co-management/partners_detail.jsp" />
+    </action>
+    
+     <action path="/web/cooperation/channelsNoInfoList" scope="request" type="com.aspire.ponaadmin.web.coManagement.action.ChannelNoAction">
+    	<forward name="list" path="/web/channelnummanage/channel_number_list.jsp" />
+    </action>
+    
+    <action path="/web/cooperation/importChannelsNo" name="dataImportForm" type="com.aspire.ponaadmin.web.coManagement.action.ChannelNoAction" />
+    
+    <action path="/web/cooperation/channelList" scope="request" type="com.aspire.ponaadmin.web.coManagement.action.ChannelListAction">
+    	<forward name="list" path="/web/channelmanagement/channel_list.jsp" />
+    	<forward name="detail" path="/web/channelmanagement/channel_detail.jsp" />
+    </action>
+     <!-- 我的渠道 -->
+     <action path="/web/mychannel/channelInfo" scope="request" type="com.aspire.ponaadmin.webpps.mychannel.action.MyChannelAction">
+    	<forward name="list" path="/web/mychannel/channel_list.jsp" />
+    	<forward name="add" path="/web/mychannel/channel_add.jsp" />
+    	<forward name="detail" path="/web/mychannel/channel_detail.jsp" />
+    	<forward name="edit" path="/web/mychannel/channel_edit.jsp" />
+    </action>
+    <!-- 我的应用 -->
+    <action path="/web/mycontent/contentInfo" scope="request" type="com.aspire.ponaadmin.webpps.mycontent.action.MyContentAction">
+    	<forward name="query" path="/web/mycontent/content_list.jsp" />
+    </action>
+       
+  </action-mappings>
+  <message-resources parameter="ApplicationResources"/>
+</struts-config>
